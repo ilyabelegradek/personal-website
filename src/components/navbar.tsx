@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, AppBar, Toolbar, IconButton, Typography } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
