@@ -1,12 +1,15 @@
 @import "tailwindcss";
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: "ibmPlexSans";
+  src: url("/fonts/ibmPlexSans.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "advantage";
-  src: url("/fonts/Advantage.ttf") format("truetype");
+  font-family: "gelasio";
+  src: url("/fonts/gelasio.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
