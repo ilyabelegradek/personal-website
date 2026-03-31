@@ -5,19 +5,22 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import { NavigationItem } from "@/src/types/types";
 import Link from "next/link";
 import EmailCopyIcon from "./emailIcon";
+import { useTranslations } from "next-intl";
 
 const navigationItems: NavigationItem[] = [
   {
-    text: "Skills",
+    stringKey: "skills",
     ref: "/skills",
   },
   {
-    text: "Work Experience",
+    stringKey: "work-experience",
     ref: "/work",
   },
 ];
 
 export default function NavBar() {
+  const t = useTranslations();
+
   return (
     <Box sx={{ width: "100%" }}>
       <AppBar position="static" className="text-center">
@@ -39,7 +42,9 @@ export default function NavBar() {
                 key={navItem.ref}
                 className="mx-2.5 pt-0.5"
               >
-                <Typography variant="gelasio">{navItem.text}</Typography>
+                <Typography variant="gelasio">
+                  {t(navItem.stringKey)}
+                </Typography>
               </Link>
             );
           })}

@@ -18,7 +18,7 @@ export default function ProfileCard() {
             priority
           />
         </div>
-        <Typography className="flex" variant="gelasio">
+        <Typography className="flex pt-5" variant="gelasio">
           {t("name")}
         </Typography>
         <Typography className="flex" variant="gelasio">

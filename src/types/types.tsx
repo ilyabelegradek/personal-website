@@ -1,4 +1,4 @@
 export type NavigationItem = {
-  text: string;
+  stringKey: string;
   ref: string;
 };
