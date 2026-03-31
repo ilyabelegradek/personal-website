@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Skills",
-  description: "My Skills",
+  title: "Settings",
+  description: "Site Settings",
 };
 
 export default function RootLayout({

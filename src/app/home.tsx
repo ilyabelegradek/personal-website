@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
         <Typography className="flex" variant="advantage">
           ILYA BELEGRADEK
         </Typography>
-        <Link href={"/skills"}>My Skills</Link>
       </main>
     </div>
   );

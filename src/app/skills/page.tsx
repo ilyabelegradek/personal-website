@@ -1,4 +1,4 @@
-import Skills from "@/src/components/skills/skills";
+import Skills from "./components/skills";
 
 export default function SkillsPage() {
   return <Skills />;
