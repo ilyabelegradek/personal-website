@@ -4,6 +4,7 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { customTheme } from "./style/theme";
 import NavBar from "../components/navbar";
+import { NextIntlClientProvider } from "next-intl";
 
 export const metadata: Metadata = {
   title: "Ilya Belegradek",
@@ -21,10 +22,12 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <ThemeProvider theme={customTheme}>
             <CssBaseline />
-            <main>
-              <NavBar />
-              {children}
-            </main>
+            <NextIntlClientProvider>
+              <main>
+                <NavBar />
+                {children}
+              </main>
+            </NextIntlClientProvider>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

@@ -39,7 +39,7 @@ export default function NavBar() {
                 key={navItem.ref}
                 className="mx-2.5 pt-0.5"
               >
-                <Typography>{navItem.text}</Typography>
+                <Typography variant="gelasio">{navItem.text}</Typography>
               </Link>
             );
           })}

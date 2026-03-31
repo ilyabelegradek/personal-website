@@ -1,7 +1,10 @@
 import { Card, CardContent, Typography } from "@mui/material";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 export default function ProfileCard() {
+  const t = useTranslations();
+
   return (
     <Card className="mt-20 rounded-4xl">
       <CardContent className="justify-items-center">
@@ -16,15 +19,13 @@ export default function ProfileCard() {
           />
         </div>
         <Typography className="flex" variant="gelasio">
-          ILYA BELEGRADEK
+          {t("name")}
         </Typography>
-        <Typography className="flex">ilyushabelegradek@gmail.com</Typography>
-        <Typography className="flex" variant="ibmPlexSans">
-          ilyushabelegradek@gmail.com
-        </Typography>
-
         <Typography className="flex" variant="gelasio">
-          678-643-4464
+          {t("email")}
+        </Typography>
+        <Typography className="flex" variant="gelasio">
+          {t("phone")}
         </Typography>
       </CardContent>
     </Card>
