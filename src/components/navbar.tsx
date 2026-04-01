@@ -8,6 +8,8 @@ import { NavigationItem } from "@/src/types/types";
 import Link from "next/link";
 import EmailCopyIcon from "./emailIcon";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
+import SettingsDrawer from "./settingsDrawer";
 
 const navigationItems: NavigationItem[] = [
   {
@@ -22,6 +24,7 @@ const navigationItems: NavigationItem[] = [
 
 export default function NavBar() {
   const t = useTranslations();
+  const [settingsDrawerOpen, setSettingsDrawerOpen] = useState(false);
 
   return (
     <Box sx={{ width: "100%" }}>
@@ -44,7 +47,7 @@ export default function NavBar() {
                 key={navItem.ref}
                 className="mx-2.5 pt-0.5"
               >
-                <Typography variant="gelasio">
+                <Typography variant="titleFont">
                   {t(navItem.stringKey)}
                 </Typography>
               </Link>
@@ -66,19 +69,24 @@ export default function NavBar() {
               </IconButton>
             </a>
             <EmailCopyIcon />
-            <Link href={"/settings"}>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="settings"
-              >
-                <SettingsIcon />
-              </IconButton>
-            </Link>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="settings"
+              onClick={() => setSettingsDrawerOpen(true)}
+            >
+              <SettingsIcon />
+            </IconButton>
           </div>
         </Toolbar>
       </AppBar>
+      {settingsDrawerOpen && (
+        <SettingsDrawer
+          settingsDrawerOpen={settingsDrawerOpen}
+          setSettingsDrawerOpen={setSettingsDrawerOpen}
+        />
+      )}
     </Box>
   );
 }

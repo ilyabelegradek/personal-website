@@ -7,20 +7,20 @@ import { useEffect, useMemo, useState } from "react";
 
 declare module "@mui/material/styles" {
   interface TypographyVariants {
-    gelasio: React.CSSProperties;
-    ibmPlexSans: React.CSSProperties;
+    titleFont: React.CSSProperties;
+    bodyFont: React.CSSProperties;
   }
 
   interface TypographyVariantsOptions {
-    gelasio?: React.CSSProperties;
-    ibmPlexSans?: React.CSSProperties;
+    titleFont?: React.CSSProperties;
+    bodyFont?: React.CSSProperties;
   }
 }
 
 declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
-    gelasio: true;
-    ibmPlexSans: true;
+    titleFont: true;
+    bodyFont: true;
   }
 }
 
@@ -69,10 +69,10 @@ export default function MUIThemeProvider({
                 },
               },
         typography: {
-          gelasio: {
+          titleFont: {
             fontFamily: "gelasio",
           },
-          ibmPlexSans: {
+          bodyFont: {
             fontFamily: "ibmPlexSans",
           },
         },

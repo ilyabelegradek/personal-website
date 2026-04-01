@@ -18,13 +18,13 @@ export default function ProfileCard() {
             priority
           />
         </div>
-        <Typography className="flex pt-5" variant="gelasio">
+        <Typography className="flex pt-5" variant="titleFont">
           {t("name")}
         </Typography>
-        <Typography className="flex" variant="gelasio">
+        <Typography className="flex" variant="titleFont">
           {t("email")}
         </Typography>
-        <Typography className="flex" variant="gelasio">
+        <Typography className="flex" variant="titleFont">
           {t("phone")}
         </Typography>
       </CardContent>
