@@ -3,5 +3,7 @@
   "email": "ilyushabelegradek@gmail.com",
   "phone": "678-643-4464",
   "skills": "Skills",
-  "work-experience": "Work Experience"
+  "work-experience": "Work Experience",
+  "theme": "Theme",
+  "about-me": "Hi! I'm a frontend developer with {numYears} years experience developing Android and React applications at General Motors. In my spare time, I like to play video games, play and watch soccer, and watch TV. Feel free to reach out if you'd like to get in touch!"
 }
