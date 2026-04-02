@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.join(__dirname),
   },
+  allowedDevOrigins: ["10.0.0.134"],
 };
 
 const withNextIntl = createNextIntlPlugin();

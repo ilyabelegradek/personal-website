@@ -23,7 +23,7 @@ export default function EmailCopyIcon() {
         aria-label="email"
         onClick={copyEmailToClipboard}
       >
-        <EmailIcon />
+        <EmailIcon fontSize="large" />
       </IconButton>
       {copyText !== "" && (
         <Snackbar

@@ -1,13 +1,14 @@
-import { Card, CardContent, Typography } from "@mui/material";
+import { Card, CardActions, CardContent, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import LinkedInButton from "./linkedInButton";
 
 export default function ProfileCard() {
   const t = useTranslations();
 
   return (
     <Card className="mt-20 rounded-4xl">
-      <CardContent className="justify-items-center">
+      <CardContent className="justify-items-center border">
         <div className="rounded-full overflow-hidden h-50 w-50">
           <Image
             className="object-cover w-full h-full"
@@ -28,6 +29,9 @@ export default function ProfileCard() {
           {t("phone")}
         </Typography>
       </CardContent>
+      <CardActions className="justify-end border">
+        <LinkedInButton />
+      </CardActions>
     </Card>
   );
 }
