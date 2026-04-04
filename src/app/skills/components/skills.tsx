@@ -1,3 +1,4 @@
+import ExpandableList from "@/src/components/expandableList";
 import ExpandableSection from "@/src/components/expandableSection";
 import { Typography } from "@mui/material";
 
@@ -16,22 +17,10 @@ export default function Skills() {
   return (
     <div className="flex flex-col gap-5 m-15 sm:flex-row sm:flex-wrap">
       <ExpandableSection title="Programming Languages">
-        <div className="flex flex-col">
-          {programmingLanguages.map((language) => (
-            <Typography variant="bodyFont" key={language}>
-              {language}
-            </Typography>
-          ))}
-        </div>
+        <ExpandableList listItems={programmingLanguages} />
       </ExpandableSection>
       <ExpandableSection title="Miscallaneous">
-        <div className="flex flex-col">
-          {miscList.map((miscItem) => (
-            <Typography variant="bodyFont" key={miscItem}>
-              {miscItem}
-            </Typography>
-          ))}
-        </div>
+        <ExpandableList listItems={miscList} />
       </ExpandableSection>
     </div>
   );

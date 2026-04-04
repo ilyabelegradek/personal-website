@@ -1,4 +1,5 @@
 export type NavigationItem = {
   stringKey: string;
   ref: string;
+  icon: React.ReactNode;
 };

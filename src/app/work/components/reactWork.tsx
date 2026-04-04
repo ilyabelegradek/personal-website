@@ -1,3 +1,4 @@
+import ExpandableList from "@/src/components/expandableList";
 import ExpandableSection from "@/src/components/expandableSection";
 import { Typography } from "@mui/material";
 
@@ -27,22 +28,10 @@ export default function ReactWork() {
         </Typography>
       </ExpandableSection>
       <ExpandableSection title="Responsibilites">
-        <div className="flex flex-col">
-          {responsibilitesList.map((responsibility) => (
-            <Typography variant="bodyFont" key={responsibility}>
-              {responsibility}
-            </Typography>
-          ))}
-        </div>
+        <ExpandableList listItems={responsibilitesList} />
       </ExpandableSection>
       <ExpandableSection title="Tech Stack">
-        <div className="flex flex-col">
-          {techStackList.map((stackItem) => (
-            <Typography variant="bodyFont" key={stackItem}>
-              {stackItem}
-            </Typography>
-          ))}
-        </div>
+        <ExpandableList listItems={techStackList} />
       </ExpandableSection>
     </div>
   );
