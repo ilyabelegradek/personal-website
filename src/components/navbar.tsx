@@ -15,7 +15,7 @@ const navigationItems: NavigationItem[] = [
     ref: "/skills",
   },
   {
-    stringKey: "work-experience",
+    stringKey: "work",
     ref: "/work",
   },
 ];
