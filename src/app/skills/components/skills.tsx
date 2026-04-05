@@ -9,7 +9,9 @@ export default function Skills() {
     "Javascript",
     "Java",
     "HTML",
-    "css",
+    "CSS",
+    "React Native",
+    "Node JS?",
   ];
 
   const miscList = ["Languages: English and Russian"];

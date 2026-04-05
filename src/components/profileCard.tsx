@@ -24,10 +24,10 @@ export default function ProfileCard() {
           {t("name")}
         </Typography>
         <Typography className="flex" variant="titleFont">
-          {t("email")}
+          {process.env.NEXT_PUBLIC_EMAIL}
         </Typography>
         <Typography className="flex" variant="titleFont">
-          {t("phone")}
+          {process.env.NEXT_PUBLIC_PHONE}
         </Typography>
       </CardContent>
       <CardActions className="justify-between border">
