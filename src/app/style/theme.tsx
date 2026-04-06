@@ -6,6 +6,20 @@ import { useTheme } from "next-themes";
 import { useEffect, useMemo, useState } from "react";
 
 declare module "@mui/material/styles" {
+  interface Theme {
+    customColors: {
+      navBarHeader: string;
+      tabColor: string;
+    };
+  }
+
+  interface ThemeOptions {
+    customColors?: {
+      navBarHeader?: string;
+      tabColor?: string;
+    };
+  }
+
   interface TypographyVariants {
     titleFont: React.CSSProperties;
     bodyFont: React.CSSProperties;
@@ -55,7 +69,6 @@ export default function MUIThemeProvider({
                   default: "#caf0f8",
                   paper: "#90E0EF",
                 },
-                //TODO custom tab color
               }
             : {
                 primary: {
@@ -69,6 +82,13 @@ export default function MUIThemeProvider({
                   paper: "#F4845F",
                 },
               },
+        customColors:
+          theme === "dark"
+            ? {
+                navBarHeader: "#FFFFFF",
+                tabColor: "#03045e",
+              }
+            : { navBarHeader: "#FFFFFF", tabColor: "#000000" },
         typography: {
           titleFont: {
             fontFamily: "gelasio",

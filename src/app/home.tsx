@@ -1,5 +1,3 @@
-import { Typography } from "@mui/material";
-import Image from "next/image";
 import ProfileCard from "../components/profileCard";
 import Statement from "../components/statement";
 
