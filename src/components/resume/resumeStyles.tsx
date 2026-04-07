@@ -31,9 +31,23 @@ export const resumeStyles = StyleSheet.create({
     flexDirection: "column",
   },
   sectionTitle: {
+    fontSize: 14,
     fontWeight: 700,
     textDecoration: "underline",
     textAlign: "center",
+  },
+  bulletList: {
+    flexDirection: "column",
+    paddingLeft: 8,
+  },
+  bulletHeader: {
+    fontWeight: 700,
+    textDecoration: "underline",
+  },
+  bulletItem: {
+    marginBottom: 4,
+    marginLeft: 8,
+    marginRight: 8,
   },
   boldText: {
     fontWeight: 700,

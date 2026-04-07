@@ -22,31 +22,53 @@ export default function ResumePDF() {
           <Text style={resumeStyles.sectionTitle}>
             Work - General Motors (2020 - 2026)
           </Text>
-          <Text>Android dev lead for Jetpack Compose Kotlin and Java app</Text>
-          <Text>
-            Collaborated with a team of developers, QA and UAT testers, product
-            owners, and UI/UX to design, size, and develop new features
-          </Text>
-          <Text>
-            Maintained existing codebase by troubleshooting production
-            incidents, addressing tech debt, and fixing security vulnerabilities
-          </Text>
-          <Text>
-            App allows internal users to submit forms, use the native device
-            camera to scan VINs, take photos of vehicles, and receive push
-            notifications about their submissions
-          </Text>
-          <Text>
-            Frontend React developer for Nextjs rewrite of legacy application
-          </Text>
-          <Text>
-            Implemented screens in a ground-up rewrite using a microfrontend
-            architecture
-          </Text>
-          <Text>
-            Application allows internal users to create and modify projects for
-            returning parts and to view tabulated summaries of existing projects
-          </Text>
+          <View style={resumeStyles.bulletList}>
+            <Text style={resumeStyles.bulletHeader}>Android</Text>
+            <Text style={resumeStyles.bulletItem}>
+              • Dev lead for Jetpack Compose Kotlin and Java app with 17,000
+              monthly users
+            </Text>
+            <Text style={resumeStyles.bulletItem}>
+              • App allows internal users to submit forms, use the native device
+              camera to scan VINs, take photos of vehicles, and receive push
+              notifications about their submissions
+            </Text>
+            <Text style={resumeStyles.bulletItem}>
+              • Collaborated with a team of developers, QA and UAT testers,
+              product owners, and UI/UX to design, size, and develop new
+              features
+            </Text>
+            <Text style={resumeStyles.bulletItem}>
+              • Managed production incidents and communicated with end users to
+              resolve individual issues
+            </Text>
+            <Text style={resumeStyles.bulletItem}>
+              • Implemented Microsoft Authentication to comply with new security
+              requirements
+            </Text>
+            <Text style={resumeStyles.bulletItem}>
+              • Implemented Adobe Analytics reporting suite and sent out monthly
+              analytics reports to leadership
+            </Text>
+            <Text style={resumeStyles.bulletHeader}>React</Text>
+            <Text style={resumeStyles.bulletItem}>
+              • Frontend developer for Nextjs microfrontend rewrite of legacy
+              application
+            </Text>
+            <Text style={resumeStyles.bulletItem}>
+              • Application allows internal users to create and modify projects
+              for returning parts and to view tabulated summaries of existing
+              projects
+            </Text>
+            <Text style={resumeStyles.bulletItem}>
+              • Created reusable React components as well as screens based on
+              Figma mockups
+            </Text>
+            <Text style={resumeStyles.bulletItem}>
+              • Implemented mock Redux RTK Query API for future integration
+              stories
+            </Text>
+          </View>
         </View>
         <View style={resumeStyles.section}>
           <Text style={resumeStyles.sectionTitle}>
