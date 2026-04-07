@@ -31,7 +31,7 @@ export default function AndroidWork() {
     <div className="flex flex-col gap-5 sm:flex-row sm:flex-wrap">
       <ExpandableSection title="About">
         <Typography>
-          Android developer for Jetpack Compose Kotlin and Java app with __
+          Android developer for Jetpack Compose Kotlin and Java app with 17,000
           monthly users deployed in the United States, Canada, Mexico,
           Australia, New Zealand, and Egypt.
         </Typography>
