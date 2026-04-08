@@ -16,6 +16,14 @@ export const resumeStyles = StyleSheet.create({
     fontFamily: "titleFont",
     fontSize: 12,
   },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    borderBottom: 2,
+    borderBottomColor: "black",
+    borderBottomWidth: 1,
+    marginBottom: 4,
+  },
   name: {
     fontSize: 32,
     fontWeight: 700,
@@ -23,12 +31,25 @@ export const resumeStyles = StyleSheet.create({
     textAlign: "center",
     flex: 1,
   },
+  infoColumnStart: {
+    flexDirection: "column",
+    alignItems: "flex-start",
+    justifyContent: "center",
+  },
   infoColumn: {
     flexDirection: "column",
     alignItems: "flex-end",
+    justifyContent: "center",
+  },
+  infoItem: {
+    fontSize: 10,
   },
   section: {
     flexDirection: "column",
+    borderBottom: 2,
+    borderBottomColor: "black",
+    borderBottomWidth: 1,
+    marginBottom: 4,
   },
   sectionTitle: {
     fontSize: 14,

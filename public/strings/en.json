@@ -1,8 +1,24 @@
 {
+  "android": "Android",
+  "android_role": "• Dev lead for Jetpack Compose Kotlin and Java app with 17,000 monthly users",
+  "android_about": "• App allows internal users to submit forms, use the native device camera to scan VINs, take photos of vehicles, and receive push notifications about their submissions",
+  "android_work_collab": "• Collaborated with a team of developers, QA and UAT testers, product owners, and UI/UX to design, size, and develop new features",
+  "android_incidents": "• Managed production incidents and communicated with end users to resolve individual issues",
+  "android_msauth": "• Implemented Microsoft Authentication to comply with new security requirements",
+  "android_analytics": "• Implemented Adobe Analytics reporting suite and sent out monthly analytics reports to leadership",
+  "react": "React",
+  "react_role": "• Frontend developer for Nextjs microfrontend rewrite of legacy application",
+  "react_about": "• Application allows internal users to create and modify projects for returning parts and to view tabulated summaries of existing projects",
+  "react_work_screens": " • Created reusable React components as well as screens based on Figma mockups",
+  "react_work_api": "• Implemented mock Redux RTK Query API for future integration stories",
   "name": "Ilya Belegradek",
   "home": "Home",
   "skills": "Skills",
   "work": "Work",
   "theme": "Theme",
-  "about-me": "Hello! I'm a software developer with {numYears} years experience developing Android and React applications. I enjoy the process of iterating on projects and watching them grow before my eyes. In my spare time, I like to play video games, play and watch soccer, and watch TV. Feel free to reach out if you'd like to get in touch!"
+  "about-me": "Hello! I'm a software developer with {numYears} years experience developing Android and React applications. I enjoy the process of iterating on projects and watching them grow before my eyes. In my spare time, I like to play video games, play and watch soccer, and watch TV. Feel free to reach out if you'd like to get in touch!",
+  "resume_work_title": "Work - General Motors (2020 - 2026)",
+  "title_about": "About",
+  "title_responsibilities": "Responsibilities",
+  "title_tech_stack": "Tech Stack"
 }

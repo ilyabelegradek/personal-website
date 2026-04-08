@@ -3,3 +3,8 @@ export type NavigationItem = {
   ref: string;
   icon: React.ReactNode;
 };
+
+export type ResumeBulletedList = {
+  headerStringKey: string;
+  itemsStringKeys: string[];
+};
