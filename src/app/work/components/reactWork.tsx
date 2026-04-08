@@ -1,23 +1,21 @@
 import WorkComponent from "./workComponent";
 
-const aboutList = [
-  "React developer for NextJS Typescript rewrite of 20+ year old legacy__ application",
-];
+const aboutList = ["react_role"];
 
 const responsibilitesList = [
-  "Reviewed legacy application with UI/UX, business, and other developers",
-  "Implemented screens based on Figma mockups and existing functionality",
-  "Setup placeholder requests and responses with mock data for eventual integration stories",
+  "react_work_collab",
+  "react_work_screens",
+  "react_work_api",
 ];
 
 const techStackList = [
-  "IDE: Visual Studio Code",
-  "Styling: Tailwind",
-  "Design Library: MUI",
-  "State Management: Mobx",
-  "Rest API: React Redux ??",
-  "Forms: Formik",
-  "Validation: Yup",
+  "react_tech_ide",
+  "react_tech_styling",
+  "react_tech_design",
+  "react_tech_state",
+  "react_tech_api",
+  "react_tech_forms",
+  "react_tech_validation",
 ];
 
 export default function ReactWork() {

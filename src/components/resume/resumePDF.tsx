@@ -2,7 +2,12 @@ import { Document, Page, Text, View } from "@react-pdf/renderer";
 import { resumeStyles } from "./resumeStyles";
 import { useTranslations } from "next-intl";
 import { ResumeBulletedList } from "@/src/types/types";
-import { androidWork, infoAddress, infoItems, reactWork } from "./constants";
+import {
+  androidWork,
+  infoAddress,
+  infoItems,
+  reactWork,
+} from "@/src/constants/constants";
 
 export default function ResumePDF(props: {
   t: ReturnType<typeof useTranslations>;
@@ -37,16 +42,16 @@ export default function ResumePDF(props: {
           <BulletedList t={t} list={reactWork} />
         </View>
         <View style={resumeStyles.section}>
-          <Text style={resumeStyles.sectionTitle}>
-            Education - University of Georgia (2016 - 2020)
-          </Text>
-        </View>
-        <View style={resumeStyles.section}>
           <Text style={resumeStyles.sectionTitle}>Skills</Text>
           <View style={resumeStyles.row}>
             <Text style={resumeStyles.boldText}>Programming Languages:</Text>
             <Text>Kotlin, Java, Typescript, HTML, CSS</Text>
           </View>
+        </View>
+        <View style={resumeStyles.section}>
+          <Text style={resumeStyles.sectionTitle}>
+            Education - University of Georgia (2016 - 2020)
+          </Text>
         </View>
       </Page>
     </Document>

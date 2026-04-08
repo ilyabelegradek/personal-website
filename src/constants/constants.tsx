@@ -33,3 +33,12 @@ export const reactWork: ResumeBulletedList = {
     "react_work_api",
   ],
 };
+
+export const schoolworkList = [
+  "education_major",
+  "education_minor",
+  "education_cert_new_media",
+  "education_cert_data_science",
+  "education_gpa",
+  "education_honors",
+];
