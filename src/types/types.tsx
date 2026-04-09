@@ -5,6 +5,6 @@ export type NavigationItem = {
 };
 
 export type ResumeBulletedList = {
-  headerStringKey: string;
+  headerStringKey?: string;
   itemsStringKeys: string[];
 };

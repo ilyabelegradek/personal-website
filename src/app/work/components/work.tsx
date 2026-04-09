@@ -4,7 +4,7 @@ import { styled, Tab, Tabs, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import AndroidWork from "./androidWork";
 import ReactWork from "./reactWork";
-import SchoolWork from "./schoolWork";
+import EducationWork from "./educationWork";
 import KidChessWork from "./kidChessWork";
 
 const tabList = ["Android", "React"];
@@ -40,7 +40,7 @@ export default function Work() {
       <Typography variant="titleFont" className="text-3xl font-bold underline">
         {`University of Georgia (2016 - 2020)`}
       </Typography>
-      <SchoolWork />
+      <EducationWork />
       <Typography variant="titleFont" className="text-3xl font-bold underline">
         {`Kid Chess (2013 - 2019)`}
       </Typography>

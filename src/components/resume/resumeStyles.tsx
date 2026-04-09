@@ -23,6 +23,7 @@ export const resumeStyles = StyleSheet.create({
     borderBottomColor: "black",
     borderBottomWidth: 1,
     marginBottom: 4,
+    paddingBottom: 2,
   },
   name: {
     fontSize: 32,
@@ -50,12 +51,17 @@ export const resumeStyles = StyleSheet.create({
     borderBottomColor: "black",
     borderBottomWidth: 1,
     marginBottom: 4,
+    paddingTop: 4,
   },
   sectionTitle: {
     fontSize: 14,
     fontWeight: 700,
     textDecoration: "underline",
     textAlign: "center",
+  },
+  bottomSection: {
+    flexDirection: "column",
+    marginBottom: 4,
   },
   bulletList: {
     flexDirection: "column",
@@ -70,15 +76,33 @@ export const resumeStyles = StyleSheet.create({
     marginLeft: 8,
     marginRight: 8,
   },
+  bulletItemDense: {
+    marginLeft: 8,
+    marginRight: 8,
+  },
   boldText: {
     fontWeight: 700,
   },
   row: {
     flexDirection: "row",
   },
+  skillsRow: {
+    flexDirection: "row",
+    marginTop: 4,
+    gap: 8,
+  },
   workSection: {
     flexDirection: "column",
     flex: 1,
     alignItems: "flex-start",
   },
+  educationSection: {
+    flex: 1,
+    paddingTop: 4,
+    borderRight: 1,
+    borderRightWidth: 1,
+    borderRightColor: "black",
+    paddingRight: 4,
+  },
+  projectSection: { flex: 1, paddingTop: 4, paddingLeft: 4 },
 });

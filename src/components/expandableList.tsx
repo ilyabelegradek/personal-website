@@ -7,7 +7,7 @@ export default function ExpandableList(props: { listItems: string[] }) {
     <div className="flex flex-col">
       {listItems.map((listItem) => (
         <Typography variant="bodyFont" key={listItem}>
-          {listItem}
+          {`• ${listItem}`}
         </Typography>
       ))}
     </div>

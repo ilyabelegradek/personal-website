@@ -4,10 +4,15 @@ import { useTranslations } from "next-intl";
 import { ResumeBulletedList } from "@/src/types/types";
 import {
   androidWork,
+  education,
+  frameworks,
   infoAddress,
   infoItems,
+  misc,
+  personalProject,
+  programmingLanguages,
   reactWork,
-} from "@/src/constants/constants";
+} from "@/src/constants/resumeConstants";
 
 export default function ResumePDF(props: {
   t: ReturnType<typeof useTranslations>;
@@ -43,15 +48,27 @@ export default function ResumePDF(props: {
         </View>
         <View style={resumeStyles.section}>
           <Text style={resumeStyles.sectionTitle}>Skills</Text>
-          <View style={resumeStyles.row}>
-            <Text style={resumeStyles.boldText}>Programming Languages:</Text>
-            <Text>Kotlin, Java, Typescript, HTML, CSS</Text>
+          <View style={resumeStyles.skillsRow}>
+            <BulletedList t={t} list={programmingLanguages} dense />
+            <BulletedList t={t} list={frameworks} dense />
+            <BulletedList t={t} list={misc} dense />
           </View>
         </View>
-        <View style={resumeStyles.section}>
-          <Text style={resumeStyles.sectionTitle}>
-            Education - University of Georgia (2016 - 2020)
-          </Text>
+        <View style={resumeStyles.bottomSection}>
+          <View style={resumeStyles.row}>
+            <View style={resumeStyles.educationSection}>
+              <Text style={resumeStyles.sectionTitle}>
+                {t("education_title")}
+              </Text>
+              <BulletedList t={t} list={education} />
+            </View>
+            <View style={resumeStyles.projectSection}>
+              <Text style={resumeStyles.sectionTitle}>
+                {t("personal_project")}
+              </Text>
+              <BulletedList t={t} list={personalProject} />
+            </View>
+          </View>
         </View>
       </Page>
     </Document>
@@ -61,15 +78,21 @@ export default function ResumePDF(props: {
 function BulletedList(props: {
   t: ReturnType<typeof useTranslations>;
   list: ResumeBulletedList;
+  dense?: boolean;
 }) {
-  const { t, list } = props;
+  const { t, list, dense } = props;
 
   return (
     <View style={resumeStyles.bulletList}>
-      <Text style={resumeStyles.bulletHeader}>{t(list.headerStringKey)}</Text>
+      {list.headerStringKey && (
+        <Text style={resumeStyles.bulletHeader}>{t(list.headerStringKey)}</Text>
+      )}
       {list.itemsStringKeys.map((stringKey) => (
-        <Text style={resumeStyles.bulletItem} key={stringKey}>
-          {t(stringKey)}
+        <Text
+          style={dense ? resumeStyles.bulletItemDense : resumeStyles.bulletItem}
+          key={stringKey}
+        >
+          {`• ${t(stringKey)}`}
         </Text>
       ))}
     </View>
