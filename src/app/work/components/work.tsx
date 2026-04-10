@@ -6,6 +6,7 @@ import AndroidWork from "./androidWork";
 import ReactWork from "./reactWork";
 import EducationWork from "./educationWork";
 import KidChessWork from "./kidChessWork";
+import { useTranslations } from "next-intl";
 
 const tabList = ["Android", "React"];
 
@@ -16,6 +17,7 @@ const StyledTab = styled(Tab)(({ theme }) => ({
 }));
 
 export default function Work() {
+  const t = useTranslations();
   const [projectsTabValue, setProjectsTabValue] = useState(0);
   const [mounted, setMounted] = useState(false);
 
@@ -38,11 +40,11 @@ export default function Work() {
       {projectsTabValue === 0 && <AndroidWork />}
       {projectsTabValue === 1 && <ReactWork />}
       <Typography variant="titleFont" className="text-3xl font-bold underline">
-        {`University of Georgia (2016 - 2020)`}
+        {t("education_uga")}
       </Typography>
       <EducationWork />
       <Typography variant="titleFont" className="text-3xl font-bold underline">
-        {`Kid Chess (2013 - 2019)`}
+        {t("chess_title")}
       </Typography>
       <KidChessWork />
     </div>

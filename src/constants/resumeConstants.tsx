@@ -51,14 +51,14 @@ export const programmingLanguages: ResumeBulletedList = {
     "javascript",
     "html",
     "css",
-    "react_native",
+    "swift",
   ],
 };
 
 export const frameworks: ResumeBulletedList = {
   headerStringKey: "frameworks",
   itemsStringKeys: [
-    "react",
+    "react_react_native",
     "jetpack_compose",
     "nodejs",
     "expressjs",
@@ -76,6 +76,18 @@ export const misc: ResumeBulletedList = {
     "akamai",
     "github_actions",
     "misc_languages",
+  ],
+};
+
+export const miscContinued: ResumeBulletedList = {
+  itemsStringKeys: [
+    "firebase",
+    "microsoft_office",
+    "postman_insomnia",
+    "android_studio",
+    "visual_studio",
+    "shell_scripts",
+    "ai",
   ],
 };
 

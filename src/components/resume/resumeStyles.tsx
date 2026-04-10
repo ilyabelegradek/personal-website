@@ -31,11 +31,14 @@ export const resumeStyles = StyleSheet.create({
     fontFamily: "titleFont",
     textAlign: "center",
     flex: 1,
+    paddingTop: 8,
+    paddingLeft: 20,
   },
   infoColumnStart: {
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "center",
+    paddingRight: 4,
   },
   infoColumn: {
     flexDirection: "column",
@@ -44,6 +47,10 @@ export const resumeStyles = StyleSheet.create({
   },
   infoItem: {
     fontSize: 10,
+  },
+  iconRow: {
+    flexDirection: "row",
+    gap: 4,
   },
   section: {
     flexDirection: "column",
@@ -58,6 +65,13 @@ export const resumeStyles = StyleSheet.create({
     fontWeight: 700,
     textDecoration: "underline",
     textAlign: "center",
+  },
+  sectionTitlePaddingBottom: {
+    fontSize: 14,
+    fontWeight: 700,
+    textDecoration: "underline",
+    textAlign: "center",
+    paddingBottom: 2,
   },
   bottomSection: {
     flexDirection: "column",
@@ -85,6 +99,9 @@ export const resumeStyles = StyleSheet.create({
   },
   row: {
     flexDirection: "row",
+  },
+  column: {
+    flexDirection: "column",
   },
   skillsRow: {
     flexDirection: "row",

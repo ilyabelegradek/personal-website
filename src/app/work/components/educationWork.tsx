@@ -7,7 +7,7 @@ export default function EducationWork() {
   const t = useTranslations();
 
   return (
-    <ExpandableSection title="Bachelor's Degree">
+    <ExpandableSection title={t("education_degree")}>
       <ExpandableList
         listItems={educationList.map((stringKey) => t(stringKey))}
       />

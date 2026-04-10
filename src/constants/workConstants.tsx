@@ -47,3 +47,5 @@ export const educationList = [
   "education_gpa",
   "education_honors",
 ];
+
+export const chessList = ["chess_collab", "chess_odds"];

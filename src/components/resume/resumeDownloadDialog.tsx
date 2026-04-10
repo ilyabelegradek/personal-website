@@ -30,11 +30,11 @@ export default function ResumeDownloadDialog(props: {
   return (
     <Dialog open={dialogOpen} onClose={() => setDialogOpen(false)}>
       <DialogContent>
-        <Typography variant="titleFont">Download PDF of resume?</Typography>
+        <Typography variant="titleFont">{t("resume_download_pdf")}</Typography>
       </DialogContent>
       <DialogActions>
-        <Button onClick={() => setDialogOpen(false)}>Cancel</Button>
-        <Button onClick={saveResumeToPdf}>Download</Button>
+        <Button onClick={() => setDialogOpen(false)}>{t("cancel")}</Button>
+        <Button onClick={saveResumeToPdf}>{t("download")}</Button>
       </DialogActions>
     </Dialog>
   );

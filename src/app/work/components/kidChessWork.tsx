@@ -1,13 +1,13 @@
 import ExpandableList from "@/src/components/expandableList";
 import ExpandableSection from "@/src/components/expandableSection";
+import { chessList } from "@/src/constants/workConstants";
+import { useTranslations } from "next-intl";
 
 export default function KidChessWork() {
-  const chessList = [
-    "Collaborated with team of coaches to teach kids how to play chess",
-  ];
+  const t = useTranslations();
 
   return (
-    <ExpandableSection title="Summer Job">
+    <ExpandableSection title={t("chess_summer")}>
       <ExpandableList listItems={chessList} />
     </ExpandableSection>
   );
