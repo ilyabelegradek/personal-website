@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  Card,
-  DialogContent,
-  DialogTitle,
-  Icon,
-  Typography,
-} from "@mui/material";
+import { Card, Icon, Typography } from "@mui/material";
 import { useState } from "react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";

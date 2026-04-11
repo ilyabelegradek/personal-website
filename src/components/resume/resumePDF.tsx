@@ -1,4 +1,4 @@
-import { Document, G, Page, Path, Svg, Text, View } from "@react-pdf/renderer";
+import { Document, Page, Text, View } from "@react-pdf/renderer";
 import { resumeStyles } from "./resumeStyles";
 import { useTranslations } from "next-intl";
 import { ResumeBulletedList } from "@/src/types/types";

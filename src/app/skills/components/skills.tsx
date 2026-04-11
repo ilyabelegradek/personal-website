@@ -1,6 +1,5 @@
 import ExpandableList from "@/src/components/expandableList";
 import ExpandableSection from "@/src/components/expandableSection";
-import { Typography } from "@mui/material";
 
 export default function Skills() {
   const programmingLanguages = [
