@@ -52,6 +52,12 @@ export const resumeStyles = StyleSheet.create({
     flexDirection: "row",
     gap: 4,
   },
+  iconRowCentered: {
+    flexDirection: "row",
+    gap: 4,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   section: {
     flexDirection: "column",
     borderBottom: 2,

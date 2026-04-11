@@ -5,13 +5,6 @@ export const infoAddress = [
   process.env.NEXT_PUBLIC_CITY,
 ];
 
-export const infoItems = [
-  process.env.NEXT_PUBLIC_EMAIL,
-  process.env.NEXT_PUBLIC_PHONE,
-  process.env.NEXT_PUBLIC_WEBSITE,
-  process.env.NEXT_PUBLIC_LINKEDIN_SHORT,
-];
-
 export const androidWork: ResumeBulletedList = {
   headerStringKey: "android",
   itemsStringKeys: [
@@ -93,7 +86,7 @@ export const miscContinued: ResumeBulletedList = {
 
 export const education: ResumeBulletedList = {
   itemsStringKeys: [
-    "education_uga",
+    "education_uga_short",
     "education_major",
     "education_minor",
     "education_certificates",
@@ -110,7 +103,3 @@ export const personalProject: ResumeBulletedList = {
     "personal_project_translations",
   ],
 };
-
-/*
-supporting multiple regions
-*/
