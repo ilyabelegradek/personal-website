@@ -8,7 +8,7 @@ export default function KidChessWork() {
 
   return (
     <ExpandableSection title={t("chess_summer")}>
-      <ExpandableList listItems={chessList} />
+      <ExpandableList listItems={chessList.map((stringKey) => t(stringKey))} />
     </ExpandableSection>
   );
 }

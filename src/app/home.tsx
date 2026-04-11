@@ -1,4 +1,4 @@
-import ProfileCard from "../components/profileCard";
+import ProfileCard from "../components/profileCard/profileCard";
 import Resume from "../components/resume/resume";
 import Statement from "../components/statement";
 

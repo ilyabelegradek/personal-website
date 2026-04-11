@@ -29,7 +29,7 @@ const StyledSwitch = styled(Switch)(({}) => ({
     },
   },
   "& .MuiSwitch-thumb": {
-    backgroundColor: "#F25C54",
+    backgroundColor: "#7B4A1F",
     width: 48,
     height: 48,
     "&::before": {
@@ -48,7 +48,7 @@ const StyledSwitch = styled(Switch)(({}) => ({
   },
   "& .MuiSwitch-track": {
     opacity: 1,
-    backgroundColor: "#F79D65",
+    backgroundColor: "#D97B4A",
     borderRadius: 15,
   },
 }));

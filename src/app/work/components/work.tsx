@@ -1,7 +1,7 @@
 "use client";
 
-import { styled, Tab, Tabs, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
+import { Tab, Tabs, Typography } from "@mui/material";
+import { useState } from "react";
 import AndroidWork from "./androidWork";
 import ReactWork from "./reactWork";
 import EducationWork from "./educationWork";
@@ -10,21 +10,9 @@ import { useTranslations } from "next-intl";
 
 const tabList = ["Android", "React"];
 
-const StyledTab = styled(Tab)(({ theme }) => ({
-  "&.Mui-selected": {
-    color: theme.customColors.tabColor,
-  },
-}));
-
 export default function Work() {
   const t = useTranslations();
   const [projectsTabValue, setProjectsTabValue] = useState(0);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setProjectsTabValue(newValue);
   };
@@ -35,7 +23,9 @@ export default function Work() {
         {`General Motors (2020 - 2026)`}
       </Typography>
       <Tabs value={projectsTabValue} onChange={handleChange}>
-        {mounted && tabList.map((tab) => <StyledTab label={tab} key={tab} />)}
+        {tabList.map((tab) => (
+          <Tab label={tab} key={tab} />
+        ))}
       </Tabs>
       {projectsTabValue === 0 && <AndroidWork />}
       {projectsTabValue === 1 && <ReactWork />}

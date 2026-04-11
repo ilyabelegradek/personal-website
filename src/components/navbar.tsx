@@ -7,7 +7,6 @@ import {
   IconButton,
   Typography,
   Button,
-  styled,
 } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
@@ -16,8 +15,8 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import { NavigationItem } from "@/src/types/types";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
-import SettingsDrawer from "./settingsDrawer";
+import { useState } from "react";
+import SettingsDrawer from "./settings/settingsDrawer";
 import { usePathname } from "next/navigation";
 
 const navigationItems: NavigationItem[] = [
@@ -34,42 +33,30 @@ const navigationItems: NavigationItem[] = [
   },
 ];
 
-const NavHeaderButton = styled(Button)(({ theme }) => ({
-  "& .MuiButton-endIcon svg": {
-    color: theme.customColors.navBarHeader,
-  },
-}));
-
 export default function NavBar() {
   const t = useTranslations();
   const [settingsDrawerOpen, setSettingsDrawerOpen] = useState(false);
   const pathname = usePathname();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <Box sx={{ width: "100%" }}>
       <AppBar position="static" className="text-center">
         <Toolbar>
-          {mounted &&
-            navigationItems.map((navItem) => {
-              return (
-                <Link
-                  href={navItem.ref}
-                  key={navItem.ref}
-                  className={`mx-2.5 pt-0.5 ${pathname === navItem.ref ? "border-b" : ""}`}
-                >
-                  <NavHeaderButton endIcon={navItem.icon} color="secondary">
-                    <Typography variant="titleFont" color={"#FFFFFF"}>
-                      {t(navItem.stringKey)}
-                    </Typography>
-                  </NavHeaderButton>
-                </Link>
-              );
-            })}
+          {navigationItems.map((navItem) => {
+            return (
+              <Link
+                href={navItem.ref}
+                key={navItem.ref}
+                className={`mx-2.5 pt-0.5 ${pathname === navItem.ref ? "border-b" : ""}`}
+              >
+                <Button endIcon={navItem.icon} color="secondary">
+                  <Typography variant="titleFont" color={"#FFFFFF"}>
+                    {t(navItem.stringKey)}
+                  </Typography>
+                </Button>
+              </Link>
+            );
+          })}
           <div className="flex-1" />
           <IconButton
             size="large"
