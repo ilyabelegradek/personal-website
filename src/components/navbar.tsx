@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { NavigationItem } from "@/src/types/types";
 import Link from "next/link";
@@ -21,11 +20,6 @@ import { usePathname } from "next/navigation";
 
 const navigationItems: NavigationItem[] = [
   { stringKey: "home", ref: "/", icon: <HomeIcon /> },
-  {
-    stringKey: "skills",
-    ref: "/skills",
-    icon: <MenuBookIcon />,
-  },
   {
     stringKey: "work",
     ref: "/work",
