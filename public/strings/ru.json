@@ -102,5 +102,8 @@
   "android_studio": "Android Studio",
   "visual_studio": "Visual Studio Code",
   "shell_scripts": "Скрипты Оболочки",
-  "ai": "Github Copilot / чат в IDE"
+  "ai": "Github Copilot / чат в IDE",
+  "language": "Язык",
+  "english": "Английский",
+  "russian": "Русский"
 }

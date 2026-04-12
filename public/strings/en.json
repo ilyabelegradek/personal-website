@@ -102,5 +102,8 @@
   "android_studio": "Android Studio",
   "visual_studio": "Visual Studio Code",
   "shell_scripts": "Shell Scripts",
-  "ai": "Github Copilot / IDE Chat"
+  "ai": "Github Copilot / IDE Chat",
+  "language": "Language",
+  "english": "English",
+  "russian": "Russian"
 }

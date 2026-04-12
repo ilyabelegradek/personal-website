@@ -7,6 +7,7 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import DarkModeSwitch from "./darkModeSwitch";
+import LanguageSwitch from "./languageSwitch";
 
 export default function SettingsDrawer(props: {
   settingsDrawerOpen: boolean;
@@ -30,6 +31,7 @@ export default function SettingsDrawer(props: {
       </DialogTitle>
       <DialogContent dividers>
         <DarkModeSwitch />
+        <LanguageSwitch />
       </DialogContent>
     </Drawer>
   );
