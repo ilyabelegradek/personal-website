@@ -22,7 +22,7 @@ import {
   IconResumeSkills,
   IconResumeEducation,
   IconResumePersonal,
-} from "./resumeIcons";
+} from "./resumeIconsPDF";
 
 export default function ResumePDF(props: {
   t: ReturnType<typeof useTranslations>;

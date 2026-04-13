@@ -107,5 +107,6 @@
   "english": "English",
   "russian": "Russian",
   "settings": "Settings",
-  "resume": "Resume"
+  "resume": "Resume",
+  "resume_local": "View Local Copy"
 }

@@ -48,7 +48,7 @@ export default function ResumeDownloadDialog(props: {
             {t("download")}
           </Button>
           <Button onClick={viewLocalCopy} variant="outlined" className="w-full">
-            {"View Local Copy"}
+            {t("resume_local")}
           </Button>
           <Button
             onClick={() => setDialogOpen(false)}

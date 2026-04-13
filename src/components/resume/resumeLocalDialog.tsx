@@ -17,7 +17,12 @@ export default function ResumeLocalDialog(props: {
   const { dialogOpen, setDialogOpen } = props;
 
   return (
-    <Dialog open={dialogOpen} onClose={() => setDialogOpen(false)}>
+    <Dialog
+      open={dialogOpen}
+      onClose={() => setDialogOpen(false)}
+      fullWidth
+      maxWidth="lg"
+    >
       <DialogTitle>
         <div className="flex items-center w-full justify-between">
           <Typography variant="titleFont">{t("resume")}</Typography>

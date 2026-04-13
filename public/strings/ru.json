@@ -86,7 +86,7 @@
   "personal_project_about": "Создал личный веб-сайт изпользуя Next.js",
   "personal_project_theme": "Темный и светлый режим MUI, сохраненные с помощью next-themes",
   "personal_project_resume": "Резюме для скачивания, реализованное с помощью \n@react/pdf-renderer",
-  "personal_project_translations": "Переводы, реализованные с помощью next-intl",
+  "personal_project_translations": "Переводы реализованные с помощью next-intl",
   "chess_summer": "Летняя работа",
   "chess_title": "Kid Chess (2013 - 2019)",
   "chess_collab": "Сотрудничал с командой тренеров, обучая детей игре в шахматы",
@@ -107,5 +107,6 @@
   "english": "Английский",
   "russian": "Русский",
   "settings": "Настройки",
-  "resume": "Резюме"
+  "resume": "Резюме",
+  "resume_local": "Локальная копия"
 }
