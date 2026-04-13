@@ -7,12 +7,14 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import DarkModeSwitch from "./darkModeSwitch";
-import LanguageSwitch from "./languageSwitch";
+import LanguageSelect from "./languageSelect";
+import { useTranslations } from "next-intl";
 
 export default function SettingsDrawer(props: {
   settingsDrawerOpen: boolean;
   setSettingsDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
+  const t = useTranslations();
   const { settingsDrawerOpen, setSettingsDrawerOpen } = props;
 
   return (
@@ -23,15 +25,17 @@ export default function SettingsDrawer(props: {
     >
       <DialogTitle variant="h5">
         <div className="flex items-center w-full justify-between">
-          <Typography variant="titleFont">Settings</Typography>
+          <Typography variant="titleFont">{t("settings")}</Typography>
           <IconButton onClick={() => setSettingsDrawerOpen(false)}>
             <CloseIcon />
           </IconButton>
         </div>
       </DialogTitle>
       <DialogContent dividers>
-        <DarkModeSwitch />
-        <LanguageSwitch />
+        <div className="flex flex-col gap-5 sm:min-w-60">
+          <DarkModeSwitch />
+          <LanguageSelect />
+        </div>
       </DialogContent>
     </Drawer>
   );

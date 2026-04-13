@@ -105,5 +105,6 @@
   "ai": "Github Copilot / IDE Chat",
   "language": "Language",
   "english": "English",
-  "russian": "Russian"
+  "russian": "Russian",
+  "settings": "Settings"
 }

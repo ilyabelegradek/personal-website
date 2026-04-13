@@ -8,3 +8,8 @@ export type ResumeBulletedList = {
   headerStringKey?: string;
   itemsStringKeys: string[];
 };
+
+export type CustomLocale = {
+  value: string;
+  displayName: string;
+};

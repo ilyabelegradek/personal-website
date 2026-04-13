@@ -55,7 +55,7 @@
   "home": "Главная",
   "skills": "Навыки",
   "work": "Работа",
-  "theme": "Theme",
+  "theme": "Режим",
   "about-me": "Здравствуйте! Я программист с {numYears}-летним опытом разработки приложений для Android и React. Мне нравится процесс итерации проектов и наблюдать как они растут на глазах. В свободное время я люблю играть в видеоигры, играть и смотреть футбол, и смотреть телевизор. Не стесняйтесь обращаться, если хотите связаться со мной!",
   "resume_work_title": "Работа - General Motors (2020 - 2026)",
   "title_about": "О Себе",
@@ -84,7 +84,7 @@
   "misc_languages": "Носитель английского \nи русского языков",
   "personal_project": "Личный проект — веб-сайт",
   "personal_project_about": "Создал личный веб-сайт изпользуя Next.js",
-  "personal_project_theme": "Темная и светлая темы MUI, сохраненные с помощью next-themes",
+  "personal_project_theme": "Темный и светлый режим MUI, сохраненные с помощью next-themes",
   "personal_project_resume": "Резюме для скачивания, реализованное с помощью \n@react/pdf-renderer",
   "personal_project_translations": "Переводы, реализованные с помощью next-intl",
   "chess_summer": "Летняя работа",
@@ -105,5 +105,6 @@
   "ai": "Github Copilot / чат в IDE",
   "language": "Язык",
   "english": "Английский",
-  "russian": "Русский"
+  "russian": "Русский",
+  "settings": "Настройки"
 }
