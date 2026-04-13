@@ -39,21 +39,28 @@ export default function ResumeDownloadDialog(props: {
         <Typography variant="titleFont">{t("resume_download_pdf")}</Typography>
       </DialogContent>
       <DialogActions>
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full gap-2">
           <Button
             onClick={saveResumeToPdf}
             variant="outlined"
             className="w-full"
+            size="large"
           >
             {t("download")}
           </Button>
-          <Button onClick={viewLocalCopy} variant="outlined" className="w-full">
+          <Button
+            onClick={viewLocalCopy}
+            variant="outlined"
+            className="w-full"
+            size="large"
+          >
             {t("resume_local")}
           </Button>
           <Button
             onClick={() => setDialogOpen(false)}
             variant="outlined"
             className="w-full"
+            size="large"
           >
             {t("cancel")}
           </Button>

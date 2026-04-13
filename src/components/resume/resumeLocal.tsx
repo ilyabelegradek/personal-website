@@ -27,44 +27,51 @@ export default function ResumeLocal() {
   const t = useTranslations();
 
   return (
-    <div className="flex flex-col p-2 font-serif text-sm">
+    <div className="flex flex-col" style={{ fontSize: "18px" }}>
       <div className="flex justify-between border-b-2 border-black mb-1 pb-1">
         <div className="flex flex-col items-start justify-center pr-1">
           <IconResumeHome />
         </div>
         <div className="flex flex-col items-start justify-center pr-1">
           {infoAddress.map((item) => (
-            <Typography key={item} className="text-xs">
+            <Typography
+              variant="titleFont"
+              key={item}
+              sx={{ fontSize: "14px" }}
+            >
               {item}
             </Typography>
           ))}
         </div>
         <Typography
-          className="text-center flex-1 pt-2 pl-5"
-          sx={{ fontSize: "3rem" }}
           variant="titleFont"
+          className="text-center flex-1 pt-2 pl-5"
+          sx={{ fontSize: "40px" }}
         >
           {t("name")}
         </Typography>
-        <div className="flex flex-col items-end justify-center">
+        <div
+          className="flex flex-col items-end justify-center"
+          style={{ fontSize: "14px" }}
+        >
           <div className="flex flex-row gap-1">
-            <Typography className="text-xs">
+            <Typography variant="titleFont">
               {process.env.NEXT_PUBLIC_EMAIL}
             </Typography>
             <IconResumeEmail />
           </div>
           <div className="flex flex-row gap-1">
-            <Typography className="text-xs">
+            <Typography variant="titleFont">
               {process.env.NEXT_PUBLIC_PHONE}
             </Typography>
             <IconResumePhone />
           </div>
           <div className="flex flex-row gap-1 items-center">
             <div className="flex flex-col items-end">
-              <Typography className="text-xs">
+              <Typography variant="titleFont">
                 {process.env.NEXT_PUBLIC_WEBSITE}
               </Typography>
-              <Typography className="text-xs">
+              <Typography variant="titleFont">
                 {process.env.NEXT_PUBLIC_LINKEDIN_SHORT}
               </Typography>
             </div>
@@ -75,7 +82,10 @@ export default function ResumeLocal() {
       <div className="flex flex-col border-b-2 border-black mb-1 pt-1">
         <div className="flex flex-row gap-1 justify-center items-center">
           <IconResumeWork />
-          <Typography className="text-sm font-bold underline text-center">
+          <Typography
+            variant="titleFont"
+            className="font-bold underline text-center"
+          >
             {t("resume_work_title")}
           </Typography>
         </div>
@@ -85,7 +95,10 @@ export default function ResumeLocal() {
       <div className="flex flex-col border-b-2 border-black mb-1 pt-1">
         <div className="flex flex-row gap-1 justify-center items-center">
           <IconResumeSkills />
-          <Typography className="text-sm font-bold underline text-center">
+          <Typography
+            variant="titleFont"
+            className="font-bold underline text-center"
+          >
             {t("skills")}
           </Typography>
         </div>
@@ -101,7 +114,10 @@ export default function ResumeLocal() {
           <div className="flex-1 pt-1 border-r border-black pr-1">
             <div className="flex flex-row gap-1 justify-center items-center">
               <IconResumeEducation />
-              <Typography className="text-sm font-bold underline text-center pb-0.5">
+              <Typography
+                variant="titleFont"
+                className="font-bold underline text-center pb-0.5"
+              >
                 {t("education_title_with_date")}
               </Typography>
             </div>
@@ -110,7 +126,10 @@ export default function ResumeLocal() {
           <div className="flex-1 pt-1 pl-1">
             <div className="flex flex-row gap-1 justify-center items-center">
               <IconResumePersonal />
-              <Typography className="text-sm font-bold underline text-center pb-0.5">
+              <Typography
+                variant="titleFont"
+                className="font-bold underline text-center pb-0.5"
+              >
                 {t("personal_project")}
               </Typography>
             </div>
@@ -132,14 +151,19 @@ function BulletedList(props: {
   return (
     <div className="flex flex-col pl-2">
       {list.headerStringKey && (
-        <Typography className="font-bold underline">
+        <Typography
+          variant="titleFont"
+          className="font-bold underline"
+          style={{ fontSize: "16px" }}
+        >
           {t(list.headerStringKey)}
         </Typography>
       )}
       {list.itemsStringKeys.map((stringKey) => (
         <Typography
+          variant="titleFont"
           key={stringKey}
-          className={`text-xs ${dense ? "" : "mb-1"} ml-2 mr-2`}
+          className={`${dense ? "" : "mb-1"} ml-2 mr-2`}
         >
           {`• ${t(stringKey)}`}
         </Typography>

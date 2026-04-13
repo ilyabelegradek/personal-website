@@ -31,7 +31,7 @@ export default function ResumeLocalDialog(props: {
           </IconButton>
         </div>
       </DialogTitle>
-      <DialogContent>
+      <DialogContent dividers>
         <ResumeLocal />
       </DialogContent>
     </Dialog>
