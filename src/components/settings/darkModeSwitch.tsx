@@ -19,11 +19,12 @@ export default function DarkModeSwitch() {
   }, [theme]);
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-full">
       <FormControlLabel
         control={
           <StyledSwitch checked={darkModeSwitch} onChange={handleChange} />
         }
+        sx={{ marginLeft: 0, marginRight: 0 }}
         label={t("theme")}
       />
     </div>

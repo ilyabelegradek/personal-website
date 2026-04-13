@@ -16,28 +16,36 @@ import {
   Typography,
 } from "@mui/material";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function LanguageSelect() {
   const t = useTranslations();
   const [currentLocale, setCurrentLocale] = useState(DEFAULT_LOCALE);
+  const router = useRouter();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getCurrentLocale() {
       const localeCookie = await getCookie(LOCALE_COOKIE_NAME, DEFAULT_LOCALE);
       setCurrentLocale(localeCookie);
+      setLoading(false);
     }
 
     getCurrentLocale();
   }, []);
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setCurrentLocale(event.target.value);
-    setCookie(LOCALE_COOKIE_NAME, event.target.value);
+  const handleChange = async (event: SelectChangeEvent) => {
+    setLoading(true);
+    const newLocale = event.target.value;
+    setCurrentLocale(newLocale);
+    await setCookie(LOCALE_COOKIE_NAME, newLocale);
+    router.refresh();
+    setLoading(false);
   };
 
   return (
-    <FormControl fullWidth>
+    <FormControl fullWidth disabled={loading}>
       <InputLabel id="locale-label">{t("language")}</InputLabel>
       <Select
         labelId="locale-label"
@@ -47,7 +55,7 @@ export default function LanguageSelect() {
         onChange={handleChange}
       >
         {LOCALES.map((locale) => (
-          <MenuItem value={locale.value}>
+          <MenuItem value={locale.value} key={locale.value}>
             <Typography>{t(locale.displayName)}</Typography>
           </MenuItem>
         ))}
