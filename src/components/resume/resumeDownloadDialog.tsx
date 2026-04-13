@@ -12,9 +12,10 @@ import { useTranslations } from "next-intl";
 export default function ResumeDownloadDialog(props: {
   dialogOpen: boolean;
   setDialogOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setLocalResumeDialogOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const t = useTranslations();
-  const { dialogOpen, setDialogOpen } = props;
+  const { dialogOpen, setDialogOpen, setLocalResumeDialogOpen } = props;
 
   async function saveResumeToPdf() {
     const blob = await pdf(<ResumePDF t={t} />).toBlob();
@@ -27,14 +28,36 @@ export default function ResumeDownloadDialog(props: {
     setDialogOpen(false);
   }
 
+  function viewLocalCopy() {
+    setDialogOpen(false);
+    setLocalResumeDialogOpen(true);
+  }
+
   return (
     <Dialog open={dialogOpen} onClose={() => setDialogOpen(false)}>
       <DialogContent>
         <Typography variant="titleFont">{t("resume_download_pdf")}</Typography>
       </DialogContent>
       <DialogActions>
-        <Button onClick={() => setDialogOpen(false)}>{t("cancel")}</Button>
-        <Button onClick={saveResumeToPdf}>{t("download")}</Button>
+        <div className="flex flex-col w-full">
+          <Button
+            onClick={saveResumeToPdf}
+            variant="outlined"
+            className="w-full"
+          >
+            {t("download")}
+          </Button>
+          <Button onClick={viewLocalCopy} variant="outlined" className="w-full">
+            {"View Local Copy"}
+          </Button>
+          <Button
+            onClick={() => setDialogOpen(false)}
+            variant="outlined"
+            className="w-full"
+          >
+            {t("cancel")}
+          </Button>
+        </div>
       </DialogActions>
     </Dialog>
   );

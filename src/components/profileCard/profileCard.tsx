@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import LinkedInButton from "./linkedInButton";
 import GithubButton from "./githubButton";
+import Resume from "../resume/resume";
 
 export default function ProfileCard() {
   const t = useTranslations();
@@ -30,9 +31,14 @@ export default function ProfileCard() {
           {process.env.NEXT_PUBLIC_PHONE}
         </Typography>
       </CardContent>
-      <CardActions className="justify-between border">
-        <LinkedInButton />
-        <GithubButton />
+      <CardActions className="border">
+        <div className="flex flex-col w-full">
+          <div className="flex justify-between">
+            <LinkedInButton />
+            <Resume />
+            <GithubButton />
+          </div>
+        </div>
       </CardActions>
     </Card>
   );
