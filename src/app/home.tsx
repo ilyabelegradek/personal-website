@@ -1,5 +1,14 @@
-import ProfileCard from "../components/profileCard/profileCard";
-import Statement from "../components/statement";
+"use client";
+
+import dynamic from "next/dynamic";
+
+const ProfileCard = dynamic(
+  () => import("../components/profileCard/profileCard"),
+  { ssr: false },
+);
+const Statement = dynamic(() => import("../components/statement"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
