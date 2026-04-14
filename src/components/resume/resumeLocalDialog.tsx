@@ -22,6 +22,11 @@ export default function ResumeLocalDialog(props: {
       onClose={() => setDialogOpen(false)}
       fullWidth
       maxWidth="lg"
+      sx={{
+        "& .MuiDialog-paper": {
+          maxWidth: { xs: "95vw", sm: "90vw" },
+        },
+      }}
     >
       <DialogTitle>
         <div className="flex items-center w-full justify-between">
@@ -31,7 +36,7 @@ export default function ResumeLocalDialog(props: {
           </IconButton>
         </div>
       </DialogTitle>
-      <DialogContent dividers>
+      <DialogContent dividers sx={{ overflow: "auto" }}>
         <ResumeLocal />
       </DialogContent>
     </Dialog>

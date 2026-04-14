@@ -8,6 +8,7 @@ import {
 import { pdf } from "@react-pdf/renderer";
 import ResumePDF from "./resumePDF";
 import { useTranslations } from "next-intl";
+import DownloadIcon from "@mui/icons-material/Download";
 
 export default function ResumeDownloadDialog(props: {
   dialogOpen: boolean;
@@ -41,6 +42,7 @@ export default function ResumeDownloadDialog(props: {
       <DialogActions>
         <div className="flex flex-col w-full gap-2">
           <Button
+            startIcon={<DownloadIcon />}
             onClick={saveResumeToPdf}
             variant="outlined"
             className="w-full"

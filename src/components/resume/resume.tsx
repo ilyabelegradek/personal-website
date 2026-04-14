@@ -1,7 +1,6 @@
 "use client";
 
-import { Button, Card, Typography } from "@mui/material";
-import DownloadIcon from "@mui/icons-material/Download";
+import { Button, Typography } from "@mui/material";
 import { useState } from "react";
 import ResumeDownloadDialog from "./resumeDownloadDialog";
 import { useTranslations } from "next-intl";
@@ -16,7 +15,6 @@ export default function Resume() {
   return (
     <>
       <Button
-        startIcon={<DownloadIcon />}
         onClick={() => setShowResumeDownloadDialog(true)}
         variant="outlined"
       >

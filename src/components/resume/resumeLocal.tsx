@@ -28,25 +28,27 @@ export default function ResumeLocal() {
 
   return (
     <div className="flex flex-col" style={{ fontSize: "18px" }}>
-      <div className="flex justify-between border-b-2 border-black mb-1 pb-1">
-        <div className="flex flex-col items-start justify-center pr-1">
-          <IconResumeHome />
-        </div>
-        <div className="flex flex-col items-start justify-center pr-1">
-          {infoAddress.map((item) => (
-            <Typography
-              variant="titleFont"
-              key={item}
-              sx={{ fontSize: "14px" }}
-            >
-              {item}
-            </Typography>
-          ))}
+      <div className="flex flex-col md:flex-row md:justify-between border-b-2 border-black mb-1 pb-1 gap-2 md:gap-0">
+        <div className="flex">
+          <div className="flex flex-col items-start justify-center pr-1">
+            <IconResumeHome />
+          </div>
+          <div className="flex flex-col items-start justify-center pr-1">
+            {infoAddress.map((item) => (
+              <Typography
+                variant="titleFont"
+                key={item}
+                sx={{ fontSize: "14px" }}
+              >
+                {item}
+              </Typography>
+            ))}
+          </div>
         </div>
         <Typography
           variant="titleFont"
-          className="text-center flex-1 pt-2 pl-5"
-          sx={{ fontSize: "40px" }}
+          className="text-center flex-1 pt-2 pl-5 text-2xl md:text-5xl content-center"
+          sx={{ fontSize: { xs: "36px", md: "40px" } }}
         >
           {t("name")}
         </Typography>
@@ -102,7 +104,7 @@ export default function ResumeLocal() {
             {t("skills")}
           </Typography>
         </div>
-        <div className="flex flex-row mt-1 gap-2">
+        <div className="flex flex-col md:flex-row mt-1 gap-2">
           <BulletedList t={t} list={programmingLanguages} dense />
           <BulletedList t={t} list={frameworks} dense />
           <BulletedList t={t} list={misc} dense />
@@ -110,8 +112,8 @@ export default function ResumeLocal() {
         </div>
       </div>
       <div className="flex flex-col mb-1">
-        <div className="flex flex-row">
-          <div className="flex-1 pt-1 border-r border-black pr-1">
+        <div className="flex flex-col md:flex-row">
+          <div className="flex-1 pt-1 md:border-r border-black md:pr-1 mb-2 md:mb-0">
             <div className="flex flex-row gap-1 justify-center items-center">
               <IconResumeEducation />
               <Typography
@@ -123,7 +125,7 @@ export default function ResumeLocal() {
             </div>
             <BulletedList t={t} list={education} />
           </div>
-          <div className="flex-1 pt-1 pl-1">
+          <div className="flex-1 pt-1 md:pl-1">
             <div className="flex flex-row gap-1 justify-center items-center">
               <IconResumePersonal />
               <Typography
