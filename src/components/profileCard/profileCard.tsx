@@ -1,9 +1,12 @@
+"use client";
+
 import { Card, CardActions, CardContent, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import LinkedInButton from "./linkedInButton";
 import GithubButton from "./githubButton";
-import Resume from "../resume/resume";
+const Resume = dynamic(() => import("../resume/resume"), { ssr: false });
 
 export default function ProfileCard() {
   const t = useTranslations();
