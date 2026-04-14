@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 };
 
 const gelasio = localFont({
-  src: "../../public/fonts/Gelasio.woff2",
+  src: "../../public/fonts/Gelasio.ttf",
 });
 
 const ibmPlexSans = localFont({
-  src: "../../public/fonts/IBMPlexSans.woff2",
+  src: "../../public/fonts/IBMPlexSans.ttf",
 });
 
 export default function RootLayout({
