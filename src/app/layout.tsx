@@ -7,6 +7,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import localFont from "next/font/local";
 
 const NavBar = dynamic(() => import("../components/navbar"));
 
@@ -14,6 +15,14 @@ export const metadata: Metadata = {
   title: "Ilya Belegradek",
   description: "About Me",
 };
+
+const gelasio = localFont({
+  src: "../../public/fonts/Gelasio.woff2",
+});
+
+const ibmPlexSans = localFont({
+  src: "../../public/fonts/IBMPlexSans.woff2",
+});
 
 export default function RootLayout({
   children,
@@ -23,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="h-full w-full antialiased"
+      className={`h-full w-full antialiased ${gelasio.className} ${ibmPlexSans.className}`}
       suppressHydrationWarning
     >
       <body className="h-full w-full flex flex-col">

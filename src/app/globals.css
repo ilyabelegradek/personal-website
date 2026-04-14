@@ -1,15 +1,1 @@
 @import "tailwindcss";
-
-@font-face {
-  font-family: "ibmPlexSans";
-  src: url("/fonts/ibmPlexSans.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "gelasio";
-  src: url("/fonts/gelasio.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}

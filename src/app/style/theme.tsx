@@ -37,8 +37,6 @@ export default function MUIThemeProvider({
     setMounted(true);
   }, [setTheme]);
 
-  //https://coolors.co/palette/03045e-0077b6-00b4d8-90e0ef-caf0f8
-  //https://coolors.co/palette/f7b267-f79d65-f4845f-f27059-f25c54
   const customTheme = useMemo(
     () =>
       createTheme({
