@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
     root: path.join(__dirname),
   },
   allowedDevOrigins: ["10.0.0.134"],
+  compress: true,
+  poweredByHeader: false,
 };
 
 const withNextIntl = createNextIntlPlugin();
