@@ -35,13 +35,13 @@ export default function NavBar() {
   return (
     <Box sx={{ width: "100%" }}>
       <AppBar position="static" className="text-center">
-        <Toolbar>
+        <Toolbar className="flex justify-between w-full">
           {navigationItems.map((navItem) => {
             return (
               <Link
                 href={navItem.ref}
                 key={navItem.ref}
-                className={`mx-2.5 pt-0.5 ${pathname === navItem.ref ? "border-b" : ""}`}
+                className={`mx-2.5 p-0.5 ${pathname === navItem.ref ? "border-b" : ""}`}
               >
                 <Button endIcon={navItem.icon} color="secondary">
                   <Typography variant="titleFont" color={"#FFFFFF"}>
@@ -51,7 +51,7 @@ export default function NavBar() {
               </Link>
             );
           })}
-          <div className="flex-1" />
+          <div className="sm:flex-1" />
           <IconButton
             size="large"
             edge="start"
