@@ -4,24 +4,23 @@ import { ResumeBulletedList } from "@/src/types/types";
 import {
   androidWork,
   education,
+  EDUCATION_ICON,
+  EMAIL_ICON,
   frameworks,
+  HOME_ICON,
   infoAddress,
   misc,
   miscContinued,
+  PERSONAL_ICON,
   personalProject,
+  PHONE_ICON,
   programmingLanguages,
   reactWork,
+  WORK_ICON,
+  SKILLS_ICON,
+  WEB_ICON,
 } from "@/src/constants/resumeConstants";
-import {
-  IconResumeHome,
-  IconResumeEmail,
-  IconResumePhone,
-  IconResumeWeb,
-  IconResumeWork,
-  IconResumeSkills,
-  IconResumeEducation,
-  IconResumePersonal,
-} from "./resumeIconsLocal";
+import SvgIconLocal from "./svgIconLocal";
 
 export default function ResumeLocal() {
   const t = useTranslations();
@@ -31,7 +30,7 @@ export default function ResumeLocal() {
       <div className="flex flex-col md:flex-row md:justify-between border-b-2 border-black mb-1 pb-1 gap-2 md:gap-0">
         <div className="flex">
           <div className="flex flex-col items-start justify-center pr-1">
-            <IconResumeHome />
+            <SvgIconLocal id={HOME_ICON} />
           </div>
           <div className="flex flex-col items-start justify-center pr-1">
             {infoAddress.map((item) => (
@@ -60,13 +59,13 @@ export default function ResumeLocal() {
             <Typography variant="titleFont">
               {process.env.NEXT_PUBLIC_EMAIL}
             </Typography>
-            <IconResumeEmail />
+            <SvgIconLocal id={EMAIL_ICON} />
           </div>
           <div className="flex flex-row gap-1">
             <Typography variant="titleFont">
               {process.env.NEXT_PUBLIC_PHONE}
             </Typography>
-            <IconResumePhone />
+            <SvgIconLocal id={PHONE_ICON} />
           </div>
           <div className="flex flex-row gap-1 items-center">
             <div className="flex flex-col items-end">
@@ -77,13 +76,13 @@ export default function ResumeLocal() {
                 {process.env.NEXT_PUBLIC_LINKEDIN_SHORT}
               </Typography>
             </div>
-            <IconResumeWeb />
+            <SvgIconLocal id={WEB_ICON} />
           </div>
         </div>
       </div>
       <div className="flex flex-col border-b-2 border-black mb-1 pt-1">
         <div className="flex flex-row gap-1 justify-center items-center">
-          <IconResumeWork />
+          <SvgIconLocal id={WORK_ICON} />
           <Typography
             variant="titleFont"
             className="font-bold underline text-center"
@@ -96,7 +95,8 @@ export default function ResumeLocal() {
       </div>
       <div className="flex flex-col border-b-2 border-black mb-1 pt-1">
         <div className="flex flex-row gap-1 justify-center items-center">
-          <IconResumeSkills />
+          <SvgIconLocal id={SKILLS_ICON} />
+
           <Typography
             variant="titleFont"
             className="font-bold underline text-center"
@@ -115,7 +115,8 @@ export default function ResumeLocal() {
         <div className="flex flex-col md:flex-row">
           <div className="flex-1 pt-1 md:border-r border-black md:pr-1 mb-2 md:mb-0">
             <div className="flex flex-row gap-1 justify-center items-center">
-              <IconResumeEducation />
+              <SvgIconLocal id={EDUCATION_ICON} />
+
               <Typography
                 variant="titleFont"
                 className="font-bold underline text-center pb-0.5"
@@ -127,7 +128,8 @@ export default function ResumeLocal() {
           </div>
           <div className="flex-1 pt-1 md:pl-1">
             <div className="flex flex-row gap-1 justify-center items-center">
-              <IconResumePersonal />
+              <SvgIconLocal id={PERSONAL_ICON} />
+
               <Typography
                 variant="titleFont"
                 className="font-bold underline text-center pb-0.5"

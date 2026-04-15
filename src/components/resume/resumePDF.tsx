@@ -5,24 +5,23 @@ import { ResumeBulletedList } from "@/src/types/types";
 import {
   androidWork,
   education,
+  EDUCATION_ICON,
+  EMAIL_ICON,
   frameworks,
+  HOME_ICON,
   infoAddress,
   misc,
   miscContinued,
+  PERSONAL_ICON,
   personalProject,
+  PHONE_ICON,
   programmingLanguages,
   reactWork,
+  SKILLS_ICON,
+  WEB_ICON,
+  WORK_ICON,
 } from "@/src/constants/resumeConstants";
-import {
-  IconResumeHome,
-  IconResumeEmail,
-  IconResumePhone,
-  IconResumeWeb,
-  IconResumeWork,
-  IconResumeSkills,
-  IconResumeEducation,
-  IconResumePersonal,
-} from "./resumeIconsPDF";
+import { SvgIconPDF } from "./svgIconPDF";
 
 export default function ResumePDF(props: {
   t: ReturnType<typeof useTranslations>;
@@ -34,7 +33,7 @@ export default function ResumePDF(props: {
       <Page size="A4" style={resumeStyles.page}>
         <View style={resumeStyles.header}>
           <View style={resumeStyles.infoColumnStart}>
-            <IconResumeHome />
+            <SvgIconPDF id={HOME_ICON} />
           </View>
           <View style={resumeStyles.infoColumnStart}>
             {infoAddress.map((item) => (
@@ -49,13 +48,13 @@ export default function ResumePDF(props: {
               <Text style={resumeStyles.infoItem}>
                 {process.env.NEXT_PUBLIC_EMAIL}
               </Text>
-              <IconResumeEmail />
+              <SvgIconPDF id={EMAIL_ICON} />
             </View>
             <View style={resumeStyles.iconRow}>
               <Text style={resumeStyles.infoItem}>
                 {process.env.NEXT_PUBLIC_PHONE}
               </Text>
-              <IconResumePhone />
+              <SvgIconPDF id={PHONE_ICON} />
             </View>
             <View style={resumeStyles.iconRowCentered}>
               <View style={resumeStyles.infoColumn}>
@@ -66,13 +65,13 @@ export default function ResumePDF(props: {
                   {process.env.NEXT_PUBLIC_LINKEDIN_SHORT}
                 </Text>
               </View>
-              <IconResumeWeb />
+              <SvgIconPDF id={WEB_ICON} />
             </View>
           </View>
         </View>
         <View style={resumeStyles.section}>
           <View style={resumeStyles.iconRowCentered}>
-            <IconResumeWork />
+            <SvgIconPDF id={WORK_ICON} />
             <Text style={resumeStyles.sectionTitle}>
               {t("resume_work_title")}
             </Text>
@@ -82,7 +81,7 @@ export default function ResumePDF(props: {
         </View>
         <View style={resumeStyles.section}>
           <View style={resumeStyles.iconRowCentered}>
-            <IconResumeSkills />
+            <SvgIconPDF id={SKILLS_ICON} />
             <Text style={resumeStyles.sectionTitle}>{t("skills")}</Text>
           </View>
           <View style={resumeStyles.skillsRow}>
@@ -96,7 +95,7 @@ export default function ResumePDF(props: {
           <View style={resumeStyles.row}>
             <View style={resumeStyles.educationSection}>
               <View style={resumeStyles.iconRowCentered}>
-                <IconResumeEducation />
+                <SvgIconPDF id={EDUCATION_ICON} />
                 <Text style={resumeStyles.sectionTitlePaddingBottom}>
                   {t("education_title_with_date")}
                 </Text>
@@ -105,7 +104,7 @@ export default function ResumePDF(props: {
             </View>
             <View style={resumeStyles.projectSection}>
               <View style={resumeStyles.iconRowCentered}>
-                <IconResumePersonal />
+                <SvgIconPDF id={PERSONAL_ICON} />
                 <Text style={resumeStyles.sectionTitlePaddingBottom}>
                   {t("personal_project")}
                 </Text>

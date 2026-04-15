@@ -41,7 +41,7 @@ export default function NavBar() {
               <Link
                 href={navItem.ref}
                 key={navItem.ref}
-                className={`mx-2.5 p-0.5 ${pathname === navItem.ref ? "border-b" : ""}`}
+                className={`mx-2.5 p-3 ${pathname === navItem.ref ? "border-b" : ""}`}
               >
                 <Button endIcon={navItem.icon} color="secondary">
                   <Typography variant="titleFont" color={"#FFFFFF"}>
