@@ -1,28 +1,24 @@
-import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
-import { FormControlLabel } from "@mui/material";
+import { FormControlLabel, useColorScheme } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { StyledSwitch } from "../styledSwitch";
 
 export default function DarkModeSwitch() {
-  const { theme, setTheme } = useTheme();
-  const [darkModeSwitch, setDarkModeSwitch] = useState(false);
+  const { mode, setMode } = useColorScheme();
+  if (!mode) {
+    return null;
+  }
   const t = useTranslations();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const darkModeStr = event.target.checked ? "dark" : "light";
-    setTheme(darkModeStr);
+    setMode(darkModeStr);
   };
-
-  useEffect(() => {
-    setDarkModeSwitch(theme === "dark");
-  }, [theme]);
 
   return (
     <div className="flex flex-col items-center w-full">
       <FormControlLabel
         control={
-          <StyledSwitch checked={darkModeSwitch} onChange={handleChange} />
+          <StyledSwitch checked={mode !== "light"} onChange={handleChange} />
         }
         sx={{ marginLeft: 0, marginRight: 0 }}
         label={t("theme")}

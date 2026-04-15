@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import LinkedInButton from "./linkedInButton";
 import GithubButton from "./githubButton";
-const Resume = dynamic(() => import("../resume/resume"), { ssr: false });
+const Resume = dynamic(() => import("../resume/resume"));
 
 export default function ProfileCard() {
   const t = useTranslations();

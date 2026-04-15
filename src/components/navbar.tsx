@@ -34,7 +34,12 @@ export default function NavBar() {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <AppBar position="static" className="text-center">
+      <AppBar
+        position="static"
+        className="text-center"
+        enableColorOnDark
+        sx={{ backgroundImage: "none" }}
+      >
         <Toolbar className="flex justify-between w-full">
           {navigationItems.map((navItem) => {
             return (

@@ -84,7 +84,7 @@
   "misc_languages": "Носитель английского \nи русского языков",
   "personal_project": "Личный проект — веб-сайт",
   "personal_project_about": "Создал личный веб-сайт изпользуя Next.js",
-  "personal_project_theme": "Темный и светлый режим MUI, сохраненные с помощью next-themes",
+  "personal_project_theme": "Темный и светлый режим MUI",
   "personal_project_resume": "Резюме для скачивания, реализованное с помощью \n@react/pdf-renderer",
   "personal_project_translations": "Переводы реализованные с помощью next-intl",
   "chess_summer": "Летняя работа",

@@ -4,10 +4,10 @@ import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import MUIThemeProvider from "./style/theme";
 import { NextIntlClientProvider } from "next-intl";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import localFont from "next/font/local";
+import InitColorSchemeScript from "@mui/material/InitColorSchemeScript";
 
 const NavBar = dynamic(() => import("../components/navbar"));
 
@@ -36,19 +36,18 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="h-full w-full flex flex-col">
+        <InitColorSchemeScript attribute="class" />
         <AppRouterCacheProvider>
-          <NextThemesProvider attribute="class" storageKey="darkMode">
-            <MUIThemeProvider>
-              <NextIntlClientProvider>
-                <main>
-                  <Analytics />
-                  <NavBar />
-                  {children}
-                  <SpeedInsights />
-                </main>
-              </NextIntlClientProvider>
-            </MUIThemeProvider>
-          </NextThemesProvider>
+          <MUIThemeProvider>
+            <NextIntlClientProvider>
+              <main>
+                <Analytics />
+                <NavBar />
+                {children}
+                <SpeedInsights />
+              </main>
+            </NextIntlClientProvider>
+          </MUIThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
