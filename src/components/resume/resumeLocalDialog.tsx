@@ -1,10 +1,8 @@
-import {
-  Dialog,
-  DialogContent,
-  Typography,
-  DialogTitle,
-  IconButton,
-} from "@mui/material";
+import Typography from "@mui/material/Typography";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogContent from "@mui/material/DialogContent";
+import IconButton from "@mui/material/IconButton";
 import { useTranslations } from "next-intl";
 import CloseIcon from "@mui/icons-material/Close";
 import ResumeLocal from "./resumeLocal";

@@ -1,6 +1,7 @@
 "use client";
 
-import { Button, Typography } from "@mui/material";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import ResumeDownloadDialog from "./resumeDownloadDialog";
 import { useTranslations } from "next-intl";

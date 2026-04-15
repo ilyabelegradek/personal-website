@@ -1,6 +1,8 @@
 "use client";
 
-import { Card, Icon, Typography } from "@mui/material";
+import Card from "@mui/material/Card";
+import Icon from "@mui/material/Icon";
+import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";

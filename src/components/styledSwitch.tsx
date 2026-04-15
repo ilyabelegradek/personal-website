@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Switch } from "@mui/material";
+import Switch from "@mui/material/Switch";
 
 export const StyledSwitch = styled(Switch)(({}) => ({
   width: 93,

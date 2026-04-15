@@ -1,4 +1,5 @@
-import { FormControlLabel, useColorScheme } from "@mui/material";
+import { useColorScheme } from "@mui/material";
+import FormControlLabel from "@mui/material/FormControlLabel";
 import { useTranslations } from "next-intl";
 import { StyledSwitch } from "../styledSwitch";
 

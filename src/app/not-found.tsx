@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
 import { useTranslations } from "next-intl";
 
 export default function NotFound() {

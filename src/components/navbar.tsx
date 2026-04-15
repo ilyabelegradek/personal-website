@@ -1,13 +1,11 @@
 "use client";
 
-import {
-  Box,
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Button,
-} from "@mui/material";
+import Box from "@mui/material/Box";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 import HomeIcon from "@mui/icons-material/Home";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -15,8 +13,10 @@ import { NavigationItem } from "@/src/types/types";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import SettingsDrawer from "./settings/settingsDrawer";
+import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
+
+const SettingsDrawer = dynamic(() => import("./settings/settingsDrawer"));
 
 const navigationItems: NavigationItem[] = [
   { stringKey: "home", ref: "/", icon: <HomeIcon /> },

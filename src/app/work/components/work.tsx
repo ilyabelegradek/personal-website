@@ -1,6 +1,8 @@
 "use client";
 
-import { Tab, Tabs, Typography } from "@mui/material";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
+import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import AndroidWork from "./androidWork";
 import ReactWork from "./reactWork";
