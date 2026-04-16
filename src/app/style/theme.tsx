@@ -2,6 +2,7 @@
 
 import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { blue, grey } from "@mui/material/colors";
 
 declare module "@mui/material/styles" {
   interface TypographyVariants {
@@ -32,31 +33,46 @@ export default function MUIThemeProvider({
       light: {
         palette: {
           primary: {
-            main: "#7B4A1F",
+            main: "#2f82f7",
+            contrastText: "#EDF2FA",
           },
           secondary: {
-            main: "#D97B4A",
+            main: "#00c2cd",
           },
           background: {
-            default: "#FEF9F3",
-            paper: "#F5E6D3",
+            default: "#e4f2ff",
+            paper: "#DDE8FD",
+          },
+          text: {
+            primary: "#0d121b",
+            secondary: "#383D47",
+          },
+          divider: "#D1D8E5",
+          info: {
+            main: "#008ecc",
           },
         },
       },
       dark: {
         palette: {
           primary: {
-            main: "#03045e",
+            main: "#2f82f7",
+            contrastText: "#EDF2FA",
           },
           secondary: {
-            main: "#0077b6",
+            main: "#00c2cd",
           },
           background: {
-            default: "#caf0f8",
-            paper: "#90E0EF",
+            default: "#050c1e",
+            paper: "#020511",
           },
           text: {
-            primary: "#000000",
+            primary: "#dae2ef",
+            secondary: "#BEC4D0",
+          },
+          divider: "#010207",
+          info: {
+            main: "#008ecc",
           },
         },
       },
@@ -78,27 +94,6 @@ export default function MUIThemeProvider({
           root: {
             borderRadius: 8,
           },
-        },
-      },
-      MuiOutlinedInput: {
-        styleOverrides: {
-          notchedOutline: ({ theme }) => ({
-            borderColor: theme.palette.mode === "dark" ? "#000000" : "#000000",
-          }),
-        },
-      },
-      MuiInputLabel: {
-        styleOverrides: {
-          root: ({ theme }) => ({
-            color: theme.palette.mode === "dark" ? "#000000" : "#000000",
-          }),
-        },
-      },
-      MuiTab: {
-        styleOverrides: {
-          root: ({ theme }) => ({
-            color: theme.palette.mode === "dark" ? "#444444" : "#444444",
-          }),
         },
       },
     },

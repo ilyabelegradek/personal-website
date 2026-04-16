@@ -7,7 +7,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import DarkModeSwitch from "./darkModeSwitch";
 import LanguageSelect from "./languageSelect";
 import { useTranslations } from "next-intl";
-import { useColorScheme } from "@mui/material/styles";
 
 export default function SettingsDrawer(props: {
   settingsDrawerOpen: boolean;
@@ -15,7 +14,6 @@ export default function SettingsDrawer(props: {
 }) {
   const t = useTranslations();
   const { settingsDrawerOpen, setSettingsDrawerOpen } = props;
-  const { mode } = useColorScheme();
 
   return (
     <Drawer
@@ -26,24 +24,12 @@ export default function SettingsDrawer(props: {
       <DialogTitle variant="h5">
         <div className="flex items-center w-full justify-between">
           <Typography variant="titleFont">{t("settings")}</Typography>
-          <IconButton
-            onClick={() => setSettingsDrawerOpen(false)}
-            sx={{
-              "& .MuiSvgIcon-root": {
-                color: mode === "dark" ? "#000000" : "#444444",
-              },
-            }}
-          >
+          <IconButton onClick={() => setSettingsDrawerOpen(false)}>
             <CloseIcon />
           </IconButton>
         </div>
       </DialogTitle>
-      <DialogContent
-        dividers
-        sx={{
-          borderColor: mode === "dark" ? "#000000" : "#444444",
-        }}
-      >
+      <DialogContent dividers>
         <div className="flex flex-col gap-5 sm:min-w-60">
           <DarkModeSwitch />
           <LanguageSelect />
