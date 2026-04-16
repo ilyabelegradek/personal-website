@@ -12,6 +12,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import { SelectChangeEvent } from "@mui/material/Select";
+import { useColorScheme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
@@ -22,6 +23,7 @@ export default function LanguageSelect() {
   const [currentLocale, setCurrentLocale] = useState(DEFAULT_LOCALE);
   const router = useRouter();
   const [loading, setLoading] = useState(true);
+  const { mode } = useColorScheme();
 
   useEffect(() => {
     async function getCurrentLocale() {
@@ -51,6 +53,11 @@ export default function LanguageSelect() {
         value={currentLocale}
         label={t("language")}
         onChange={handleChange}
+        sx={{
+          "& .MuiSelect-icon": {
+            color: mode === "dark" ? "#000000" : "#444444",
+          },
+        }}
       >
         {LOCALES.map((locale) => (
           <MenuItem value={locale.value} key={locale.value}>

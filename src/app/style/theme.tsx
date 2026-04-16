@@ -80,6 +80,27 @@ export default function MUIThemeProvider({
           },
         },
       },
+      MuiOutlinedInput: {
+        styleOverrides: {
+          notchedOutline: ({ theme }) => ({
+            borderColor: theme.palette.mode === "dark" ? "#000000" : "#000000",
+          }),
+        },
+      },
+      MuiInputLabel: {
+        styleOverrides: {
+          root: ({ theme }) => ({
+            color: theme.palette.mode === "dark" ? "#000000" : "#000000",
+          }),
+        },
+      },
+      MuiTab: {
+        styleOverrides: {
+          root: ({ theme }) => ({
+            color: theme.palette.mode === "dark" ? "#444444" : "#444444",
+          }),
+        },
+      },
     },
   });
   return (
