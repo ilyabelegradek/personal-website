@@ -24,6 +24,10 @@ const ibmPlexSans = localFont({
   src: "../../public/fonts/IBMPlexSans.ttf",
 });
 
+const ptSerif = localFont({
+  src: "../../public/fonts/PTSerif.ttf",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,7 +36,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full w-full antialiased ${gelasio.className} ${ibmPlexSans.className}`}
+      className={`h-full w-full antialiased ${gelasio.className} ${ibmPlexSans.className} ${ptSerif.className}`}
       suppressHydrationWarning
     >
       <body className="h-full w-full flex flex-col">

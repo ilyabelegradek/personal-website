@@ -3,9 +3,10 @@
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import ResumeDownloadDialog from "./resumeDownloadDialog";
 import { useTranslations } from "next-intl";
-import ResumeLocalDialog from "./resumeLocalDialog";
+import dynamic from "next/dynamic";
+const ResumeDownloadDialog = dynamic(() => import("./resumeDownloadDialog"));
+const ResumeLocalDialog = dynamic(() => import("./resumeLocalDialog"));
 
 export default function Resume() {
   const t = useTranslations();

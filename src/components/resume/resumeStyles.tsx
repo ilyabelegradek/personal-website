@@ -2,11 +2,7 @@ import { StyleSheet, Font } from "@react-pdf/renderer";
 
 Font.register({
   family: "titleFont",
-  src: "/fonts/Gelasio.ttf",
-});
-Font.register({
-  family: "bodyFont",
-  src: "/fonts/IBMPlexSans.ttf",
+  src: "/fonts/PTSerif.ttf",
 });
 
 export const resumeStyles = StyleSheet.create({
@@ -14,7 +10,7 @@ export const resumeStyles = StyleSheet.create({
     flexDirection: "column",
     padding: 8,
     fontFamily: "titleFont",
-    fontSize: 12,
+    fontSize: 11,
   },
   header: {
     flexDirection: "row",
@@ -28,7 +24,6 @@ export const resumeStyles = StyleSheet.create({
   name: {
     fontSize: 32,
     fontWeight: 700,
-    fontFamily: "titleFont",
     textAlign: "center",
     flex: 1,
     paddingTop: 8,
