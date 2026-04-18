@@ -45,12 +45,11 @@
   "education_title": "Образование",
   "education_title_with_date": "Образование (2016 - 2020)",
   "education_uga": "Университет Джорджии (2016 - 2020)",
-  "education_uga_short": "Университет Джорджии",
+  "education_uga_short": "Университет Джорджии - Степень бакалавра",
   "education_major": "Специальность по информатике",
   "education_minor": "Дополнительная специальность по статистике",
   "education_certificates": "Сертификаты по новым медиа и науке о данных",
   "education_gpa": "Средний балл: 3,75",
-  "education_honors": "Отличник",
   "name": "Илья Белеградек",
   "home": "Главная",
   "skills": "Навыки",
@@ -109,5 +108,7 @@
   "settings": "Настройки",
   "resume": "Резюме",
   "resume_local": "Локальная копия",
-  "error_404": "Эта страница не существует."
+  "error_404": "Эта страница не существует.",
+  "restful_apis": "RESTful APIs",
+  "databases": "Базы данных"
 }

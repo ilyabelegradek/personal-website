@@ -45,12 +45,11 @@
   "education_title": "Education",
   "education_title_with_date": "Education (2016 - 2020)",
   "education_uga": "University of Georgia (2016 - 2020)",
-  "education_uga_short": "University of Georgia",
+  "education_uga_short": "University of Georgia - Bachelor's Degree",
   "education_major": "Computer Science Major",
   "education_minor": "Statistics Minor",
   "education_certificates": "New Media and Data Science Certificates",
   "education_gpa": "3.75 GPA",
-  "education_honors": "Honors Student",
   "name": "Ilya Belegradek",
   "home": "Home",
   "skills": "Skills",
@@ -109,5 +108,7 @@
   "settings": "Settings",
   "resume": "Resume",
   "resume_local": "View Local Copy",
-  "error_404": "This page does not exist."
+  "error_404": "This page does not exist.",
+  "restful_apis": "RESTful APIs",
+  "databases": "Databases"
 }

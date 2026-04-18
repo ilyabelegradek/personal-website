@@ -107,6 +107,7 @@ export const resumeStyles = StyleSheet.create({
   skillsRow: {
     flexDirection: "row",
     marginTop: 4,
+    marginBottom: 4,
     gap: 8,
   },
   workSection: {

@@ -69,6 +69,7 @@ export const misc: ResumeBulletedList = {
     "akamai",
     "github_actions",
     "misc_languages",
+    "databases",
   ],
 };
 
@@ -81,6 +82,7 @@ export const miscContinued: ResumeBulletedList = {
     "visual_studio",
     "shell_scripts",
     "ai",
+    "restful_apis",
   ],
 };
 
@@ -91,7 +93,6 @@ export const education: ResumeBulletedList = {
     "education_minor",
     "education_certificates",
     "education_gpa",
-    "education_honors",
   ],
 };
 

@@ -6,6 +6,11 @@ This is my personal website created with [Next.js](https://nextjs.org). To run o
    ```
    NEXT_PUBLIC_EMAIL=<email>
    NEXT_PUBLIC_PHONE=<phone>
+   NEXT_PUBLIC_WEBSITE=<personal website>
+   NEXT_PUBLIC_LINKEDIN=<linkedin>
+   NEXT_PUBLIC_LINKEDIN_SHORT=<linkedin short url>
+   NEXT_PUBLIC_STREET=<street address>
+   NEXT_PUBLIC_CITY=<city state zip code>
    ```
 4. Open your IDE's terminal and run `npm install`.
 5. Run `npm run dev`.

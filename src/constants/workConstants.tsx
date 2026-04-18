@@ -45,7 +45,6 @@ export const educationList = [
   "education_minor",
   "education_certificates",
   "education_gpa",
-  "education_honors",
 ];
 
 export const chessList = ["chess_collab", "chess_odds"];
