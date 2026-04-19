@@ -1,7 +1,7 @@
 import { useColorScheme } from "@mui/material";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { useTranslations } from "next-intl";
-import { StyledSwitch } from "../styledSwitch";
+import { StyledSwitch } from "../reusable/styledSwitch";
 
 export default function DarkModeSwitch() {
   const { mode, setMode } = useColorScheme();

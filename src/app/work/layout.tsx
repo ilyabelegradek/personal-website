@@ -1,9 +1,19 @@
-import { Metadata } from "next";
+import {
+  LOCALE_COOKIE_NAME,
+  DEFAULT_LOCALE,
+} from "@/src/constants/localeConstants";
+import { getTranslations } from "next-intl/server";
+import { getCookie } from "../getCookie";
 
-export const metadata: Metadata = {
-  title: "Work",
-  description: "Work Experience",
-};
+export async function generateMetadata() {
+  const locale = await getCookie(LOCALE_COOKIE_NAME, DEFAULT_LOCALE);
+  const t = await getTranslations({ locale });
+
+  return {
+    title: t("work"),
+    description: t("work-experience"),
+  };
+}
 
 export default function RootLayout({
   children,

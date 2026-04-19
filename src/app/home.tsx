@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 const ProfileCard = dynamic(
   () => import("../components/profileCard/profileCard"),
 );
-const Statement = dynamic(() => import("../components/statement"));
+const Statement = dynamic(() => import("../components/profileCard/statement"));
 
 export default function Home() {
   return (

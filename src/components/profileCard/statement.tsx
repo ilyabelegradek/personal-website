@@ -9,7 +9,7 @@ export default function Statement() {
   return (
     <div className="flex w-80 mt-5 sm:mt-20 sm:mx-20">
       <Typography variant="bodyFont">
-        {t("about-me", { numYears: numYears })}
+        {t("statement", { numYears: numYears })}
       </Typography>
     </div>
   );

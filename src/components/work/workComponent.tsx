@@ -1,5 +1,5 @@
-import ExpandableList from "@/src/components/expandableList";
-import ExpandableSection from "@/src/components/expandableSection";
+import ExpandableList from "@/src/components/reusable/expandableList";
+import ExpandableSection from "@/src/components/reusable/expandableSection";
 import { useTranslations } from "next-intl";
 
 export default function WorkComponent(props: {

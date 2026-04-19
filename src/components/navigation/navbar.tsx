@@ -16,7 +16,7 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 
-const SettingsDrawer = dynamic(() => import("./settings/settingsDrawer"));
+const SettingsDrawer = dynamic(() => import("../settings/settingsDrawer"));
 
 const navigationItems: NavigationItem[] = [
   { stringKey: "home", ref: "/", icon: <HomeIcon /> },
