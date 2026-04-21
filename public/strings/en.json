@@ -26,6 +26,7 @@
   "android_tech_test": "Test Automation: Browserstack",
   "android_tech_ui": "UI: Jetpack Compose, Material UI",
   "android_work_accessibility": "Followed best practices for handling user accessibility settings",
+  "android_work_architecture": "Implemented plugins using MVI architecture with Hilt dependency injection",
   "android_work_build": "Fixed issues with CI / CD pipelines run through Github Actions",
   "android_work_collab": "Collaborated with a team of developers, QA and UAT testers, product owners, and UI/UX to design, size, and develop new features",
   "android_work_notifications": "Implemented local and Acoustic push notifications to notify users about the status of their submissions",

@@ -10,6 +10,7 @@ export const androidWork: ResumeBulletedList = {
   itemsStringKeys: [
     "android_role",
     "android_about",
+    "android_work_architecture",
     "android_work_submit",
     "android_work_collab",
     "android_incidents",
@@ -20,7 +21,6 @@ export const androidWork: ResumeBulletedList = {
     "android_work_unitTests",
     "android_work_notifications",
     "android_work_responsive",
-    "android_work_accessibility",
   ],
 };
 
