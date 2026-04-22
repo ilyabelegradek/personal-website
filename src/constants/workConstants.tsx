@@ -34,7 +34,9 @@ export const aboutListReact = ["react_role"];
 export const responsibilitesListReact = [
   "react_work_collab",
   "react_work_screens",
+  "react_work_forms",
   "react_work_api",
+  "react_work_unit_tests",
 ];
 
 export const techStackListReact = [

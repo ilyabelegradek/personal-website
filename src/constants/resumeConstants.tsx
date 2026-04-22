@@ -32,6 +32,7 @@ export const reactWork: ResumeBulletedList = {
     "react_work_screens",
     "react_work_forms",
     "react_work_api",
+    "react_work_unit_tests",
   ],
 };
 
