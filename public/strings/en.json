@@ -29,7 +29,7 @@
   "android_work_architecture": "Implemented plugins using MVI architecture with Hilt dependency injection",
   "android_work_build": "Fixed issues with CI / CD pipelines run through Github Actions",
   "android_work_collab": "Collaborated with a team of developers, QA and UAT testers, product owners, and UI/UX to design, size, and develop new features",
-  "android_work_deployments": "Deployed and managed production builds on Google Play",
+  "android_work_deployments": "Managed and deployed test builds to Firebase and production builds to Google Play",
   "android_work_responsive": "Implemented responsive layouts that met design guidelines for both phones and tablets",
   "android_work_submit": "Users are able to submit using email and an asynchronous queue implemented with kotlinx coroutines and jobs. On average, 15,000 - 20,000 submissions are processed per month.",
   "android_work_unitTests": "Implemented unit test suite with kotlinx coroutines, JUnit, and MockK",
