@@ -7,9 +7,9 @@ export const responsibilitesListAndroid = [
   "android_analytics",
   "android_work_architecture",
   "android_google_play",
+  "android_work_deployments",
   "android_work_build",
   "android_work_unitTests",
-  "android_work_notifications",
   "android_work_responsive",
   "android_work_accessibility",
 ];

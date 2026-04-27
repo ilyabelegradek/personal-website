@@ -15,11 +15,11 @@ export const androidWork: ResumeBulletedList = {
     "android_work_collab",
     "android_incidents",
     "android_google_play",
+    "android_work_deployments",
     "android_msauth",
     "android_analytics",
     "android_work_build",
     "android_work_unitTests",
-    "android_work_notifications",
     "android_work_responsive",
   ],
 };
