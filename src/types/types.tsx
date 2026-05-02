@@ -13,3 +13,9 @@ export type CustomLocale = {
   value: string;
   displayName: string;
 };
+
+export type CustomRichText = {
+  strKey: string;
+  argumentName?: string;
+  link?: string;
+};

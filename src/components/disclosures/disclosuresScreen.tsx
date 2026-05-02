@@ -8,7 +8,7 @@ import {
 import { Tabs, Tab, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import ExpandableList from "../reusable/expandableList";
+import StringWithHyperlink from "../reusable/stringWithHyperlink";
 
 export default function DisclosuresScreen() {
   const t = useTranslations();
@@ -27,14 +27,14 @@ export default function DisclosuresScreen() {
           <Tab label={t(tab)} key={tab} />
         ))}
       </Tabs>
-      {disclosureTabValue == 0 && (
-        <ExpandableList listItems={privacyList.map((strKey) => t(strKey))} />
-      )}
-      {disclosureTabValue == 1 && (
-        <ExpandableList
-          listItems={attributionList.map((strKey) => t(strKey))}
-        />
-      )}
+      {disclosureTabValue == 0 &&
+        privacyList.map((richText) => (
+          <StringWithHyperlink richText={richText} key={richText.strKey} />
+        ))}
+      {disclosureTabValue == 1 &&
+        attributionList.map((richText) => (
+          <StringWithHyperlink richText={richText} key={richText.strKey} />
+        ))}
     </div>
   );
 }
