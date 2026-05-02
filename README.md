@@ -1,4 +1,6 @@
-This is my personal website created with [Next.js](https://nextjs.org). To run on your local machine,
+This is my personal website created with [Next.js](https://nextjs.org) and deployed using [Vercel](https://vercel.com/frameworks/nextjs) to [ilyabelegradek.com](www.ilyabelegradek.com).
+
+To run on your local machine,
 
 1. Checkout the code.
 2. [Install nodejs](https://nodejs.org/en/download).
