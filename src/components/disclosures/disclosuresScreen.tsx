@@ -5,7 +5,9 @@ import {
   disclosureTabList,
   privacyList,
 } from "@/src/constants/disclosuresConstants";
-import { Tabs, Tab, Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import StringWithHyperlink from "../reusable/stringWithHyperlink";
@@ -27,14 +29,20 @@ export default function DisclosuresScreen() {
           <Tab label={t(tab)} key={tab} />
         ))}
       </Tabs>
-      {disclosureTabValue == 0 &&
-        privacyList.map((richText) => (
-          <StringWithHyperlink richText={richText} key={richText.strKey} />
-        ))}
-      {disclosureTabValue == 1 &&
-        attributionList.map((richText) => (
-          <StringWithHyperlink richText={richText} key={richText.strKey} />
-        ))}
+      {disclosureTabValue == 0 && (
+        <div className="flex flex-col">
+          {privacyList.map((richText) => (
+            <StringWithHyperlink richText={richText} key={richText.strKey} />
+          ))}
+        </div>
+      )}
+      {disclosureTabValue == 1 && (
+        <div className="flex flex-col">
+          {attributionList.map((richText) => (
+            <StringWithHyperlink richText={richText} key={richText.strKey} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

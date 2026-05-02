@@ -8,6 +8,7 @@ import DarkModeSwitch from "./darkModeSwitch";
 import LanguageSelect from "./languageSelect";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { useTheme } from "@mui/material";
 
 export default function SettingsDrawer(props: {
   settingsDrawerOpen: boolean;
@@ -15,6 +16,7 @@ export default function SettingsDrawer(props: {
 }) {
   const t = useTranslations();
   const { settingsDrawerOpen, setSettingsDrawerOpen } = props;
+  const theme = useTheme();
 
   return (
     <Drawer
@@ -39,7 +41,12 @@ export default function SettingsDrawer(props: {
             className="w-full justify-center flex"
             onClick={() => setSettingsDrawerOpen(false)}
           >
-            <Typography variant="titleFont" className="underline">
+            <Typography
+              variant="titleFont"
+              className="underline"
+              style={{ color: theme.palette.primary.main }}
+              fontSize={"20px"}
+            >
               {t("disclosures")}
             </Typography>
           </Link>
