@@ -1,4 +1,4 @@
-This is my personal website created with [Next.js](https://nextjs.org) and deployed using [Vercel](https://vercel.com/frameworks/nextjs) to [ilyabelegradek.com](www.ilyabelegradek.com).
+This is my personal website created with [Next.js](https://nextjs.org) and deployed using [Vercel](https://vercel.com/frameworks/nextjs) to [ilyabelegradek.com](https://www.ilyabelegradek.com).
 
 To run on your local machine,
 
