@@ -34,8 +34,12 @@ export default function SettingsDrawer(props: {
         <div className="flex flex-col gap-5 sm:min-w-60">
           <DarkModeSwitch />
           <LanguageSelect />
-          <Link href={"/disclosures"}>
-            <Typography variant="titleFont" className="text-center">
+          <Link
+            href={"/disclosures"}
+            className="w-full justify-center flex"
+            onClick={() => setSettingsDrawerOpen(false)}
+          >
+            <Typography variant="titleFont" className="underline">
               {t("disclosures")}
             </Typography>
           </Link>

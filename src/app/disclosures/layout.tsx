@@ -10,8 +10,8 @@ export async function generateMetadata() {
   const t = await getTranslations({ locale });
 
   return {
-    title: t("work"),
-    description: t("work-experience"),
+    title: t("disclosures"),
+    description: t("disclosures_site"),
   };
 }
 
