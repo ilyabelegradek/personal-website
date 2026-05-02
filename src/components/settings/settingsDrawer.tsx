@@ -7,6 +7,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import DarkModeSwitch from "./darkModeSwitch";
 import LanguageSelect from "./languageSelect";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function SettingsDrawer(props: {
   settingsDrawerOpen: boolean;
@@ -33,6 +34,11 @@ export default function SettingsDrawer(props: {
         <div className="flex flex-col gap-5 sm:min-w-60">
           <DarkModeSwitch />
           <LanguageSelect />
+          <Link href={"/disclosures"}>
+            <Typography variant="titleFont" className="text-center">
+              {t("disclosures")}
+            </Typography>
+          </Link>
         </div>
       </DialogContent>
     </Drawer>

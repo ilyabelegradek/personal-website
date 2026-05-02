@@ -9,8 +9,7 @@ import ReactWork from "./reactWork";
 import EducationWork from "./educationWork";
 import KidChessWork from "./kidChessWork";
 import { useTranslations } from "next-intl";
-
-const tabList = ["Android", "React"];
+import { workTabList } from "@/src/constants/workConstants";
 
 export default function Work() {
   const t = useTranslations();
@@ -22,11 +21,11 @@ export default function Work() {
   return (
     <div className="flex flex-col m-15 gap-5">
       <Typography variant="titleFont" className="text-3xl font-bold underline">
-        {`General Motors (2020 - 2026)`}
+        {t("work-title")}
       </Typography>
       <Tabs value={projectsTabValue} onChange={handleChange}>
-        {tabList.map((tab) => (
-          <Tab label={tab} key={tab} />
+        {workTabList.map((tab) => (
+          <Tab label={t(tab)} key={tab} />
         ))}
       </Tabs>
       {projectsTabValue === 0 && <AndroidWork />}

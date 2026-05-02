@@ -1,3 +1,5 @@
+export const workTabList = ["android", "react"];
+
 export const aboutListAndroid = ["android_role_long", "android_about_long"];
 
 export const responsibilitesListAndroid = [

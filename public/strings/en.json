@@ -33,6 +33,8 @@
   "android_work_responsive": "Implemented responsive layouts that met design guidelines for both phones and tablets",
   "android_work_submit": "Users are able to submit using email and an asynchronous queue implemented with kotlinx coroutines and jobs. On average, 15,000 - 20,000 submissions are processed per month.",
   "android_work_unitTests": "Implemented unit test suite with kotlinx coroutines, JUnit, and MockK",
+  "attribution": "Attribution",
+  "attribution_pdf": "This site uses the @react/pdf-renderer library to create a downloadable resume",
   "azure_boards": "Azure Boards",
   "cancel": "Cancel",
   "chess_collab": "Collaborated with team of coaches to teach kids how to play chess",
@@ -41,6 +43,8 @@
   "chess_title": "Kid Chess (2013 - 2019)",
   "css": "CSS",
   "databases": "Databases",
+  "disclosures": "Disclosures",
+  "disclosures_site": "Site Disclosures",
   "download": "Download",
   "education_certificates": "New Media and Data Science Certificates",
   "education_degree": "Bachelor's Degree",
@@ -79,6 +83,8 @@
   "personal_project_translations": "Translations implemented with next-intl",
   "postman_insomnia": "Postman / Insomnia",
   "programming_languages": "Programming Languages",
+  "privacy_policy": "Privacy Policy",
+  "privacy_vercel": "This site uses Vercel Analytics and SpeedInsights to collect anonymized usage and performance data.",
   "react": "React",
   "react_about": "Application allows internal users to create and modify projects for returning parts and to view tabulated summaries of existing projects",
   "react_native": "React Native",
@@ -114,5 +120,6 @@
   "typescript": "Typescript",
   "visual_studio": "Visual Studio Code",
   "work": "Work",
-  "work-experience": "Work Experience"
+  "work-experience": "Work Experience",
+  "work-title": "General Motors (2020 - 2026)"
 }
