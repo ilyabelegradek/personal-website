@@ -31,6 +31,7 @@ export default function DisclosuresScreen() {
       </Tabs>
       {disclosureTabValue == 0 && (
         <div className="flex flex-col">
+          <Typography variant="bodyFont">{t("site_uses")}</Typography>
           {privacyList.map((richText) => (
             <StringWithHyperlink richText={richText} key={richText.strKey} />
           ))}
@@ -38,6 +39,7 @@ export default function DisclosuresScreen() {
       )}
       {disclosureTabValue == 1 && (
         <div className="flex flex-col">
+          <Typography variant="bodyFont">{t("site_uses")}</Typography>
           {attributionList.map((richText) => (
             <StringWithHyperlink richText={richText} key={richText.strKey} />
           ))}
