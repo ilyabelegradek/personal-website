@@ -1,6 +1,5 @@
 "use client";
 
-import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -33,47 +32,45 @@ export default function NavBar() {
   const pathname = usePathname();
 
   return (
-    <Box sx={{ width: "100%" }}>
-      <AppBar
-        position="static"
-        className="text-center"
-        enableColorOnDark
-        sx={{ backgroundImage: "none" }}
-      >
-        <Toolbar className="flex justify-between w-full">
-          {navigationItems.map((navItem) => {
-            return (
-              <Link
-                href={navItem.ref}
-                key={navItem.ref}
-                className={`mx-2.5 p-3 ${pathname === navItem.ref ? "border-b" : ""}`}
-              >
-                <Button endIcon={navItem.icon} color="secondary">
-                  <Typography variant="titleFont" color={"#FFFFFF"}>
-                    {t(navItem.stringKey)}
-                  </Typography>
-                </Button>
-              </Link>
-            );
-          })}
-          <div className="sm:flex-1" />
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="settings"
-            onClick={() => setSettingsDrawerOpen(true)}
-          >
-            <SettingsIcon />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
+    <AppBar
+      position="sticky"
+      className="text-center"
+      enableColorOnDark
+      sx={{ backgroundImage: "none", top: 0 }}
+    >
+      <Toolbar className="flex justify-between w-full">
+        {navigationItems.map((navItem) => {
+          return (
+            <Link
+              href={navItem.ref}
+              key={navItem.ref}
+              className={`mx-2.5 p-3 ${pathname === navItem.ref ? "border-b" : ""}`}
+            >
+              <Button endIcon={navItem.icon} color="secondary">
+                <Typography variant="titleFont" color={"#FFFFFF"}>
+                  {t(navItem.stringKey)}
+                </Typography>
+              </Button>
+            </Link>
+          );
+        })}
+        <div className="sm:flex-1" />
+        <IconButton
+          size="large"
+          edge="start"
+          color="inherit"
+          aria-label="settings"
+          onClick={() => setSettingsDrawerOpen(true)}
+        >
+          <SettingsIcon />
+        </IconButton>
+      </Toolbar>
       {settingsDrawerOpen && (
         <SettingsDrawer
           settingsDrawerOpen={settingsDrawerOpen}
           setSettingsDrawerOpen={setSettingsDrawerOpen}
         />
       )}
-    </Box>
+    </AppBar>
   );
 }

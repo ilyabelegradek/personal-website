@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type NavigationItem = {
   stringKey: string;
   ref: string;
@@ -18,4 +20,10 @@ export type CustomRichText = {
   strKey: string;
   argumentName?: string;
   link?: string;
+};
+
+export type TableOfContentsSection = {
+  titleStrKey: string;
+  content: ReactNode;
+  hideDivider?: boolean;
 };

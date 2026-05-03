@@ -1,0 +1,63 @@
+import { Card, Link, Typography } from "@mui/material";
+import { useTranslations } from "next-intl";
+
+export default function TableOfContents(props: {
+  allIDs: string[];
+  activeIDs: string[];
+}) {
+  const t = useTranslations();
+  const { allIDs, activeIDs } = props;
+
+  return (
+    <Card
+      className="fixed top-16 left-0 h-screen w-50 overflow-y-auto shadow-lg"
+      style={{
+        borderRight: 1,
+        borderColor: "divider",
+      }}
+    >
+      <nav className="p-4">
+        <ul className="space-y-2">
+          {allIDs.map((sectionID) => {
+            return (
+              <li key={sectionID}>
+                <Link
+                  href={`#${sectionID}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById(sectionID);
+                    if (element) {
+                      element.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                    }
+                  }}
+                  underline="none"
+                  className="block px-3 py-2 rounded-md transition-colors"
+                  sx={{
+                    color: "text.primary",
+
+                    ...(activeIDs.includes(sectionID)
+                      ? {
+                          backgroundColor: "primary.main",
+                          color: "primary.contrastText",
+                          fontWeight: "medium",
+                        }
+                      : {
+                          "&:hover": {
+                            backgroundColor: "action.hover",
+                          },
+                        }),
+                  }}
+                >
+                  {t(sectionID)}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+    </Card>
+  );
+}

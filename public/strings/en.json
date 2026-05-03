@@ -8,7 +8,7 @@
   "android_about_long": "The app is used by dealers and other internal users to submit various forms to the business and receive push notifications when their forms are processed. In addition to entering text, users can use their device camera to scan QR and barcodes of vehicle VINs. They can also take pictures and videos of vehicles and parts.",
   "android_analytics": "Implemented Adobe Analytics reporting suite and sent out monthly analytics reports to leadership",
   "android_google_play": "Updated Gradle libraries and app functionality to meet Google Play compliance requirements",
-  "android_incidents": "Managed and troubleshooted ServiceNow production incidents opened by end users",
+  "android_incidents": "Managed and troubleshot ServiceNow production incidents opened by end users",
   "android_msauth": "Implemented Microsoft Authentication to comply with new security requirements",
   "android_role": "Dev lead for Jetpack Compose Kotlin and Java app with 17,000 monthly users",
   "android_role_long": "Dev lead for Jetpack Compose Kotlin and Java app with 17,000 monthly users deployed in the United States, Canada, Mexico, Australia, New Zealand, and Egypt.",
@@ -132,5 +132,10 @@
   "visual_studio": "Visual Studio Code",
   "work": "Work",
   "work-experience": "Work Experience",
-  "work-title": "General Motors (2020 - 2026)"
+  "work-title": "General Motors (2020 - 2026)",
+  "architecture_title": "Site Architecture",
+  "architecture_theming": "Theming",
+  "architecture_localization": "Localization",
+  "architecture_performance": "Performance Optimization",
+  "architecture_pdf": "PDF Downloading"
 }
