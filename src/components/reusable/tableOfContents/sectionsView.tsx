@@ -19,7 +19,7 @@ export default function SectionsView(props: {
           className="flex flex-col gap-6 mb-6 scroll-mt-24"
         >
           <Typography
-            className="flex justify-start sm:justify-center font-bold underline sm:text-3xl"
+            className="flex justify-center font-bold underline sm:text-3xl"
             variant="titleFont"
           >
             {t(section.titleStrKey)}

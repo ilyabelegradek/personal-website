@@ -1,0 +1,74 @@
+"use client";
+
+import { ArchitectureEntries, ArchitectureEntry } from "@/src/types/types";
+import Card from "@mui/material/Card";
+import Typography from "@mui/material/Typography";
+import Image from "next/image";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { Icon, IconButton } from "@mui/material";
+import { useState } from "react";
+
+export default function ArchitectureEntriesCard(props: {
+  entries: ArchitectureEntries;
+}) {
+  const { entries } = props;
+  const [currentEntryIndex, setCurrentEntryIndex] = useState(0);
+  const entry = entries.entries[currentEntryIndex];
+
+  return (
+    <Card className="mx-3 my-4 p-4 sm:mx-8 sm:p-6 h-96">
+      <div className="flex flex-col items-center h-full">
+        <div className="flex-1 overflow-y-auto w-full">
+          <div className="flex w-full flex-col items-center gap-4 text-center md:items-start md:text-left">
+            <Typography
+              className="font-bold text-xl sm:text-2xl"
+              variant="titleFont"
+            >
+              {entries.title}
+            </Typography>
+            <Typography className="font-bold" variant="titleFont">
+              {entry.title}
+            </Typography>
+            <Typography className="max-w-prose leading-relaxed text-sm sm:text-base">
+              {entry.description}
+            </Typography>
+
+            <div className="w-full max-w-180 overflow-hidden bg-slate-50 dark:bg-slate-900">
+              <Image
+                className="object-contain"
+                src={entry.imageUrl}
+                alt={entry.title}
+                width={720}
+                height={480}
+                sizes="(max-width: 640px) 100vw, 720px"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex">
+          <IconButton
+            disabled={currentEntryIndex == 0}
+            onClick={() => setCurrentEntryIndex((current) => current - 1)}
+            size="large"
+          >
+            <Icon fontSize="large">
+              <ChevronLeftIcon />
+            </Icon>
+          </IconButton>
+          <IconButton
+            disabled={currentEntryIndex == entries.entries.length - 1}
+            onClick={() => setCurrentEntryIndex((current) => current + 1)}
+            size="large"
+          >
+            <Icon fontSize="large">
+              <ChevronRightIcon />
+            </Icon>
+          </IconButton>
+        </div>
+      </div>
+    </Card>
+  );
+}

@@ -27,3 +27,14 @@ export type TableOfContentsSection = {
   content: ReactNode;
   hideDivider?: boolean;
 };
+
+export type ArchitectureEntries = {
+  title: string;
+  entries: ArchitectureEntry[];
+};
+
+export type ArchitectureEntry = {
+  title: string;
+  description: string;
+  imageUrl: string;
+};

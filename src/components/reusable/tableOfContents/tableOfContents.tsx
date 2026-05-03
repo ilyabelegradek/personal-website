@@ -12,7 +12,7 @@ export default function TableOfContents(props: { allIDs: string[] }) {
 
   return (
     <Card
-      className="fixed top-16 left-0 h-screen w-30 sm:w-50 overflow-y-auto shadow-lg"
+      className="fixed xs:top-32 sm:top-16 left-0 h-screen w-30 sm:w-50 overflow-y-auto shadow-lg"
       style={{
         borderRight: 1,
         borderColor: "divider",
