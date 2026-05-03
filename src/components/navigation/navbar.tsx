@@ -6,7 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import HomeIcon from "@mui/icons-material/Home";
-import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
+import ArchitectureIcon from "@mui/icons-material/Architecture";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { NavigationItem } from "@/src/types/types";
 import Link from "next/link";
@@ -20,9 +20,9 @@ const SettingsDrawer = dynamic(() => import("../settings/settingsDrawer"));
 const navigationItems: NavigationItem[] = [
   { stringKey: "home", ref: "/", icon: <HomeIcon /> },
   {
-    stringKey: "work",
-    ref: "/work",
-    icon: <WorkHistoryIcon />,
+    stringKey: "architecture_title",
+    ref: "/architecture",
+    icon: <ArchitectureIcon />,
   },
 ];
 

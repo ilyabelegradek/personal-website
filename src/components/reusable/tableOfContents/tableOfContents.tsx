@@ -1,22 +1,24 @@
+"use client";
+
 import { Card, Link, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
+import useGetVisibleSections from "./useGetVisibleSections";
 
-export default function TableOfContents(props: {
-  allIDs: string[];
-  activeIDs: string[];
-}) {
+export default function TableOfContents(props: { allIDs: string[] }) {
   const t = useTranslations();
-  const { allIDs, activeIDs } = props;
+  const { allIDs } = props;
+
+  const { activeIDs } = useGetVisibleSections(allIDs);
 
   return (
     <Card
-      className="fixed top-16 left-0 h-screen w-50 overflow-y-auto shadow-lg"
+      className="fixed top-16 left-0 h-screen w-30 sm:w-50 overflow-y-auto shadow-lg"
       style={{
         borderRight: 1,
         borderColor: "divider",
       }}
     >
-      <nav className="p-4">
+      <nav className="sm:p-4">
         <ul className="space-y-2">
           {allIDs.map((sectionID) => {
             return (

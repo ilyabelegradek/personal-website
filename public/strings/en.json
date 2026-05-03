@@ -137,5 +137,6 @@
   "architecture_theming": "Theming",
   "architecture_localization": "Localization",
   "architecture_performance": "Performance Optimization",
-  "architecture_pdf": "PDF Downloading"
+  "architecture_pdf": "PDF Downloading",
+  "architecture": "Architecture"
 }

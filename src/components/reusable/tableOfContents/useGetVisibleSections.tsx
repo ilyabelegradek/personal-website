@@ -10,19 +10,19 @@ export default function useGetVisibleSections(sectionIDs: string[]): {
 
   useEffect(() => {
     function handleObserver(entries: IntersectionObserverEntry[]) {
-      entries.forEach((entry) => {
-        setActiveIDs((currentIDs) => {
-          if (entry?.isIntersecting) {
-            if (!currentIDs.includes(entry.target.id)) {
-              return [...currentIDs, entry.target.id];
-            }
-            return currentIDs;
+      setActiveIDs((currentIDs) => {
+        const activeSet = new Set(currentIDs);
+
+        entries.forEach((entry) => {
+          const id = entry.target.id;
+          if (entry.isIntersecting) {
+            activeSet.add(id);
           } else {
-            return currentIDs.filter(
-              (activeID) => activeID !== entry.target.id,
-            );
+            activeSet.delete(id);
           }
         });
+
+        return Array.from(activeSet);
       });
     }
 

@@ -1,17 +1,9 @@
 "use client";
 
 import TableOfContentsComponent from "../reusable/tableOfContents/tableOfContentsComponent";
+import ArchitecturePerformance from "./architecturePerformance";
 
 export default function ArchitectureScreen() {
-  /*
-      "architecture_title": "Site Architecture",
-  "architecture_theming": "Theming",
-  "architecture_localization": "Localization",
-  "architecture_performance": "Performance Optimization",
-  "architecture_pdf": "PDF Downloading"
-
-    */
-
   return (
     <TableOfContentsComponent
       sections={[
@@ -29,7 +21,7 @@ export default function ArchitectureScreen() {
         },
         {
           titleStrKey: "architecture_performance",
-          content: <div className="h-160"></div>,
+          content: <ArchitecturePerformance />,
         },
         {
           titleStrKey: "architecture_pdf",
