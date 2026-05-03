@@ -113,5 +113,6 @@
   "architecture_localization": "Localization",
   "architecture_performance": "Performance Optimization",
   "architecture_pdf": "PDF Downloading",
-  "architecture": "Architecture"
+  "architecture": "Architecture",
+  "architecture_project_structure": "Project Structure"
 }

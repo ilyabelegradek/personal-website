@@ -6,21 +6,25 @@ export const performanceNextJS: ArchitectureEntries = {
     {
       title: "Font",
       descriptionPoints: [
-        "Loads without layout shift or external network request",
+        "Bundled with static assets, improving privacy and performance",
+        "Preloaded fonts prevent flashes of unstyled text",
+        "No layout shift - fallback font has same font size",
       ],
       imageUrl: "/images/fontScreenshot.webp",
     },
     {
       title: "Dynamic Imports",
       descriptionPoints: [
-        "Loads the component on demand, reducing initial bundle size and speeding up page load.",
+        "Load javascript modules and React components only when they're needed",
+        "Reduces first contentful paint time",
       ],
       imageUrl: "/images/dynamicScreenshot.webp",
     },
     {
       title: "Image",
       descriptionPoints: [
-        "Only loads when the image enters the viewport (lazy loading). Loads without layout shift",
+        "Only loads images when they enter the viewport - leads to faster page loading",
+        "Prevents layout shift while images are loading",
       ],
       imageUrl: "/images/imageScreenshot.webp",
     },

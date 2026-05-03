@@ -38,3 +38,10 @@ export type ArchitectureEntry = {
   descriptionPoints: string[];
   imageUrl: string;
 };
+
+export type MockFile = {
+  title: string;
+  isFile?: boolean;
+  level: number;
+  description: string;
+};

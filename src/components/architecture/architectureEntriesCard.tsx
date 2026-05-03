@@ -19,9 +19,9 @@ export default function ArchitectureEntriesCard(props: {
   const entry = entries.entries[currentEntryIndex];
 
   return (
-    <Card className="mx-3 my-4 sm:mx-8 h-96">
+    <Card className="mx-3 my-4 sm:mx-14">
       <div className="flex flex-col items-center h-full">
-        <div className="flex-1 overflow-y-auto w-full">
+        <div className="flex-1 w-full">
           <div className="flex w-full flex-col text-center">
             <Typography
               className="font-bold text-xl sm:text-2xl text-center p-4 sm:p-6"
@@ -30,25 +30,26 @@ export default function ArchitectureEntriesCard(props: {
               {entries.title}
             </Typography>
             <Divider className="w-full" />
-            <div className="flex flex-col p-4 sm:p-6 md:text-left items-center md:items-start">
-              <Typography className="font-bold" variant="titleFont">
-                {entry.title}
-              </Typography>
-              {entry.descriptionPoints.map((descPoint, index) => (
-                <Typography
-                  className="max-w-prose leading-relaxed text-sm sm:text-base"
-                  key={index}
-                >
-                  {`• ${descPoint}`}
+            <div className="flex flex-col md:flex-row p-4 sm:p-6 md:text-left items-center md:items-start gap-6">
+              <div className="flex-1 flex flex-col items-center md:items-start">
+                <Typography className="font-bold" variant="titleFont">
+                  {entry.title}
                 </Typography>
-              ))}
-              <div className="w-full max-w-180 overflow-hidden bg-slate-50 dark:bg-slate-900">
+                {entry.descriptionPoints.map((descPoint, index) => (
+                  <Typography
+                    className="max-w-prose leading-relaxed text-sm sm:text-base"
+                    key={index}
+                  >
+                    {`• ${descPoint}`}
+                  </Typography>
+                ))}
+              </div>
+              <div className="overflow-hidden">
                 <Image
                   src={entry.imageUrl}
                   alt={entry.title}
-                  width={720}
-                  height={480}
-                  sizes="(max-width: 640px) 100vw, 720px"
+                  width={471}
+                  height={63}
                   priority
                 />
               </div>

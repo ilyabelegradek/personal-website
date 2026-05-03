@@ -3,7 +3,7 @@ import {
   DEFAULT_LOCALE,
 } from "@/src/constants/localeConstants";
 import { getTranslations } from "next-intl/server";
-import { getCookie } from "../getCookie";
+import { getCookie } from "../../util/getCookie";
 
 export async function generateMetadata() {
   const locale = await getCookie(LOCALE_COOKIE_NAME, DEFAULT_LOCALE);

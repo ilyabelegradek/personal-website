@@ -12,7 +12,7 @@ import {
   LOCALE_COOKIE_NAME,
   DEFAULT_LOCALE,
 } from "../constants/localeConstants";
-import { getCookie } from "./getCookie";
+import { getCookie } from "../util/getCookie";
 
 const NavBar = dynamic(() => import("../components/navigation/navbar"));
 

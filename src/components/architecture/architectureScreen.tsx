@@ -2,6 +2,7 @@
 
 import TableOfContentsComponent from "../reusable/tableOfContents/tableOfContentsComponent";
 import ArchitecturePerformance from "./architecturePerformance";
+import ArchitectureProjectStructure from "./architectureProjectStructure";
 
 export default function ArchitectureScreen() {
   return (
@@ -12,6 +13,14 @@ export default function ArchitectureScreen() {
           content: <div className="h-160"></div>,
         },
         {
+          titleStrKey: "architecture_performance",
+          content: <ArchitecturePerformance />,
+        },
+        {
+          titleStrKey: "architecture_project_structure",
+          content: <ArchitectureProjectStructure />,
+        },
+        {
           titleStrKey: "architecture_theming",
           content: <div className="h-160"></div>,
         },
@@ -19,10 +28,7 @@ export default function ArchitectureScreen() {
           titleStrKey: "architecture_localization",
           content: <div className="h-160"></div>,
         },
-        {
-          titleStrKey: "architecture_performance",
-          content: <ArchitecturePerformance />,
-        },
+
         {
           titleStrKey: "architecture_pdf",
           content: <div className="h-160"></div>,

@@ -1,7 +1,7 @@
 "use client";
 
-import { getCookie } from "@/src/app/getCookie";
-import { setCookie } from "@/src/app/setCookie";
+import { getCookie } from "@/src/util/getCookie";
+import { setCookie } from "@/src/util/setCookie";
 import {
   DEFAULT_LOCALE,
   LOCALE_COOKIE_NAME,
