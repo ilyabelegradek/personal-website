@@ -20,7 +20,7 @@ export default function ArchitectureEntriesCard(props: {
     <Card className="mx-3 my-4 sm:mx-8 h-96">
       <div className="flex flex-col items-center h-full">
         <div className="flex-1 overflow-y-auto w-full">
-          <div className="flex w-full flex-col items-center text-center md:items-start">
+          <div className="flex w-full flex-col text-center">
             <Typography
               className="font-bold text-xl sm:text-2xl text-center p-4 sm:p-6"
               variant="titleFont"
@@ -28,17 +28,20 @@ export default function ArchitectureEntriesCard(props: {
               {entries.title}
             </Typography>
             <Divider className="w-full" />
-            <div className="flex flex-col p-4 sm:p-6 md:text-left">
+            <div className="flex flex-col p-4 sm:p-6 md:text-left items-center md:items-start">
               <Typography className="font-bold" variant="titleFont">
                 {entry.title}
               </Typography>
-              <Typography className="max-w-prose leading-relaxed text-sm sm:text-base">
-                {entry.description}
-              </Typography>
-
+              {entry.descriptionPoints.map((descPoint, index) => (
+                <Typography
+                  className="max-w-prose leading-relaxed text-sm sm:text-base"
+                  key={index}
+                >
+                  {`• ${descPoint}`}
+                </Typography>
+              ))}
               <div className="w-full max-w-180 overflow-hidden bg-slate-50 dark:bg-slate-900">
                 <Image
-                  className="object-contain"
                   src={entry.imageUrl}
                   alt={entry.title}
                   width={720}

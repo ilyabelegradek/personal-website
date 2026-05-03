@@ -35,6 +35,6 @@ export type ArchitectureEntries = {
 
 export type ArchitectureEntry = {
   title: string;
-  description: string;
+  descriptionPoints: string[];
   imageUrl: string;
 };
