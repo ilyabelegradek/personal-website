@@ -51,6 +51,7 @@ export default function ArchitectureEntriesCard(props: {
                   width={471}
                   height={63}
                   priority
+                  style={{ width: "auto", height: "auto" }}
                 />
               </div>
             </div>

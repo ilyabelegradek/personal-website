@@ -42,6 +42,6 @@ export type ArchitectureEntry = {
 export type MockFile = {
   title: string;
   isFile?: boolean;
-  level: number;
+  indentationLevel: number;
   description: string;
 };

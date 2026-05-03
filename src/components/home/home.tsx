@@ -1,9 +1,7 @@
 import dynamic from "next/dynamic";
 
-const ProfileCard = dynamic(
-  () => import("../components/profileCard/profileCard"),
-);
-const Statement = dynamic(() => import("../components/profileCard/statement"));
+const ProfileCard = dynamic(() => import("./profileCard"));
+const Statement = dynamic(() => import("./statement"));
 
 export default function Home() {
   return (
