@@ -1,7 +1,8 @@
 "use client";
 
 import { TableOfContentsSection } from "@/src/types/types";
-import { Divider, Typography } from "@mui/material";
+import Divider from "@mui/material/Divider";
+import Typography from "@mui/material/Typography";
 import { useTranslations } from "next-intl";
 
 export default function SectionsView(props: {

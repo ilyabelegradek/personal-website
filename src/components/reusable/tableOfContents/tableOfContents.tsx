@@ -1,8 +1,9 @@
 "use client";
 
-import { Card, Link, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import useGetVisibleSections from "./useGetVisibleSections";
+import Card from "@mui/material/Card";
+import { Link } from "@mui/material";
 
 export default function TableOfContents(props: { allIDs: string[] }) {
   const t = useTranslations();

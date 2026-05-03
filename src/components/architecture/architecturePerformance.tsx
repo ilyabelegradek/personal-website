@@ -1,7 +1,5 @@
 import { performanceNextJS } from "@/src/constants/architectureConstants";
-import { Typography } from "@mui/material";
-import Image from "next/image";
-import ArchitectureEntriesCard from "../reusable/architectureEntriesCard";
+import ArchitectureEntriesCard from "./architectureEntriesCard";
 
 export default function ArchitecturePerformance() {
   return (
@@ -10,10 +8,3 @@ export default function ArchitecturePerformance() {
     </div>
   );
 }
-
-/*
-<Typography>
-        Link: Used for navigation between routes, prefetches the data when the
-        Link enters the viewport.
-      </Typography>
-*/

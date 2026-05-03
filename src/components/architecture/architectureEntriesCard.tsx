@@ -1,13 +1,15 @@
 "use client";
 
-import { ArchitectureEntries, ArchitectureEntry } from "@/src/types/types";
+import { ArchitectureEntries } from "@/src/types/types";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { Divider, Icon, IconButton } from "@mui/material";
 import { useState } from "react";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import Icon from "@mui/material/Icon";
 
 export default function ArchitectureEntriesCard(props: {
   entries: ArchitectureEntries;
