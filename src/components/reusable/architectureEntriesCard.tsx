@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { Icon, IconButton } from "@mui/material";
+import { Divider, Icon, IconButton } from "@mui/material";
 import { useState } from "react";
 
 export default function ArchitectureEntriesCard(props: {
@@ -17,33 +17,36 @@ export default function ArchitectureEntriesCard(props: {
   const entry = entries.entries[currentEntryIndex];
 
   return (
-    <Card className="mx-3 my-4 p-4 sm:mx-8 sm:p-6 h-96">
+    <Card className="mx-3 my-4 sm:mx-8 h-96">
       <div className="flex flex-col items-center h-full">
         <div className="flex-1 overflow-y-auto w-full">
-          <div className="flex w-full flex-col items-center gap-4 text-center md:items-start md:text-left">
+          <div className="flex w-full flex-col items-center text-center md:items-start">
             <Typography
-              className="font-bold text-xl sm:text-2xl"
+              className="font-bold text-xl sm:text-2xl text-center p-4 sm:p-6"
               variant="titleFont"
             >
               {entries.title}
             </Typography>
-            <Typography className="font-bold" variant="titleFont">
-              {entry.title}
-            </Typography>
-            <Typography className="max-w-prose leading-relaxed text-sm sm:text-base">
-              {entry.description}
-            </Typography>
+            <Divider className="w-full" />
+            <div className="flex flex-col p-4 sm:p-6 md:text-left">
+              <Typography className="font-bold" variant="titleFont">
+                {entry.title}
+              </Typography>
+              <Typography className="max-w-prose leading-relaxed text-sm sm:text-base">
+                {entry.description}
+              </Typography>
 
-            <div className="w-full max-w-180 overflow-hidden bg-slate-50 dark:bg-slate-900">
-              <Image
-                className="object-contain"
-                src={entry.imageUrl}
-                alt={entry.title}
-                width={720}
-                height={480}
-                sizes="(max-width: 640px) 100vw, 720px"
-                priority
-              />
+              <div className="w-full max-w-180 overflow-hidden bg-slate-50 dark:bg-slate-900">
+                <Image
+                  className="object-contain"
+                  src={entry.imageUrl}
+                  alt={entry.title}
+                  width={720}
+                  height={480}
+                  sizes="(max-width: 640px) 100vw, 720px"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
