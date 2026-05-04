@@ -2,14 +2,14 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import LinkedInButton from "./linkedInButton";
 import GithubButton from "./githubButton";
 import ResumeWrapper from "../resume/resumeWrapper";
+import { getTranslations } from "next-intl/server";
 
-export default function ProfileCard() {
-  const t = useTranslations("Global");
+export default async function ProfileCard() {
+  const t = await getTranslations("Global");
 
   return (
     <Card className="mt-5 sm:mt-20 rounded-4xl">

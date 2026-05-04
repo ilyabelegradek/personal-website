@@ -14,8 +14,7 @@ import {
 } from "../constants/localeConstants";
 import { getCookie } from "../util/getCookie";
 import pick from "lodash/pick";
-
-const NavBar = dynamic(() => import("../components/navigation/navbar"));
+import NavBar from "../components/navigation/navbar";
 
 export async function generateMetadata() {
   const locale = await getCookie(LOCALE_COOKIE_NAME, DEFAULT_LOCALE);

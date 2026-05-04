@@ -112,6 +112,7 @@
     "site_uses": "This site uses..."
   },
   "Architecture": {
+    "arch_intro": "On this screen, I will walk through some of the design, implementation, and architectural decisions I made while creating this website. My goal was to create an intuitive, responsive experience that reflects best practices in modern web development.",
     "arch_title": "Site Architecture",
     "arch_theming": "Theming",
     "arch_localization": "Localization",
@@ -119,7 +120,7 @@
     "arch_pdf": "PDF Downloading",
     "architecture": "Architecture",
     "arch_proj_struct": "Project Structure",
-    "arch_struct_explanation": "My codebase needs to be intuitive to navigate so I can easily make updates and modifications. It also needs to be scalable, readable, and follow best practices to demonstrate my competency as a developer.",
+    "arch_struct_explanation": "My codebase needed to be intuitive to navigate so I can easily make updates and modifications. It also needed to be scalable, readable, and follow best practices to demonstrate my competency as a developer.",
     "arch_default_description": "Click a folder to see its children and a short description. Not every directory or file is represented - that felt excessive!",
     "arch_public_description": "The Next.js convention is that anything in the public folder can be referenced anywhere in the codebase starting from the base url /. This is a good place to keep static files.",
     "arch_fonts_description": "Here I store all the font files I use in the application as .ttf files. Because they're in 'public', I can access them anywhere in the app.",

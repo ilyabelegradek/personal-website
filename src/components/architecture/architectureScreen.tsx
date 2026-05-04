@@ -1,4 +1,5 @@
 import TableOfContentsComponent from "../reusable/tableOfContents/tableOfContentsComponent";
+import ArchitectureIntro from "./architectureIntro";
 import ArchitecturePerformance from "./architecturePerformance";
 import ArchitectureProjectStructure from "./architectureProjectStructure";
 
@@ -8,7 +9,7 @@ export default function ArchitectureScreen() {
       sections={[
         {
           titleStrKey: "arch_title",
-          content: <div className="h-160"></div>,
+          content: <ArchitectureIntro />,
         },
         {
           titleStrKey: "arch_perf",

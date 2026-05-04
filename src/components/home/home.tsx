@@ -1,7 +1,5 @@
-import dynamic from "next/dynamic";
-
-const ProfileCard = dynamic(() => import("./profileCard"));
-const Statement = dynamic(() => import("./statement"));
+import ProfileCard from "./profileCard";
+import Statement from "./statement";
 
 export default function Home() {
   return (
