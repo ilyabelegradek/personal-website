@@ -39,8 +39,6 @@ export default function TableOfContents(props: { allIDs: string[] }) {
                   underline="none"
                   className="block px-3 py-2 rounded-md transition-colors"
                   sx={{
-                    color: "text.primary",
-
                     ...(activeIDs.includes(sectionID)
                       ? {
                           backgroundColor: "primary.main",
@@ -50,6 +48,7 @@ export default function TableOfContents(props: { allIDs: string[] }) {
                       : {
                           "&:hover": {
                             backgroundColor: "action.hover",
+                            color: "text.primary",
                           },
                         }),
                   }}

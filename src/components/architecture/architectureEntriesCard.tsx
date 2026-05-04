@@ -30,6 +30,9 @@ export default function ArchitectureEntriesCard(props: {
               {entries.title}
             </Typography>
             <Divider className="w-full" />
+            <Typography className="p-4 sm:p-6 text-start" variant="titleFont">
+              {entries.description}
+            </Typography>
             <div className="flex flex-col md:flex-row p-4 sm:p-6 md:text-left items-center md:items-start gap-6">
               <div className="flex-1 flex flex-col items-center md:items-start">
                 <Typography className="font-bold" variant="titleFont">
@@ -37,7 +40,7 @@ export default function ArchitectureEntriesCard(props: {
                 </Typography>
                 {entry.descriptionPoints.map((descPoint, index) => (
                   <Typography
-                    className="max-w-prose leading-relaxed text-sm sm:text-base"
+                    className="max-w-prose leading-relaxed text-sm sm:text-base text-start"
                     key={index}
                   >
                     {`• ${descPoint}`}

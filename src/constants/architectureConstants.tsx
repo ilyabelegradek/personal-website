@@ -2,6 +2,8 @@ import { ArchitectureEntries, MockFile } from "../types/types";
 
 export const performanceNextJS: ArchitectureEntries = {
   title: "Next.js Built-In Components",
+  description:
+    "Next.js provides several components with various optimizations built in.",
   entries: [
     {
       title: "Font",
@@ -27,6 +29,32 @@ export const performanceNextJS: ArchitectureEntries = {
         "Prevents layout shift while images are loading",
       ],
       imageUrl: "/images/imageScreenshot.webp",
+    },
+  ],
+};
+
+export const performanceTesting: ArchitectureEntries = {
+  title: "Performance Testing",
+  description:
+    "To measure my performance in a more objective way than manual testing, I used the following tools:",
+  entries: [
+    {
+      title: "Lighthouse",
+      descriptionPoints: [
+        "Google Chrome has a built-in performance test.",
+        "Tested on both desktop and mobile devices.",
+        "Mobile tests will throttle your network to simulate a real user on their phone.",
+      ],
+      imageUrl: "/images/lighthouseTesting.webp",
+    },
+    {
+      title: "Vercel Speed Insights",
+      descriptionPoints: [
+        "Provided by Vercel - the creators of Next.js and the hosting provider I used to deploy my website",
+        "Injected in the root layout.tsx file, tracks anonymized speed statistics of real users",
+        "Good to see how the website is actually performing in production",
+      ],
+      imageUrl: "/images/vercelTesting.webp",
     },
   ],
 };

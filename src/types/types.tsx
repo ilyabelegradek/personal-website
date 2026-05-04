@@ -30,6 +30,7 @@ export type TableOfContentsSection = {
 
 export type ArchitectureEntries = {
   title: string;
+  description: string;
   entries: ArchitectureEntry[];
 };
 

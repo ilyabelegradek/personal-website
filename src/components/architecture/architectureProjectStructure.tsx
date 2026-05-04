@@ -5,7 +5,7 @@ import { useState } from "react";
 import FolderIcon from "@mui/icons-material/Folder";
 import ArticleIcon from "@mui/icons-material/Article";
 import Card from "@mui/material/Card";
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 import ProjectStructureDescription from "./projectStructureDesciption";
 import { projectStructureList } from "@/src/constants/architectureConstants";
 import { useTranslations } from "next-intl";

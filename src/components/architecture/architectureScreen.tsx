@@ -1,8 +1,15 @@
 "use client";
 
-import TableOfContentsComponent from "../reusable/tableOfContents/tableOfContentsComponent";
-import ArchitecturePerformance from "./architecturePerformance";
-import ArchitectureProjectStructure from "./architectureProjectStructure";
+import dynamic from "next/dynamic";
+const TableOfContentsComponent = dynamic(
+  () => import("../reusable/tableOfContents/tableOfContentsComponent"),
+);
+const ArchitecturePerformance = dynamic(
+  () => import("./architecturePerformance"),
+);
+const ArchitectureProjectStructure = dynamic(
+  () => import("./architectureProjectStructure"),
+);
 
 export default function ArchitectureScreen() {
   return (

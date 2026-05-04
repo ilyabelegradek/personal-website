@@ -147,5 +147,8 @@
   "arch_types_desc_isFile": "isFile: boolean? (Optional, to show the file icon. Not set for this directory.)",
   "arch_types_desc_path": "path: string? (Optional, used to simulate the file explorer behavior by expanding and collapsing appropriate paths)",
   "arch_types_desc_final": "Keeping all the types in one directory makes it easy to modify and maintain them. If the project grew large enough, I would split the types file by functionality, similar to how I manage the 'constants' and 'components' directories.",
-  "arch_util_description": "In this directory, I store utility functions that are used in multiple places in the app. For example, getCookie() and setCookie(), which are used to set the functional MUI and localization cookies."
+  "arch_util_description": "In this directory, I store utility functions that are used in multiple places in the app. For example, getCookie() and setCookie(), which are used to set the functional MUI and localization cookies.",
+  "arch_perf_intro": "I wanted to write this website using React and various third party libraries to showcase my proficiency with them.\n\nThe downside of this approach, as opposed to a simple HTML page styled with CSS, is that React is pure Javascript. By default, Javascript renders on the user's browser, which means the page takes longer to load, especially the first time a user visits. This is a poor experience for any site, but especially for a personal site which should be fast and lightweight.\n\nTherefore, I used Next.js for server-side rendering. I also did the following optimizations:",
+  "arch_perf_builtin_title": "Next.js Built-In Components",
+  "arch_perf_builtin_desc": "Next.js provides several components with various optimizations built in."
 }
