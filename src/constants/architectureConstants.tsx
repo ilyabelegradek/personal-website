@@ -1,58 +1,50 @@
 import { ArchitectureEntries, MockFile } from "../types/types";
 
 export const performanceNextJS: ArchitectureEntries = {
-  title: "Next.js Built-In Components",
-  description:
-    "Next.js provides several components with various optimizations built in.",
+  title: "arch_perf_builtin_title",
+  description: "arch_perf_builtin_desc",
   entries: [
     {
-      title: "Font",
+      title: "arch_perf_font_title",
       descriptionPoints: [
-        "Bundled with static assets, improving privacy and performance",
-        "Preloaded fonts prevent flashes of unstyled text",
-        "No layout shift - fallback font has same font size",
+        "arch_perf_font_desc",
+        "arch_perf_font_desc1",
+        "arch_perf_font_desc2",
       ],
       imageUrl: "/images/fontScreenshot.webp",
     },
     {
-      title: "Dynamic Imports",
-      descriptionPoints: [
-        "Load javascript modules and React components only when they're needed",
-        "Reduces first contentful paint time",
-      ],
+      title: "arch_perf_dynamic_title",
+      descriptionPoints: ["arch_perf_dynamic_desc1", "arch_perf_dynamic_desc2"],
       imageUrl: "/images/dynamicScreenshot.webp",
     },
     {
-      title: "Image",
-      descriptionPoints: [
-        "Only loads images when they enter the viewport - leads to faster page loading",
-        "Prevents layout shift while images are loading",
-      ],
+      title: "arch_perf_image_title",
+      descriptionPoints: ["arch_perf_image_desc1", "arch_perf_image_desc2"],
       imageUrl: "/images/imageScreenshot.webp",
     },
   ],
 };
 
 export const performanceTesting: ArchitectureEntries = {
-  title: "Performance Testing",
-  description:
-    "To measure my performance in a more objective way than manual testing, I used the following tools:",
+  title: "arch_perf_testing_title",
+  description: "arch_perf_testing_desc",
   entries: [
     {
-      title: "Lighthouse",
+      title: "arch_perf_testing_lighthouse_title",
       descriptionPoints: [
-        "Google Chrome has a built-in performance test.",
-        "Tested on both desktop and mobile devices.",
-        "Mobile tests will throttle your network to simulate a real user on their phone.",
+        "arch_perf_testing_lighthouse_desc1",
+        "arch_perf_testing_lighthouse_desc2",
+        "arch_perf_testing_lighthouse_desc3",
       ],
       imageUrl: "/images/lighthouseTesting.webp",
     },
     {
-      title: "Vercel Speed Insights",
+      title: "arch_perf_testing_vercel_title",
       descriptionPoints: [
-        "Provided by Vercel - the creators of Next.js and the hosting provider I used to deploy my website",
-        "Injected in the root layout.tsx file, tracks anonymized speed statistics of real users",
-        "Good to see how the website is actually performing in production",
+        "arch_perf_testing_vercel_desc1",
+        "arch_perf_testing_vercel_desc2",
+        "arch_perf_testing_vercel_desc3",
       ],
       imageUrl: "/images/vercelTesting.webp",
     },

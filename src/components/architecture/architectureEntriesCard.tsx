@@ -10,6 +10,7 @@ import { useState } from "react";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Icon from "@mui/material/Icon";
+import { useTranslations } from "next-intl";
 
 export default function ArchitectureEntriesCard(props: {
   entries: ArchitectureEntries;
@@ -17,6 +18,7 @@ export default function ArchitectureEntriesCard(props: {
   const { entries } = props;
   const [currentEntryIndex, setCurrentEntryIndex] = useState(0);
   const entry = entries.entries[currentEntryIndex];
+  const t = useTranslations();
 
   return (
     <Card className="my-4">
@@ -27,23 +29,23 @@ export default function ArchitectureEntriesCard(props: {
               className="font-bold text-xl sm:text-2xl text-center p-4 sm:p-6"
               variant="titleFont"
             >
-              {entries.title}
+              {t(entries.title)}
             </Typography>
             <Divider className="w-full" />
             <Typography className="p-4 sm:p-6 text-start" variant="titleFont">
-              {entries.description}
+              {t(entries.description)}
             </Typography>
             <div className="flex flex-col md:flex-row p-4 sm:p-6 md:text-left items-center md:items-start gap-6">
               <div className="flex-1 flex flex-col items-center md:items-start">
                 <Typography className="font-bold" variant="titleFont">
-                  {entry.title}
+                  {t(entry.title)}
                 </Typography>
                 {entry.descriptionPoints.map((descPoint, index) => (
                   <Typography
                     className="max-w-prose leading-relaxed text-sm sm:text-base text-start"
                     key={index}
                   >
-                    {`• ${descPoint}`}
+                    {`• ${t(descPoint)}`}
                   </Typography>
                 ))}
               </div>
@@ -53,7 +55,6 @@ export default function ArchitectureEntriesCard(props: {
                   alt={entry.title}
                   width={471}
                   height={63}
-                  priority
                   style={{ width: "auto", height: "auto" }}
                 />
               </div>
