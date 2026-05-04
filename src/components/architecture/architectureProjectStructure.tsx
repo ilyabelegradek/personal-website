@@ -34,7 +34,7 @@ export default function ArchitectureProjectStructure() {
   return (
     <div className="mx-3 sm:mx-14">
       <Typography>{t("arch_struct_explanation")}</Typography>
-      <Card className="flex justify-between gap-8  mt-10 p-4">
+      <Card className="flex flex-col gap-8 mt-10 p-4 sm:flex-row sm:justify-between">
         <div className="flex flex-col gap-2">
           {projectStructureList
             .filter((file) => isPathVisible(file.path))

@@ -15,14 +15,12 @@ export default function ProjectStructureDescription(props: {
 
   return (
     <Box
+      className="flex-1 px-4 py-3"
       sx={{
-        flex: 1,
         borderRadius: 2,
         border: 1,
         borderColor: "divider",
         bgcolor: "background.paper",
-        px: 4,
-        py: 3,
         color: "text.primary",
         boxShadow: 1,
       }}
