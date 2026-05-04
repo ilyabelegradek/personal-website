@@ -30,3 +30,5 @@ export const performanceNextJS: ArchitectureEntries = {
     },
   ],
 };
+
+export const TYPES_DESCRIPTION = "TYPES_DESCRIPTION";
