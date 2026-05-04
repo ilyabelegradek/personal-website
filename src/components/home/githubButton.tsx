@@ -1,5 +1,6 @@
 import IconButton from "@mui/material/IconButton";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import SvgIconLocal from "../resume/svgIconLocal";
+import { ICONS } from "@/src/types/types";
 
 export default function GithubButton() {
   return (
@@ -8,7 +9,12 @@ export default function GithubButton() {
       target="_blank"
     >
       <IconButton size="large" edge="start" color="inherit" aria-label="github">
-        <GitHubIcon fontSize="large" />
+        <SvgIconLocal
+          id={ICONS.GITHUB}
+          fill="currentColor"
+          width={35}
+          height={35}
+        />
       </IconButton>
     </a>
   );

@@ -1,5 +1,6 @@
 import IconButton from "@mui/material/IconButton";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import SvgIconLocal from "../resume/svgIconLocal";
+import { ICONS } from "@/src/types/types";
 
 export default function LinkedInButton() {
   return (
@@ -10,7 +11,12 @@ export default function LinkedInButton() {
         color="inherit"
         aria-label="linkedIn"
       >
-        <LinkedInIcon fontSize="large" />
+        <SvgIconLocal
+          id={ICONS.LINKEDIN}
+          fill="currentColor"
+          width={35}
+          height={35}
+        />
       </IconButton>
     </a>
   );

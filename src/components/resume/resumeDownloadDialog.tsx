@@ -6,7 +6,8 @@ import DialogContent from "@mui/material/DialogContent";
 import { pdf } from "@react-pdf/renderer";
 import ResumePDF from "./resumePDF";
 import { useTranslations } from "next-intl";
-import DownloadIcon from "@mui/icons-material/Download";
+import SvgIconLocal from "./svgIconLocal";
+import { ICONS } from "@/src/types/types";
 
 export default function ResumeDownloadDialog(props: {
   dialogOpen: boolean;
@@ -41,7 +42,14 @@ export default function ResumeDownloadDialog(props: {
       <DialogActions>
         <div className="flex flex-col w-full gap-2">
           <Button
-            startIcon={<DownloadIcon />}
+            startIcon={
+              <SvgIconLocal
+                id={ICONS.DOWNLOAD}
+                fill="currentColor"
+                width={35}
+                height={35}
+              />
+            }
             onClick={saveResumeToPdf}
             variant="outlined"
             className="w-full"

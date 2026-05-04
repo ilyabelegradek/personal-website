@@ -1,9 +1,10 @@
 "use client";
 
 import IconButton from "@mui/material/IconButton";
-import SettingsIcon from "@mui/icons-material/Settings";
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import SvgIconLocal from "../resume/svgIconLocal";
+import { ICONS } from "@/src/types/types";
 const SettingsDrawer = dynamic(() => import("../settings/settingsDrawer"));
 
 export default function NavSettings() {
@@ -18,7 +19,12 @@ export default function NavSettings() {
         aria-label="settings"
         onClick={() => setSettingsDrawerOpen(true)}
       >
-        <SettingsIcon />
+        <SvgIconLocal
+          id={ICONS.SETTINGS}
+          fill="currentColor"
+          width={35}
+          height={35}
+        />
       </IconButton>
       {settingsDrawerOpen && (
         <SettingsDrawer

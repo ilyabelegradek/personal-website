@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 export type NavigationItem = {
   stringKey: string;
   ref: string;
-  icon: React.ReactNode;
+  iconID: string;
 };
 
 export type ResumeBulletedList = {
@@ -47,3 +47,24 @@ export type MockFile = {
   isFile?: boolean;
   path?: string;
 };
+
+export const enum ICONS {
+  HOME = "home",
+  EMAIL = "email",
+  PHONE = "phone",
+  WEB = "web",
+  WORK = "work",
+  SKILLS = "skills",
+  EDUCATION = "education",
+  PERSONAL = "personal",
+  ARCHITECTURE = "architecture",
+  GITHUB = "github",
+  LINKEDIN = "linkedin",
+  SETTINGS = "settings",
+  ARTICLE = "article",
+  FOLDER = "folder",
+  CLOSE = "close",
+  DOWNLOAD = "download",
+  CHEVRONLEFT = "chevronLeft",
+  CHEVRONRIGHT = "chevronRight",
+}

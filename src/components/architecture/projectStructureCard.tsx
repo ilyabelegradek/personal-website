@@ -6,8 +6,8 @@ import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import ProjectStructureDescription from "./projectStructureDesciption";
-import FolderIcon from "@mui/icons-material/Folder";
-import ArticleIcon from "@mui/icons-material/Article";
+import SvgIconLocal from "../resume/svgIconLocal";
+import { ICONS } from "@/src/types/types";
 
 export default function ProjectStructureCard() {
   const [selectedFileDescription, setSelectedFileDescription] = useState(
@@ -67,9 +67,19 @@ export default function ProjectStructureCard() {
             >
               <Typography className="flex items-center gap-1">
                 {file.isFile ? (
-                  <ArticleIcon fontSize="inherit" />
+                  <SvgIconLocal
+                    id={ICONS.ARTICLE}
+                    fill="currentColor"
+                    width={25}
+                    height={25}
+                  />
                 ) : (
-                  <FolderIcon fontSize="inherit" />
+                  <SvgIconLocal
+                    id={ICONS.FOLDER}
+                    fill="currentColor"
+                    width={25}
+                    height={25}
+                  />
                 )}
                 {file.title}
               </Typography>

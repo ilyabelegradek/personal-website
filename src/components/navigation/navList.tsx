@@ -1,20 +1,18 @@
 "use client";
 
-import { NavigationItem } from "@/src/types/types";
+import { ICONS, NavigationItem } from "@/src/types/types";
 import { usePathname } from "next/navigation";
-import HomeIcon from "@mui/icons-material/Home";
-import ArchitectureIcon from "@mui/icons-material/Architecture";
 import Link from "next/link";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useTranslations } from "next-intl";
+import SvgIconLocal from "../resume/svgIconLocal";
 
 const navigationItems: NavigationItem[] = [
-  { stringKey: "home", ref: "/", icon: <HomeIcon /> },
+  { stringKey: "home", ref: "/", iconID: ICONS.HOME },
   {
     stringKey: "arch_title",
     ref: "/architecture",
-    icon: <ArchitectureIcon />,
+    iconID: ICONS.ARCHITECTURE,
   },
 ];
 
@@ -31,11 +29,12 @@ export default function NavList() {
             key={navItem.ref}
             className={`mx-2.5 p-3 ${pathname === navItem.ref ? "border-b" : ""}`}
           >
-            <Button endIcon={navItem.icon} color="secondary">
+            <div className="flex gap-2 items-center">
               <Typography variant="titleFont" color={"#FFFFFF"}>
                 {t(navItem.stringKey)}
               </Typography>
-            </Button>
+              <SvgIconLocal id={navItem.iconID} fill={"#FFFFFF"} />
+            </div>
           </Link>
         );
       })}

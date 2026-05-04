@@ -35,12 +35,10 @@ export default async function ProfileCard() {
         </Typography>
       </CardContent>
       <CardActions className="border">
-        <div className="flex flex-col w-full">
-          <div className="flex justify-between">
-            <LinkedInButton />
-            <ResumeWrapper />
-            <GithubButton />
-          </div>
+        <div className="flex w-full justify-between">
+          <LinkedInButton />
+          <ResumeWrapper />
+          <GithubButton />
         </div>
       </CardActions>
     </Card>
