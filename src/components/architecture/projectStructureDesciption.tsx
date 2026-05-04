@@ -69,7 +69,3 @@ function Description(props: { description: string }) {
 
   return <Typography>{description}</Typography>;
 }
-
-/*
- "Here I have a types.tsx file where I export all the custom types I use in this project. For example, this simulated project directory is an array of MockFile, each of which has a title (in this case, types), an indentationLevel (int from 0-N to simulate indentation), a description (what you're reading now!), and an optional isFile flag to change the icon. Keeping all the types in one spot makes it easy to modify and maintain them.",
-*/
