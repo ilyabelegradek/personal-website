@@ -26,19 +26,20 @@ export default function TableOfContents(props: { allIDs: string[] }) {
               <li key={sectionID}>
                 <Link
                   href={`#${sectionID}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const element = document.getElementById(sectionID);
-                    if (element) {
-                      element.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                      });
-                    }
-                  }}
+                  // onClick={(e) => {
+                  //   e.preventDefault();
+                  //   const element = document.getElementById(sectionID);
+                  //   if (element) {
+                  //     element.scrollIntoView({
+                  //       behavior: "smooth",
+                  //       block: "start",
+                  //     });
+                  //   }
+                  // }}
                   underline="none"
                   className="block px-3 py-2 rounded-md transition-colors"
                   sx={{
+                    scrollBehavior: "smooth",
                     ...(activeIDs.includes(sectionID)
                       ? {
                           backgroundColor: "primary.main",

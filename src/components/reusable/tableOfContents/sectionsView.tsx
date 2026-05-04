@@ -1,15 +1,13 @@
-"use client";
-
 import { TableOfContentsSection } from "@/src/types/types";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export default function SectionsView(props: {
+export default async function SectionsView(props: {
   sections: TableOfContentsSection[];
 }) {
   const { sections } = props;
-  const t = useTranslations("Architecture");
+  const t = await getTranslations("Architecture");
 
   return (
     <div className="w-full pb-8 pt-8 pl-35 sm:pl-55">

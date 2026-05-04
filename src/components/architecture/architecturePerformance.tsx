@@ -4,10 +4,10 @@ import {
 } from "@/src/constants/architectureConstants";
 import ArchitectureEntriesCard from "./architectureEntriesCard";
 import Typography from "@mui/material/Typography";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export default function ArchitecturePerformance() {
-  const t = useTranslations("Architecture");
+export default async function ArchitecturePerformance() {
+  const t = await getTranslations("Architecture");
 
   return (
     <div className="flex flex-col gap-8 mx-3 sm:mx-14">

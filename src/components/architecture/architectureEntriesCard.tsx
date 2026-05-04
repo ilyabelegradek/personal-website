@@ -51,6 +51,7 @@ export default function ArchitectureEntriesCard(props: {
               </div>
               <div className="overflow-hidden">
                 <Image
+                  priority
                   src={entry.imageUrl}
                   alt={entry.title}
                   width={471}
