@@ -25,8 +25,9 @@ import { SvgIconPDF } from "./svgIconPDF";
 
 export default function ResumePDF(props: {
   t: ReturnType<typeof useTranslations>;
+  tGlobal: ReturnType<typeof useTranslations>;
 }) {
-  const { t } = props;
+  const { t, tGlobal } = props;
 
   return (
     <Document>
@@ -42,7 +43,7 @@ export default function ResumePDF(props: {
               </Text>
             ))}
           </View>
-          <Text style={resumeStyles.name}>{t("name")}</Text>
+          <Text style={resumeStyles.name}>{tGlobal("name")}</Text>
           <View style={resumeStyles.infoColumn}>
             <View style={resumeStyles.iconRow}>
               <Text style={resumeStyles.infoItem}>

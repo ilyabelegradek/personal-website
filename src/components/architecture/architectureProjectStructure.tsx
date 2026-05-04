@@ -11,7 +11,7 @@ import { projectStructureList } from "@/src/constants/architectureConstants";
 import { useTranslations } from "next-intl";
 
 export default function ArchitectureProjectStructure() {
-  const t = useTranslations();
+  const t = useTranslations("Architecture");
   const [selectedFileDescription, setSelectedFileDescription] = useState(
     "arch_default_description",
   );

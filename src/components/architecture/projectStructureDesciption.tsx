@@ -32,7 +32,7 @@ export default function ProjectStructureDescription(props: {
 
 function Description(props: { description: string }) {
   const { description } = props;
-  const t = useTranslations();
+  const t = useTranslations("Architecture");
 
   if (description === TYPES_DESCRIPTION) {
     return (

@@ -11,7 +11,9 @@ export default function ResumeLocalDialog(props: {
   dialogOpen: boolean;
   setDialogOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const t = useTranslations();
+  const t = useTranslations("Resume");
+  const tGlobal = useTranslations("Global");
+
   const { dialogOpen, setDialogOpen } = props;
 
   return (
@@ -28,7 +30,7 @@ export default function ResumeLocalDialog(props: {
     >
       <DialogTitle>
         <div className="flex items-center w-full justify-between">
-          <Typography variant="titleFont">{t("resume")}</Typography>
+          <Typography variant="titleFont">{tGlobal("resume")}</Typography>
           <IconButton onClick={() => setDialogOpen(false)}>
             <CloseIcon />
           </IconButton>

@@ -9,7 +9,7 @@ export default function SectionsView(props: {
   sections: TableOfContentsSection[];
 }) {
   const { sections } = props;
-  const t = useTranslations();
+  const t = useTranslations("Architecture");
 
   return (
     <div className="w-full pb-8 pt-8 pl-35 sm:pl-55">

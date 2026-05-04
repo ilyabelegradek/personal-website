@@ -3,14 +3,13 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { useTranslations } from "next-intl";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import LinkedInButton from "./linkedInButton";
 import GithubButton from "./githubButton";
-const Resume = dynamic(() => import("../resume/resume"));
+import ResumeWrapper from "../resume/resumeWrapper";
 
 export default function ProfileCard() {
-  const t = useTranslations();
+  const t = useTranslations("Global");
 
   return (
     <Card className="mt-5 sm:mt-20 rounded-4xl">
@@ -39,7 +38,7 @@ export default function ProfileCard() {
         <div className="flex flex-col w-full">
           <div className="flex justify-between">
             <LinkedInButton />
-            <Resume />
+            <ResumeWrapper />
             <GithubButton />
           </div>
         </div>

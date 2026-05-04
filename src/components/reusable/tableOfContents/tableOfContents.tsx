@@ -6,7 +6,7 @@ import Card from "@mui/material/Card";
 import { Link } from "@mui/material";
 
 export default function TableOfContents(props: { allIDs: string[] }) {
-  const t = useTranslations();
+  const t = useTranslations("Architecture");
   const { allIDs } = props;
 
   const { activeIDs } = useGetVisibleSections(allIDs);

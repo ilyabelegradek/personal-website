@@ -10,7 +10,7 @@ export default function StringWithHyperlink(props: {
 }) {
   const { richText } = props;
   const { strKey, argumentName, link } = richText;
-  const t = useTranslations();
+  const t = useTranslations("Disclosures");
   const theme = useTheme();
 
   if (argumentName === undefined || link === undefined) {

@@ -18,7 +18,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function LanguageSelect() {
-  const t = useTranslations();
+  const t = useTranslations("Home");
   const [currentLocale, setCurrentLocale] = useState(DEFAULT_LOCALE);
   const router = useRouter();
   const [loading, setLoading] = useState(true);

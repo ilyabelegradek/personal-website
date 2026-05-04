@@ -2,23 +2,34 @@ import {
   LOCALE_COOKIE_NAME,
   DEFAULT_LOCALE,
 } from "@/src/constants/localeConstants";
-import { getTranslations } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import { getCookie } from "../../util/getCookie";
+import pick from "lodash/pick";
+import { NextIntlClientProvider } from "next-intl";
 
 export async function generateMetadata() {
   const locale = await getCookie(LOCALE_COOKIE_NAME, DEFAULT_LOCALE);
-  const t = await getTranslations({ locale });
+  const messages = await getMessages({ locale });
+  const architectureMessages = messages.Architecture;
 
   return {
-    title: t("architecture"),
-    description: t("arch_title"),
+    title: architectureMessages.architecture,
+    description: architectureMessages.arch_title,
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div className="h-full w-full flex flex-col">{children}</div>;
+  const locale = await getCookie(LOCALE_COOKIE_NAME, DEFAULT_LOCALE);
+  const messages = await getMessages({ locale });
+  const architectureMessages = pick(messages, ["Architecture"]);
+
+  return (
+    <NextIntlClientProvider messages={architectureMessages}>
+      <div className="h-full w-full flex flex-col">{children}</div>
+    </NextIntlClientProvider>
+  );
 }

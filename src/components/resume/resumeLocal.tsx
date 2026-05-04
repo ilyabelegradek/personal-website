@@ -23,7 +23,8 @@ import {
 import SvgIconLocal from "./svgIconLocal";
 
 export default function ResumeLocal() {
-  const t = useTranslations();
+  const t = useTranslations("Resume");
+  const tGlobal = useTranslations("Global");
 
   return (
     <div className="flex flex-col" style={{ fontSize: "18px" }}>
@@ -49,7 +50,7 @@ export default function ResumeLocal() {
           className="text-center flex-1 pt-2 pl-5 text-2xl md:text-5xl content-center"
           sx={{ fontSize: { xs: "36px", md: "40px" } }}
         >
-          {t("name")}
+          {tGlobal("name")}
         </Typography>
         <div
           className="flex flex-col items-end justify-center"

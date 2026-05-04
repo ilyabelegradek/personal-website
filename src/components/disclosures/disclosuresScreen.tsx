@@ -13,7 +13,8 @@ import { useState } from "react";
 import StringWithHyperlink from "../reusable/stringWithHyperlink";
 
 export default function DisclosuresScreen() {
-  const t = useTranslations();
+  const t = useTranslations("Disclosures");
+  const tGlobal = useTranslations("Global");
   const [disclosureTabValue, setDisclosureTabValue] = useState(0);
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setDisclosureTabValue(newValue);
@@ -22,7 +23,7 @@ export default function DisclosuresScreen() {
   return (
     <div className="flex flex-col m-15 gap-5">
       <Typography variant="titleFont" className="text-3xl font-bold underline">
-        {t("disclosures_site")}
+        {tGlobal("disclosures_site")}
       </Typography>
       <Tabs value={disclosureTabValue} onChange={handleChange}>
         {disclosureTabList.map((tab) => (

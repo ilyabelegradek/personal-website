@@ -18,7 +18,7 @@ export default function ArchitectureEntriesCard(props: {
   const { entries } = props;
   const [currentEntryIndex, setCurrentEntryIndex] = useState(0);
   const entry = entries.entries[currentEntryIndex];
-  const t = useTranslations();
+  const t = useTranslations("Architecture");
 
   return (
     <Card className="my-4">

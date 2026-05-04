@@ -13,11 +13,12 @@ export default function ResumeDownloadDialog(props: {
   setDialogOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setLocalResumeDialogOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const t = useTranslations();
+  const t = useTranslations("Resume");
+  const tGlobal = useTranslations("Global");
   const { dialogOpen, setDialogOpen, setLocalResumeDialogOpen } = props;
 
   async function saveResumeToPdf() {
-    const blob = await pdf(<ResumePDF t={t} />).toBlob();
+    const blob = await pdf(<ResumePDF t={t} tGlobal={tGlobal} />).toBlob();
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
     link.setAttribute("download", "Ilya_Belegradek_Resume.pdf");

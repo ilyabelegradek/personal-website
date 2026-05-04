@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import { useTranslations } from "next-intl";
 
 export default function ArchitecturePerformance() {
-  const t = useTranslations();
+  const t = useTranslations("Architecture");
 
   return (
     <div className="flex flex-col gap-8 mx-3 sm:mx-14">

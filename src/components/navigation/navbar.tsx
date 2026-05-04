@@ -27,7 +27,7 @@ const navigationItems: NavigationItem[] = [
 ];
 
 export default function NavBar() {
-  const t = useTranslations();
+  const t = useTranslations("Global");
   const [settingsDrawerOpen, setSettingsDrawerOpen] = useState(false);
   const pathname = usePathname();
 

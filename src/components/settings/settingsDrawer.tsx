@@ -14,7 +14,9 @@ export default function SettingsDrawer(props: {
   settingsDrawerOpen: boolean;
   setSettingsDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const t = useTranslations();
+  const t = useTranslations("Home");
+  const tGlobal = useTranslations("Global");
+
   const { settingsDrawerOpen, setSettingsDrawerOpen } = props;
   const theme = useTheme();
 
@@ -47,7 +49,7 @@ export default function SettingsDrawer(props: {
               style={{ color: theme.palette.primary.main }}
               fontSize={"20px"}
             >
-              {t("disclosures")}
+              {tGlobal("disclosures")}
             </Typography>
           </Link>
         </div>

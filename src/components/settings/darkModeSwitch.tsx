@@ -8,7 +8,7 @@ export default function DarkModeSwitch() {
   if (!mode) {
     return null;
   }
-  const t = useTranslations();
+  const t = useTranslations("Home");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const darkModeStr = event.target.checked ? "dark" : "light";
