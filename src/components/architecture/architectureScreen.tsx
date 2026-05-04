@@ -9,28 +9,28 @@ export default function ArchitectureScreen() {
     <TableOfContentsComponent
       sections={[
         {
-          titleStrKey: "architecture_title",
+          titleStrKey: "arch_title",
           content: <div className="h-160"></div>,
         },
         {
-          titleStrKey: "architecture_performance",
+          titleStrKey: "arch_perf",
           content: <ArchitecturePerformance />,
         },
         {
-          titleStrKey: "architecture_project_structure",
+          titleStrKey: "arch_proj_struct",
           content: <ArchitectureProjectStructure />,
         },
         {
-          titleStrKey: "architecture_theming",
+          titleStrKey: "arch_theming",
           content: <div className="h-160"></div>,
         },
         {
-          titleStrKey: "architecture_localization",
+          titleStrKey: "arch_localization",
           content: <div className="h-160"></div>,
         },
 
         {
-          titleStrKey: "architecture_pdf",
+          titleStrKey: "arch_pdf",
           content: <div className="h-160"></div>,
           hideDivider: true,
         },

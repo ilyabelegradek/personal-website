@@ -19,7 +19,7 @@ export default function ArchitectureEntriesCard(props: {
   const entry = entries.entries[currentEntryIndex];
 
   return (
-    <Card className="mx-3 my-4 sm:mx-14">
+    <Card className="my-4">
       <div className="flex flex-col items-center h-full">
         <div className="flex-1 w-full">
           <div className="flex w-full flex-col text-center">

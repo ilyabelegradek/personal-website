@@ -20,7 +20,7 @@ const SettingsDrawer = dynamic(() => import("../settings/settingsDrawer"));
 const navigationItems: NavigationItem[] = [
   { stringKey: "home", ref: "/", icon: <HomeIcon /> },
   {
-    stringKey: "architecture_title",
+    stringKey: "arch_title",
     ref: "/architecture",
     icon: <ArchitectureIcon />,
   },

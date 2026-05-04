@@ -11,7 +11,7 @@ export async function generateMetadata() {
 
   return {
     title: t("architecture"),
-    description: t("architecture_title"),
+    description: t("arch_title"),
   };
 }
 

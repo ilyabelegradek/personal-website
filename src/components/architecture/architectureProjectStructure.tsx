@@ -1,3 +1,5 @@
+"use client";
+
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import FolderIcon from "@mui/icons-material/Folder";
@@ -6,10 +8,12 @@ import Card from "@mui/material/Card";
 import { Box } from "@mui/material";
 import ProjectStructureDescription from "./projectStructureDesciption";
 import { projectStructureList } from "@/src/constants/architectureConstants";
+import { useTranslations } from "next-intl";
 
 export default function ArchitectureProjectStructure() {
+  const t = useTranslations();
   const [selectedFileDescription, setSelectedFileDescription] = useState(
-    "Click a folder to see its children and a short description. Not every directory or file is represented - that felt excessive!",
+    "arch_default_description",
   );
   const [expandedFolders, setExpandedFolders] = useState<Set<string>>(
     new Set(),
@@ -28,13 +32,9 @@ export default function ArchitectureProjectStructure() {
   };
 
   return (
-    <div>
-      <Typography>
-        My codebase needs to be intuitive to navigate so I can easily make
-        updates and modifications. It also needs to be scalable, readable, and
-        follow best practices to demonstrate my competency as a developer.
-      </Typography>
-      <Card className="flex justify-between gap-8 mx-3 sm:mx-14 mt-10 p-4">
+    <div className="mx-3 sm:mx-14">
+      <Typography>{t("arch_struct_explanation")}</Typography>
+      <Card className="flex justify-between gap-8  mt-10 p-4">
         <div className="flex flex-col gap-2">
           {projectStructureList
             .filter((file) => isPathVisible(file.path))
@@ -67,7 +67,7 @@ export default function ArchitectureProjectStructure() {
                     setExpandedFolders(newExpanded);
                   }
                 }}
-                key={file.title}
+                key={file.path + file.title}
               >
                 <Typography className="flex items-center gap-1">
                   {file.isFile ? (

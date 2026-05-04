@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 
 export default function ArchitecturePerformance() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 mx-3 sm:mx-14">
       <Typography>
         I wanted to write this website using React and various third party
         libraries to showcase my proficiency with them.
