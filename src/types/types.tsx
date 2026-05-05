@@ -53,6 +53,4 @@ export const enum ICONS {
   FOLDER = "folder",
   CLOSE = "close",
   DOWNLOAD = "download",
-  CHEVRONLEFT = "chevronLeft",
-  CHEVRONRIGHT = "chevronRight",
 }
