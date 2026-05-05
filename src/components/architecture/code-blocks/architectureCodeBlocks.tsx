@@ -1,6 +1,11 @@
 import { getTranslations } from "next-intl/server";
 import StringWithHyperlink from "@/src/components/reusable/stringWithHyperlink";
-import { codeBlocksDescriptionRichText } from "@/src/constants/architectureConstants";
+import {
+  codeBlockCodeSample,
+  codeBlocksDescriptionRichText,
+} from "@/src/constants/architectureConstants";
+import CardWithContent from "../cardWithContent";
+import CustomCodeBlock from "../../reusable/customCodeBlock";
 
 export default async function ArchitectureCodeBlocks() {
   const t = await getTranslations("Architecture");
@@ -11,6 +16,10 @@ export default async function ArchitectureCodeBlocks() {
         richText={codeBlocksDescriptionRichText}
         translationsNamespace="Architecture"
         hideBullet
+      />
+      <CardWithContent
+        descriptionKey="arch_code_blocks_code_block"
+        content={<CustomCodeBlock code={codeBlockCodeSample} />}
       />
     </div>
   );

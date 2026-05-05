@@ -1,5 +1,12 @@
-import { localizationDescriptionRichText } from "@/src/constants/architectureConstants";
+import {
+  localizationConfigSample,
+  localizationDescriptionRichText,
+  localizationJsonSample,
+  localizationProviderSample,
+} from "@/src/constants/architectureConstants";
 import StringWithHyperlink from "@/src/components/reusable/stringWithHyperlink";
+import CardWithContent from "../cardWithContent";
+import CustomCodeBlock from "../../reusable/customCodeBlock";
 
 export default async function ArchitectureLocalization() {
   return (
@@ -8,6 +15,18 @@ export default async function ArchitectureLocalization() {
         richText={localizationDescriptionRichText}
         translationsNamespace="Architecture"
         hideBullet
+      />
+      <CardWithContent
+        descriptionKey="arch_localization_json"
+        content={<CustomCodeBlock code={localizationJsonSample} />}
+      />
+      <CardWithContent
+        descriptionKey="arch_localization_config"
+        content={<CustomCodeBlock code={localizationConfigSample} />}
+      />
+      <CardWithContent
+        descriptionKey="arch_localization_using"
+        content={<CustomCodeBlock code={localizationProviderSample} />}
       />
     </div>
   );

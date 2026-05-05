@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import "../style/globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import MUIThemeProvider from "../style/theme";

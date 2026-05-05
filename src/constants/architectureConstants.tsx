@@ -406,3 +406,181 @@ export default function DisclosuresContent() {
     </>
   );
 }`;
+
+export const themeCreationCodeSample = `//Wraps the application code in the root layout.tsx file
+export default function MUIThemeProvider({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  const customTheme = createTheme({
+    colorSchemes: {
+    //light mode
+      light: {
+        palette: {
+          primary: {
+            main: "#2f82f7",
+            contrastText: "#EDF2FA",
+          },
+          background: {
+            default: "#e4f2ff",
+            paper: "#DDE8FD",
+          },
+          text: {
+            primary: "#0d121b",
+            secondary: "#383D47",
+          },
+        },
+      },
+      //dark mode
+      dark: {
+        //same palette object as light mode - just with different colors
+      },
+    },
+    cssVariables: {
+    //enables manual dark mode toggling
+      colorSchemeSelector: "class",
+    },
+    //inject my custom font to use in MUI components
+    typography: {
+      bodyFont: {
+        fontFamily: "ibmPlexSans",
+      },
+    },
+  });
+  return (
+    <ThemeProvider theme={customTheme}> 
+      <CssBaseline /> 
+      {children} 
+    </ThemeProvider>
+  );
+}`;
+
+export const pdfDescKeys = [
+  "arch_pdf_desc_1",
+  "arch_pdf_desc_2",
+  "arch_pdf_desc_3",
+  "arch_pdf_desc_4",
+];
+
+export const pdfCodeSample = `import { Document, Page, Text, View } from "@react-pdf/renderer";
+
+export default function ResumePDF(props: {
+  t: ReturnType<typeof useTranslations>;
+}) {
+  const { t } = props;
+
+  return (
+    <Document>
+      <Page size="A4" style={resumeStyles.page}>
+        <View style={resumeStyles.header}>
+          <Text style={resumeStyles.name}>{t("name")}</Text>
+        </View>
+      </Page>
+    </Document>
+  )
+}`;
+
+export const pdfStyleSample = `import { StyleSheet, Font } from "@react-pdf/renderer";
+
+//custom font support
+Font.register({
+  family: "titleFont",
+  src: "/fonts/PTSerif.ttf",
+});
+
+export const resumeStyles = StyleSheet.create({
+  page: {
+    flexDirection: "column",
+    padding: 8,
+    fontFamily: "titleFont",
+    fontSize: 11,
+  },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    borderBottom: 2,
+    borderBottomColor: "black",
+    borderBottomWidth: 1,
+    marginBottom: 4,
+    paddingBottom: 2,
+  },
+  name: {
+    fontSize: 32,
+    fontWeight: 700,
+    textAlign: "center",
+    flex: 1,
+    paddingTop: 8,
+    paddingLeft: 20,
+  },
+`;
+
+export const codeBlockCodeSample = `import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+
+export default function CustomCodeBlock(props: { code: string }) {
+  const { code } = props;
+
+  return (
+    <SyntaxHighlighter
+      language="typescript"
+      style={vscDarkPlus}
+      showLineNumbers={true}
+      customStyle={{
+        borderRadius: "8px",
+        padding: "20px",
+        maxWidth: "fit-content",
+      }}
+      wrapLongLines={true}
+    >
+      {code}
+    </SyntaxHighlighter>
+  );
+}`;
+
+export const localizationJsonSample = `{"Global": {
+    "name": "Ilya Belegradek",
+  },
+  "Architecture": {
+    "hello_world": "Hello world!",
+  },`;
+
+export const localizationConfigSample = `import { getRequestConfig } from "next-intl/server";
+  import { cookies } from "next/headers";
+  import {
+    DEFAULT_LOCALE,
+    LOCALE_COOKIE_NAME,
+  } from "../constants/localeConstants";
+  
+  export default getRequestConfig(async () => {
+    const store = await cookies();
+    const locale = store.get(LOCALE_COOKIE_NAME)?.value || DEFAULT_LOCALE;
+  
+    return {
+      locale,
+      messages: (await import(\`../../public/strings/\${locale}.json\`)).default,
+    };
+  });`;
+
+export const localizationProviderSample = `export default async function RootLayout({
+    children,
+  }: Readonly<{
+    children: React.ReactNode;
+  }>) {
+    const locale = await getCookie(LOCALE_COOKIE_NAME, DEFAULT_LOCALE);
+    const messages = await getMessages({ locale });
+    const architectureMessages = pick(messages, ["Architecture"]);
+  
+    //pass only the necessary messages to the provider
+    return (
+      <NextIntlClientProvider messages={architectureMessages}>
+        <div className="h-full w-full flex flex-col">{children}</div>
+      </NextIntlClientProvider>
+    );
+  }`;
+
+export const localizationStringSample = `
+    const t = await getTranslations("Architecture"); //for server components
+
+    return <Typography>{t("arch_localization_json")</Typography>
+  `;

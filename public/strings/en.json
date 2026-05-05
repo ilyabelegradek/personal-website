@@ -112,7 +112,7 @@
     "site_uses": "This site uses..."
   },
   "Architecture": {
-    "arch_intro": "On this screen, I will walk through some of the design, implementation, and architectural decisions I made while creating this website. My goal was to create an intuitive, responsive experience that reflects best practices in modern web development.",
+    "arch_intro": "On this screen, I will walk through some of the design and architectural decisions I made while creating this website. I will also give specific examples of code I wrote. My goal was to create an intuitive, responsive experience that reflects best practices in modern web development and has a robust, scalable code base.",
     "arch_title": "Site Architecture",
     "arch_theming": "Theming",
     "arch_localization": "Localization",
@@ -130,7 +130,7 @@
     "arch_strings_description": "This directory stores localization files for each language: en.json, ru.json, etc. If I want to support a new language, I simply add a new json file here. Each file has nested json objects to ensure a screen only pulls the translations it needs: for example, this screen gets the 'Architecture' translations.",
     "arch_src_description": "Next.js supports the common pattern of placing application code in a 'src' directory to separate it from configuration files (generally in the root directory).",
     "arch_app_description": "This is the folder used by the Next.js app router. Every route in the site has to be declared in this directory.",
-    "arch_app_architecture_description": "This is the folder for the /architecture route - the screen that you're on now! It has its own layout.tsx and page.tsx. I wrap the children in each layout with a NextIntlProvider containing only the strings needed by that route.",
+    "arch_app_architecture_description": "This is the folder for the /architecture route - the screen that you're on now! It has its own layout.tsx and page.tsx. I wrap the children in each layout with a NextIntlClientProvider containing only the strings needed by that route.",
     "arch_app_disclosures_description": "This is the folder for the /disclosures route - which you can view by opening the settings in the top right and clicking on the 'Disclosures' link. It also has its own layout.tsx and page.tsx.",
     "arch_favicon_description": "The icon you see on the browser tab. Next.js convention dictates this icon is placed in the app/ directory.",
     "arch_layout_description": "Every Next.js route needs a layout.tsx and a page.tsx. Since this is the root layout, it wraps all the other layouts, so in this file I inject various code that needs to be available globally, like theming and fonts. This is standard Next.js practice.",
@@ -184,9 +184,19 @@
     "arch_perf_testing_vercel_desc2": "Injected in the root layout.tsx file, tracks anonymized speed statistics of real users",
     "arch_perf_testing_vercel_desc3": "Good to see how the website is actually performing in production",
     "arch_theming_description": "I wanted an easy and consistent way to configure my website's styling. I also wanted to support a dark mode functionality as a simple form of user interaction. <mui>MUI</mui> provided me with those features, along with great integration with Next.js and many UI components with handy out of the box functionality.",
-    "arch_theming_components": "MUI provides many components with many configuration options. The components use my MUI theme and greatly reduce the amount of boilerplate code I have to write.",
+    "arch_theming_configuration": "To configure the theme, all I had to do was create a ThemeProvider and give it a theme object with light and dark palettes. Then I used it in my root layout.tsx file and I was ready to go!",
+    "arch_theming_components": "MUI provides many components with many configuration options. The components use my MUI theme and greatly reduce the amount of boilerplate code I have to write. Best of all, these components automatically use the colors I configured in my ThemeProvider.",
+    "arch_theming_final": "These examples merely scratch the surface of what MUI is capable of: it's a powerful, constantly evolving framework used by Costco, Marriott, Medium, and more. It was useful while developing this website and I'm excited to keep learning and using it in the future.",
     "arch_localization_description": "I used <nextIntl>next-intl</nextIntl> for localization because it's easy to configure, seamlessly integrates with Next.js client and server components, and allows me to easily add more languages and switch between them.",
+    "arch_localization_json": "To store the strings, I create json files for each language. The nested json objects allow a screen to only fetch the strings it needs. For example, this screen is using the 'Architecture' strings.",
+    "arch_localization_config": "This is my request.ts file that actually configures the strings based on the locale the user selected.",
+    "arch_localization_using": "Then I wrap a layout file for a screen in the next-intl provider and I'm ready to go! All I have to do is call useTranslations() - or await getTranslations() in a server component - and I can fetch any string by its key. When the locale switches, it automatically pulls the correct string from the new json.",
     "arch_pdf_description": "I wanted my website to allow users to download a PDF of my resume to hopefully aid in my job search. Also, I didn't enjoy creating a resume using a word processor, so I wanted to program a resume instead. The <pdfRenderer>@react/pdf-renderer</pdfRenderer> library fit my purposes perfectly.",
-    "arch_code_blocks_description": "I wanted to display code snippets on this screen to demonstrate the exact functionalities I was describing. At first, I tried screenshots, but they were blurry and low resolution. Then I found the <syntaxHighlighter>React Syntax Highlighter</syntaxHighlighter> library, which allows me to easily render and style code."
+    "arch_pdf_desc_1": "The library uses a React Native like syntax that's easy to pick up for any React developer.",
+    "arch_pdf_desc_2": "Custom components - Text, View, etc. - are used to organize and render content on the PDF",
+    "arch_pdf_desc_3": "StyleSheets are used to apply CSS like styling to those components",
+    "arch_pdf_desc_4": "Page will output to a standard single page in the PDF - overflowing onto the next one if I run out of room.",
+    "arch_code_blocks_description": "I wanted to display code snippets on this screen to demonstrate the exact functionalities I was describing. At first, I tried screenshots, but they were blurry and low resolution. Then I found the <syntaxHighlighter>React Syntax Highlighter</syntaxHighlighter> library, which allows me to easily render and style code.",
+    "arch_code_blocks_code_block": "All I had to do was install the npm library, make this reusable React component, and I was ready to go. Every chunk of code on this screen was displayed with this component."
   }
 }
