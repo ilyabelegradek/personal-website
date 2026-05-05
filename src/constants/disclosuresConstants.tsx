@@ -43,6 +43,11 @@ export const attributionList: CustomRichText[] = [
     argumentName: "emotion",
     link: "https://mui.com/material-ui/integrations/interoperability/",
   },
+  {
+    strKey: "attribution_code_blocks",
+    argumentName: "syntaxHighlighter",
+    link: "https://www.npmjs.com/package/react-syntax-highlighter",
+  },
 ];
 
 export const privacyList: CustomRichText[] = [
