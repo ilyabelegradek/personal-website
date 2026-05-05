@@ -12,7 +12,7 @@
     "error_404": "This page does not exist."
   },
   "Home": {
-    "statement": "Hello! I'm a software developer with {numYears} years experience developing Android and React applications. I enjoy the process of iterating on projects and watching them grow before my eyes. In my spare time, I like to play video games, play and watch soccer, and watch TV. Feel free to reach out if you'd like to get in touch!",
+    "statement": "Hello! I'm a software developer with {numYears} years experience developing Android and React applications. I enjoy the process of iterating on projects and refining the tiniest details until they're perfect. In my spare time, I enjoy video games and playing and watching soccer. Thank you for visiting my website and feel free to reach out if you'd like to get in touch!",
     "english": "English",
     "language": "Language",
     "russian": "Russian",
@@ -79,7 +79,7 @@
     "react_about": "Application allows internal users to create and modify projects for returning parts and to view tabulated summaries of existing projects",
     "react_native": "React Native",
     "react_react_native": "React, React Native",
-    "react_role": "Typescript developer for Nextjs microfrontend rewrite of legacy application",
+    "react_role": "Typescript developer for Nextjs micro-frontend rewrite of legacy application",
     "react_work_api": "Implemented Redux RTK Query API for future integration with the server",
     "react_work_forms": "Created scalable and robust forms with Formik, validated by Yup",
     "react_work_screens": "Created reusable React components and screens based on Figma mockups",
