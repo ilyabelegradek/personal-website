@@ -1,55 +1,138 @@
-import { ArchitectureEntries, MockFile } from "../types/types";
+import { CustomRichText, MockFile } from "../types/types";
 
-export const performanceNextJS: ArchitectureEntries = {
-  title: "arch_perf_builtin_title",
-  description: "arch_perf_builtin_desc",
-  entries: [
-    {
-      title: "arch_perf_font_title",
-      descriptionPoints: [
-        "arch_perf_font_desc",
-        "arch_perf_font_desc1",
-        "arch_perf_font_desc2",
-      ],
-      imageUrl: "/images/fontScreenshot.webp",
-    },
-    {
-      title: "arch_perf_dynamic_title",
-      descriptionPoints: ["arch_perf_dynamic_desc1", "arch_perf_dynamic_desc2"],
-      imageUrl: "/images/dynamicScreenshot.webp",
-    },
-    {
-      title: "arch_perf_image_title",
-      descriptionPoints: ["arch_perf_image_desc1", "arch_perf_image_desc2"],
-      imageUrl: "/images/imageScreenshot.webp",
-    },
-  ],
-};
+export const serverComponentsDescriptionKeys = [
+  "arch_perf_server_desc",
+  "arch_perf_server_desc2",
+  "arch_perf_server_desc3",
+];
 
-export const performanceTesting: ArchitectureEntries = {
-  title: "arch_perf_testing_title",
-  description: "arch_perf_testing_desc",
-  entries: [
-    {
-      title: "arch_perf_testing_lighthouse_title",
-      descriptionPoints: [
-        "arch_perf_testing_lighthouse_desc1",
-        "arch_perf_testing_lighthouse_desc2",
-        "arch_perf_testing_lighthouse_desc3",
-      ],
-      imageUrl: "/images/lighthouseTesting.webp",
-    },
-    {
-      title: "arch_perf_testing_vercel_title",
-      descriptionPoints: [
-        "arch_perf_testing_vercel_desc1",
-        "arch_perf_testing_vercel_desc2",
-        "arch_perf_testing_vercel_desc3",
-      ],
-      imageUrl: "/images/vercelTesting.webp",
-    },
-  ],
-};
+export const serverComponentCode = `//SERVER COMPONENT
+export default async function ProfileCard() {
+  const t = await getTranslations("Global");
+
+  return (
+    <Card className="mt-5 sm:mt-20 rounded-4xl">
+      <CardContent className="justify-items-center border">
+        <div className="rounded-full overflow-hidden h-50 w-50">
+          <Image
+            className="object-cover w-full h-full"
+            src="/images/profile_picture.webp"
+            alt="Profile picture"
+            height={400}
+            width={400}
+            priority
+          />
+        </div>
+        <Typography className="flex pt-5" variant="titleFont">
+          {t("name")}
+        </Typography>
+        <Typography className="flex" variant="titleFont">
+          {process.env.NEXT_PUBLIC_EMAIL}
+        </Typography>
+        <Typography className="flex" variant="titleFont">
+          {process.env.NEXT_PUBLIC_PHONE}
+        </Typography>
+      </CardContent>
+      <CardActions className="border">
+        <div className="flex w-full justify-between">
+          <LinkedInButton />
+          <ResumeWrapper /> //CLIENT COMPONENT
+          <GithubButton />
+        </div>
+      </CardActions>
+    </Card>
+  );
+}
+`;
+
+export const muiNextjsIntegrationCode = `
+export default async function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      className="h-full w-full antialiased"
+      suppressHydrationWarning
+    >
+      <body className="h-full w-full flex flex-col">
+        <AppRouterCacheProvider> //PROVIDER
+          <main>
+            {children}
+          </main>
+        </AppRouterCacheProvider>
+      </body>
+    </html>
+  );
+}
+`;
+
+export const nextintlCodeSample = `
+export default async function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  const locale = await getCookie(LOCALE_COOKIE_NAME, DEFAULT_LOCALE);
+  const messages = await getMessages({ locale });
+  const architectureMessages = pick(messages, ["Architecture"]);
+  //on the client, you would use the useTranslations() hook instead
+
+  return (
+    <NextIntlClientProvider messages={architectureMessages}>
+      <div className="h-full w-full flex flex-col">{children}</div>
+    </NextIntlClientProvider>
+  );
+}`;
+
+export const fontDescriptionKeys = [
+  "arch_perf_font_desc",
+  "arch_perf_font_desc1",
+  "arch_perf_font_desc2",
+];
+
+export const fontCode = `const ptSerif = localFont({ 
+  src: "../../public/fonts/PTSerif.ttf",
+});`;
+
+export const dynamicImportDescriptionKeys = [
+  "arch_perf_dynamic_desc1",
+  "arch_perf_dynamic_desc2",
+  "arch_perf_dynamic_desc3",
+];
+
+export const dynamicImportCode = `const SettingsDrawer = dynamic(() => import("../settings/settingsDrawer"));`;
+
+export const imageDescriptionsKeys = [
+  "arch_perf_image_desc1",
+  "arch_perf_image_desc2",
+  "arch_perf_image_desc3",
+];
+
+export const imageTypescriptCode = `<div className="rounded-full overflow-hidden h-50 w-50">
+  <Image
+    className="object-cover w-full h-full"
+    src="/images/profile_picture.webp"
+    alt="Profile picture"
+    height={400}
+    width={400}
+    priority
+  />
+</div>`;
+
+export const speedInsightDescriptionKeys = [
+  "arch_perf_testing_vercel_desc1",
+  "arch_perf_testing_vercel_desc2",
+  "arch_perf_testing_vercel_desc3",
+];
+
+export const lighthouseDescriptionKeys = [
+  "arch_perf_testing_lighthouse_desc1",
+  "arch_perf_testing_lighthouse_desc2",
+  "arch_perf_testing_lighthouse_desc3",
+];
 
 const enum ProjectDir {
   public = "public",
@@ -248,3 +331,9 @@ export const projectStructureList: MockFile[] = [
     isFile: true,
   },
 ];
+
+export const localizationDescriptionRichText: CustomRichText = {
+  strKey: "arch_localization_description",
+  argumentName: "nextIntl",
+  link: "https://next-intl.dev/",
+};

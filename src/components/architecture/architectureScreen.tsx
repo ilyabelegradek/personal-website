@@ -1,6 +1,7 @@
 import TableOfContentsComponent from "../reusable/tableOfContents/tableOfContentsComponent";
 import ArchitectureIntro from "./architectureIntro";
-import ArchitecturePerformance from "./architecturePerformance";
+import ArchitectureLocalization from "./architectureLocalization";
+import ArchitecturePerformance from "./performance/architecturePerformance";
 import ArchitectureProjectStructure from "./architectureProjectStructure";
 
 export default function ArchitectureScreen() {
@@ -25,7 +26,7 @@ export default function ArchitectureScreen() {
         },
         {
           titleStrKey: "arch_localization",
-          content: <div className="h-160"></div>,
+          content: <ArchitectureLocalization />,
         },
 
         {

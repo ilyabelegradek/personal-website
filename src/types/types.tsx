@@ -28,18 +28,6 @@ export type TableOfContentsSection = {
   hideDivider?: boolean;
 };
 
-export type ArchitectureEntries = {
-  title: string;
-  description: string;
-  entries: ArchitectureEntry[];
-};
-
-export type ArchitectureEntry = {
-  title: string;
-  descriptionPoints: string[];
-  imageUrl: string;
-};
-
 export type MockFile = {
   title: string;
   indentationLevel: number;
