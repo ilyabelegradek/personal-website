@@ -69,7 +69,7 @@ export default function MUIThemeProvider({
             primary: "#dae2ef",
             secondary: "#BEC4D0",
           },
-          divider: "#010207",
+          divider: "#393A41",
           info: {
             main: "#008ecc",
           },
