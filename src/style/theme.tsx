@@ -63,7 +63,7 @@ export default function MUIThemeProvider({
           },
           background: {
             default: "#050c1e",
-            paper: "#020511",
+            paper: "#0D1636",
           },
           text: {
             primary: "#dae2ef",

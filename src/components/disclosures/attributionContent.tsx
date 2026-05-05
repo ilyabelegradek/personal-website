@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import StringWithHyperlink from "../reusable/stringWithHyperlink";
 
 export default function AttributionContent() {
-  const t = useTranslations();
+  const t = useTranslations("Disclosures");
 
   return (
     <div className="flex flex-col">
