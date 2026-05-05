@@ -1,7 +1,7 @@
 "use client";
 
-import { getCookie } from "@/src/app/getCookie";
-import { setCookie } from "@/src/app/setCookie";
+import { getCookie } from "@/src/util/getCookie";
+import { setCookie } from "@/src/util/setCookie";
 import {
   DEFAULT_LOCALE,
   LOCALE_COOKIE_NAME,
@@ -18,7 +18,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function LanguageSelect() {
-  const t = useTranslations();
+  const t = useTranslations("Home");
   const [currentLocale, setCurrentLocale] = useState(DEFAULT_LOCALE);
   const router = useRouter();
   const [loading, setLoading] = useState(true);

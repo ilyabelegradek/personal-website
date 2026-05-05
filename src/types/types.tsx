@@ -1,7 +1,9 @@
+import { ReactNode } from "react";
+
 export type NavigationItem = {
   stringKey: string;
   ref: string;
-  icon: React.ReactNode;
+  iconID: string;
 };
 
 export type ResumeBulletedList = {
@@ -19,3 +21,36 @@ export type CustomRichText = {
   argumentName?: string;
   link?: string;
 };
+
+export type TableOfContentsSection = {
+  titleStrKey: string;
+  content: ReactNode;
+  hideDivider?: boolean;
+};
+
+export type MockFile = {
+  title: string;
+  indentationLevel: number;
+  description: string;
+  isFile?: boolean;
+  path?: string;
+};
+
+export const enum ICONS {
+  HOME = "home",
+  EMAIL = "email",
+  PHONE = "phone",
+  WEB = "web",
+  WORK = "work",
+  SKILLS = "skills",
+  EDUCATION = "education",
+  PERSONAL = "personal",
+  ARCHITECTURE = "architecture",
+  GITHUB = "github",
+  LINKEDIN = "linkedin",
+  SETTINGS = "settings",
+  ARTICLE = "article",
+  FOLDER = "folder",
+  CLOSE = "close",
+  DOWNLOAD = "download",
+}

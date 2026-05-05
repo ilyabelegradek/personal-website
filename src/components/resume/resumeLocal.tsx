@@ -1,36 +1,29 @@
 import Typography from "@mui/material/Typography";
 import { useTranslations } from "next-intl";
-import { ResumeBulletedList } from "@/src/types/types";
+import { ICONS, ResumeBulletedList } from "@/src/types/types";
 import {
   androidWork,
   education,
-  EDUCATION_ICON,
-  EMAIL_ICON,
   frameworks,
-  HOME_ICON,
   infoAddress,
   misc,
   miscContinued,
-  PERSONAL_ICON,
   personalProject,
-  PHONE_ICON,
   programmingLanguages,
   reactWork,
-  WORK_ICON,
-  SKILLS_ICON,
-  WEB_ICON,
 } from "@/src/constants/resumeConstants";
 import SvgIconLocal from "./svgIconLocal";
 
 export default function ResumeLocal() {
-  const t = useTranslations();
+  const t = useTranslations("Resume");
+  const tGlobal = useTranslations("Global");
 
   return (
     <div className="flex flex-col" style={{ fontSize: "18px" }}>
       <div className="flex flex-col md:flex-row md:justify-between border-b-2 border-black mb-1 pb-1 gap-2 md:gap-0">
         <div className="flex">
           <div className="flex flex-col items-start justify-center pr-1">
-            <SvgIconLocal id={HOME_ICON} />
+            <SvgIconLocal id={ICONS.HOME} />
           </div>
           <div className="flex flex-col items-start justify-center pr-1">
             {infoAddress.map((item) => (
@@ -49,7 +42,7 @@ export default function ResumeLocal() {
           className="text-center flex-1 pt-2 pl-5 text-2xl md:text-5xl content-center"
           sx={{ fontSize: { xs: "36px", md: "40px" } }}
         >
-          {t("name")}
+          {tGlobal("name")}
         </Typography>
         <div
           className="flex flex-col items-end justify-center"
@@ -59,13 +52,13 @@ export default function ResumeLocal() {
             <Typography variant="titleFont">
               {process.env.NEXT_PUBLIC_EMAIL}
             </Typography>
-            <SvgIconLocal id={EMAIL_ICON} />
+            <SvgIconLocal id={ICONS.EMAIL} />
           </div>
           <div className="flex flex-row gap-1">
             <Typography variant="titleFont">
               {process.env.NEXT_PUBLIC_PHONE}
             </Typography>
-            <SvgIconLocal id={PHONE_ICON} />
+            <SvgIconLocal id={ICONS.PHONE} />
           </div>
           <div className="flex flex-row gap-1 items-center">
             <div className="flex flex-col items-end">
@@ -76,13 +69,13 @@ export default function ResumeLocal() {
                 {process.env.NEXT_PUBLIC_LINKEDIN_SHORT}
               </Typography>
             </div>
-            <SvgIconLocal id={WEB_ICON} />
+            <SvgIconLocal id={ICONS.WEB} />
           </div>
         </div>
       </div>
       <div className="flex flex-col border-b-2 border-black mb-1 pt-1">
         <div className="flex flex-row gap-1 justify-center items-center">
-          <SvgIconLocal id={WORK_ICON} />
+          <SvgIconLocal id={ICONS.WORK} />
           <Typography
             variant="titleFont"
             className="font-bold underline text-center"
@@ -95,7 +88,7 @@ export default function ResumeLocal() {
       </div>
       <div className="flex flex-col border-b-2 border-black mb-1 pt-1">
         <div className="flex flex-row gap-1 justify-center items-center">
-          <SvgIconLocal id={SKILLS_ICON} />
+          <SvgIconLocal id={ICONS.SKILLS} />
 
           <Typography
             variant="titleFont"
@@ -115,7 +108,7 @@ export default function ResumeLocal() {
         <div className="flex flex-col md:flex-row">
           <div className="flex-1 pt-1 md:border-r border-black md:pr-1 mb-2 md:mb-0">
             <div className="flex flex-row gap-1 justify-center items-center">
-              <SvgIconLocal id={EDUCATION_ICON} />
+              <SvgIconLocal id={ICONS.EDUCATION} />
 
               <Typography
                 variant="titleFont"
@@ -128,7 +121,7 @@ export default function ResumeLocal() {
           </div>
           <div className="flex-1 pt-1 md:pl-1">
             <div className="flex flex-row gap-1 justify-center items-center">
-              <SvgIconLocal id={PERSONAL_ICON} />
+              <SvgIconLocal id={ICONS.PERSONAL} />
 
               <Typography
                 variant="titleFont"

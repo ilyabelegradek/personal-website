@@ -1,39 +1,32 @@
 import { Document, Page, Text, View } from "@react-pdf/renderer";
 import { resumeStyles } from "./resumeStyles";
 import { useTranslations } from "next-intl";
-import { ResumeBulletedList } from "@/src/types/types";
+import { ICONS, ResumeBulletedList } from "@/src/types/types";
 import {
   androidWork,
   education,
-  EDUCATION_ICON,
-  EMAIL_ICON,
   frameworks,
-  HOME_ICON,
   infoAddress,
   misc,
   miscContinued,
-  PERSONAL_ICON,
   personalProject,
-  PHONE_ICON,
   programmingLanguages,
   reactWork,
-  SKILLS_ICON,
-  WEB_ICON,
-  WORK_ICON,
 } from "@/src/constants/resumeConstants";
 import { SvgIconPDF } from "./svgIconPDF";
 
 export default function ResumePDF(props: {
   t: ReturnType<typeof useTranslations>;
+  tGlobal: ReturnType<typeof useTranslations>;
 }) {
-  const { t } = props;
+  const { t, tGlobal } = props;
 
   return (
     <Document>
       <Page size="A4" style={resumeStyles.page}>
         <View style={resumeStyles.header}>
           <View style={resumeStyles.infoColumnStart}>
-            <SvgIconPDF id={HOME_ICON} />
+            <SvgIconPDF id={ICONS.HOME} />
           </View>
           <View style={resumeStyles.infoColumnStart}>
             {infoAddress.map((item) => (
@@ -42,19 +35,19 @@ export default function ResumePDF(props: {
               </Text>
             ))}
           </View>
-          <Text style={resumeStyles.name}>{t("name")}</Text>
+          <Text style={resumeStyles.name}>{tGlobal("name")}</Text>
           <View style={resumeStyles.infoColumn}>
             <View style={resumeStyles.iconRow}>
               <Text style={resumeStyles.infoItem}>
                 {process.env.NEXT_PUBLIC_EMAIL}
               </Text>
-              <SvgIconPDF id={EMAIL_ICON} />
+              <SvgIconPDF id={ICONS.EMAIL} />
             </View>
             <View style={resumeStyles.iconRow}>
               <Text style={resumeStyles.infoItem}>
                 {process.env.NEXT_PUBLIC_PHONE}
               </Text>
-              <SvgIconPDF id={PHONE_ICON} />
+              <SvgIconPDF id={ICONS.PHONE} />
             </View>
             <View style={resumeStyles.iconRowCentered}>
               <View style={resumeStyles.infoColumn}>
@@ -65,13 +58,13 @@ export default function ResumePDF(props: {
                   {process.env.NEXT_PUBLIC_LINKEDIN_SHORT}
                 </Text>
               </View>
-              <SvgIconPDF id={WEB_ICON} />
+              <SvgIconPDF id={ICONS.WEB} />
             </View>
           </View>
         </View>
         <View style={resumeStyles.section}>
           <View style={resumeStyles.iconRowCentered}>
-            <SvgIconPDF id={WORK_ICON} />
+            <SvgIconPDF id={ICONS.WORK} />
             <Text style={resumeStyles.sectionTitle}>
               {t("resume_work_title")}
             </Text>
@@ -81,7 +74,7 @@ export default function ResumePDF(props: {
         </View>
         <View style={resumeStyles.section}>
           <View style={resumeStyles.iconRowCentered}>
-            <SvgIconPDF id={SKILLS_ICON} />
+            <SvgIconPDF id={ICONS.SKILLS} />
             <Text style={resumeStyles.sectionTitle}>{t("skills")}</Text>
           </View>
           <View style={resumeStyles.skillsRow}>
@@ -95,7 +88,7 @@ export default function ResumePDF(props: {
           <View style={resumeStyles.row}>
             <View style={resumeStyles.educationSection}>
               <View style={resumeStyles.iconRowCentered}>
-                <SvgIconPDF id={EDUCATION_ICON} />
+                <SvgIconPDF id={ICONS.EDUCATION} />
                 <Text style={resumeStyles.sectionTitlePaddingBottom}>
                   {t("education_title_with_date")}
                 </Text>
@@ -104,7 +97,7 @@ export default function ResumePDF(props: {
             </View>
             <View style={resumeStyles.projectSection}>
               <View style={resumeStyles.iconRowCentered}>
-                <SvgIconPDF id={PERSONAL_ICON} />
+                <SvgIconPDF id={ICONS.PERSONAL} />
                 <Text style={resumeStyles.sectionTitlePaddingBottom}>
                   {t("personal_project")}
                 </Text>

@@ -105,12 +105,3 @@ export const personalProject: ResumeBulletedList = {
     "personal_project_translations",
   ],
 };
-
-export const HOME_ICON: string = "home";
-export const EMAIL_ICON: string = "email";
-export const PHONE_ICON: string = "phone";
-export const WEB_ICON: string = "web";
-export const WORK_ICON: string = "work";
-export const SKILLS_ICON: string = "skills";
-export const EDUCATION_ICON: string = "education";
-export const PERSONAL_ICON: string = "personal";

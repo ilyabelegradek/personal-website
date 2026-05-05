@@ -4,14 +4,17 @@ import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import IconButton from "@mui/material/IconButton";
 import { useTranslations } from "next-intl";
-import CloseIcon from "@mui/icons-material/Close";
 import ResumeLocal from "./resumeLocal";
+import { ICONS } from "@/src/types/types";
+import SvgIconLocal from "./svgIconLocal";
 
 export default function ResumeLocalDialog(props: {
   dialogOpen: boolean;
   setDialogOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const t = useTranslations();
+  const t = useTranslations("Resume");
+  const tGlobal = useTranslations("Global");
+
   const { dialogOpen, setDialogOpen } = props;
 
   return (
@@ -28,9 +31,14 @@ export default function ResumeLocalDialog(props: {
     >
       <DialogTitle>
         <div className="flex items-center w-full justify-between">
-          <Typography variant="titleFont">{t("resume")}</Typography>
-          <IconButton onClick={() => setDialogOpen(false)}>
-            <CloseIcon />
+          <Typography variant="titleFont">{tGlobal("resume")}</Typography>
+          <IconButton onClick={() => setDialogOpen(false)} color="inherit">
+            <SvgIconLocal
+              id={ICONS.CLOSE}
+              fill="currentColor"
+              width={35}
+              height={35}
+            />
           </IconButton>
         </div>
       </DialogTitle>

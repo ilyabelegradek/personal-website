@@ -1,28 +1,28 @@
-import dynamic from "next/dynamic";
-import "./globals.css";
+import "../style/globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
-import MUIThemeProvider from "./style/theme";
+import MUIThemeProvider from "../style/theme";
 import { NextIntlClientProvider } from "next-intl";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import localFont from "next/font/local";
 import InitColorSchemeScript from "@mui/material/InitColorSchemeScript";
-import { getTranslations } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import {
   LOCALE_COOKIE_NAME,
   DEFAULT_LOCALE,
 } from "../constants/localeConstants";
-import { getCookie } from "./getCookie";
-
-const NavBar = dynamic(() => import("../components/navigation/navbar"));
+import { getCookie } from "../util/getCookie";
+import pick from "lodash/pick";
+import NavBar from "../components/navigation/navbar";
 
 export async function generateMetadata() {
   const locale = await getCookie(LOCALE_COOKIE_NAME, DEFAULT_LOCALE);
-  const t = await getTranslations({ locale });
+  const messages = await getMessages({ locale });
+  const globalMessages = messages.Global;
 
   return {
-    title: t("name"),
-    description: t("about-me"),
+    title: globalMessages.name,
+    description: globalMessages.about_me,
   };
 }
 
@@ -38,11 +38,15 @@ const ptSerif = localFont({
   src: "../../public/fonts/PTSerif.ttf",
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getCookie(LOCALE_COOKIE_NAME, DEFAULT_LOCALE);
+  const messages = await getMessages({ locale });
+  const homeMessages = pick(messages, ["Global", "Home"]);
+
   return (
     <html
       lang="en"
@@ -53,7 +57,7 @@ export default function RootLayout({
         <InitColorSchemeScript attribute="class" />
         <AppRouterCacheProvider>
           <MUIThemeProvider>
-            <NextIntlClientProvider>
+            <NextIntlClientProvider messages={homeMessages}>
               <main>
                 <Analytics />
                 <NavBar />

@@ -7,10 +7,12 @@ import { CustomRichText } from "@/src/types/types";
 
 export default function StringWithHyperlink(props: {
   richText: CustomRichText;
+  translationsNamespace?: string | undefined;
+  hideBullet?: boolean | undefined;
 }) {
-  const { richText } = props;
+  const { richText, translationsNamespace, hideBullet } = props;
   const { strKey, argumentName, link } = richText;
-  const t = useTranslations();
+  const t = useTranslations(translationsNamespace ?? "Disclosures");
   const theme = useTheme();
 
   if (argumentName === undefined || link === undefined) {
@@ -19,7 +21,7 @@ export default function StringWithHyperlink(props: {
 
   return (
     <Typography variant="bodyFont">
-      •{" "}
+      {!hideBullet && "• "}
       {t.rich(strKey, {
         [argumentName]: (chunks: ReactNode) => (
           <a

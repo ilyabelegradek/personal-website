@@ -9,7 +9,7 @@ const ResumeDownloadDialog = dynamic(() => import("./resumeDownloadDialog"));
 const ResumeLocalDialog = dynamic(() => import("./resumeLocalDialog"));
 
 export default function Resume() {
-  const t = useTranslations();
+  const t = useTranslations("Global");
   const [showResumeDownloadDialog, setShowResumeDownloadDialog] =
     useState(false);
   const [showResumeLocalDialog, setShowResumeLocalDialog] = useState(false);

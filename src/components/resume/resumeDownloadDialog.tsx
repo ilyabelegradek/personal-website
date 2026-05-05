@@ -6,18 +6,20 @@ import DialogContent from "@mui/material/DialogContent";
 import { pdf } from "@react-pdf/renderer";
 import ResumePDF from "./resumePDF";
 import { useTranslations } from "next-intl";
-import DownloadIcon from "@mui/icons-material/Download";
+import SvgIconLocal from "./svgIconLocal";
+import { ICONS } from "@/src/types/types";
 
 export default function ResumeDownloadDialog(props: {
   dialogOpen: boolean;
   setDialogOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setLocalResumeDialogOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const t = useTranslations();
+  const t = useTranslations("Resume");
+  const tGlobal = useTranslations("Global");
   const { dialogOpen, setDialogOpen, setLocalResumeDialogOpen } = props;
 
   async function saveResumeToPdf() {
-    const blob = await pdf(<ResumePDF t={t} />).toBlob();
+    const blob = await pdf(<ResumePDF t={t} tGlobal={tGlobal} />).toBlob();
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
     link.setAttribute("download", "Ilya_Belegradek_Resume.pdf");
@@ -40,7 +42,14 @@ export default function ResumeDownloadDialog(props: {
       <DialogActions>
         <div className="flex flex-col w-full gap-2">
           <Button
-            startIcon={<DownloadIcon />}
+            startIcon={
+              <SvgIconLocal
+                id={ICONS.DOWNLOAD}
+                fill="currentColor"
+                width={35}
+                height={35}
+              />
+            }
             onClick={saveResumeToPdf}
             variant="outlined"
             className="w-full"
