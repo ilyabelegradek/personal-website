@@ -1,6 +1,6 @@
 import Typography from "@mui/material/Typography";
-import ProjectStructureCard from "./projectStructureCard";
 import { getTranslations } from "next-intl/server";
+import ProjectStructureCard from "./projectStructureCard";
 
 export default async function ArchitectureProjectStructure() {
   const t = await getTranslations("Architecture");

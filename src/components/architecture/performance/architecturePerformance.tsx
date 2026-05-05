@@ -38,6 +38,7 @@ export default async function ArchitecturePerformance() {
             titleKey="arch_perf_font_title"
             descriptionKeys={fontDescriptionKeys}
             content={<CustomCodeBlock code={fontCode} />}
+            fullWidth={true}
           />
         </div>
         <PerformanceCard
@@ -55,6 +56,7 @@ export default async function ArchitecturePerformance() {
             alt="Vercel Speed Insights"
           />
         }
+        fullWidth={true}
       />
       <PerformanceCard
         titleKey="arch_perf_testing_lighthouse_title"
@@ -65,6 +67,7 @@ export default async function ArchitecturePerformance() {
             alt="Lighthouse Testing"
           />
         }
+        fullWidth={true}
       />
     </div>
   );

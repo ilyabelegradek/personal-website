@@ -42,8 +42,7 @@ export default async function ProfileCard() {
       </CardActions>
     </Card>
   );
-}
-`;
+}`;
 
 export const muiNextjsIntegrationCode = `
 export default async function RootLayout({
@@ -66,8 +65,7 @@ export default async function RootLayout({
       </body>
     </html>
   );
-}
-`;
+}`;
 
 export const nextintlCodeSample = `
 export default async function RootLayout({
@@ -332,8 +330,79 @@ export const projectStructureList: MockFile[] = [
   },
 ];
 
+export const themingDescriptionRichText: CustomRichText = {
+  strKey: "arch_theming_description",
+  argumentName: "mui",
+  link: "https://mui.com/material-ui/",
+};
+
 export const localizationDescriptionRichText: CustomRichText = {
   strKey: "arch_localization_description",
   argumentName: "nextIntl",
   link: "https://next-intl.dev/",
 };
+
+export const codeBlocksDescriptionRichText: CustomRichText = {
+  strKey: "arch_code_blocks_description",
+  argumentName: "syntaxHighlighter",
+  link: "https://www.npmjs.com/package/react-syntax-highlighter/",
+};
+
+export const pdfDescriptionRichText: CustomRichText = {
+  strKey: "arch_pdf_description",
+  argumentName: "pdfRenderer",
+  link: "https://www.npmjs.com/package/@react-pdf/renderer",
+};
+
+export const drawerCodeSample = `//MUI Drawer component
+import Drawer from "@mui/material/Drawer";
+
+export default function SettingsDrawer(props: {
+  settingsDrawerOpen: boolean;
+  setSettingsDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
+  const { settingsDrawerOpen, setSettingsDrawerOpen } = props;
+
+  //a settings drawer that can be toggled open and closed
+  return (
+    <Drawer
+      open={settingsDrawerOpen}
+      onClose={() => setSettingsDrawerOpen(false)}
+      anchor="right"
+    >
+      //render any React content inside the drawer
+    </Drawer>
+}`;
+
+export const tabCodeSample = `"use client";
+//MUI imports
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
+
+import { disclosureTabList } from "@/src/constants/disclosuresConstants";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
+import PrivacyContent from "./privacyContent";
+import dynamic from "next/dynamic";
+const AttributionContent = dynamic(() => import("./attributionContent"));
+
+export default function DisclosuresContent() {
+  const t = useTranslations("Disclosures");
+  const [disclosureTabValue, setDisclosureTabValue] = useState(0);
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setDisclosureTabValue(newValue);
+  };
+
+  //render a pair of tabs and conditionally show different content based on which tab is selected
+  return (
+    <>
+      <Tabs value={disclosureTabValue} onChange={handleChange}>
+        {disclosureTabList.map((tab) => (
+          <Tab label={t(tab)} key={tab} />
+        ))}
+      </Tabs>
+      {disclosureTabValue == 0 && <PrivacyContent />}
+      {disclosureTabValue == 1 && <AttributionContent />}
+    </>
+  );
+}`;

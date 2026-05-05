@@ -1,5 +1,5 @@
-import StringWithHyperlink from "../reusable/stringWithHyperlink";
 import { localizationDescriptionRichText } from "@/src/constants/architectureConstants";
+import StringWithHyperlink from "@/src/components/reusable/stringWithHyperlink";
 
 export default async function ArchitectureLocalization() {
   return (

@@ -1,8 +1,11 @@
 import TableOfContentsComponent from "../reusable/tableOfContents/tableOfContentsComponent";
-import ArchitectureIntro from "./architectureIntro";
-import ArchitectureLocalization from "./architectureLocalization";
+import ArchitectureCodeBlocks from "./code-blocks/architectureCodeBlocks";
+import ArchitectureIntro from "./intro/architectureIntro";
+import ArchitectureLocalization from "./localization/architectureLocalization";
+import ArchitecturePDF from "./pdf/architecturePdf";
 import ArchitecturePerformance from "./performance/architecturePerformance";
-import ArchitectureProjectStructure from "./architectureProjectStructure";
+import ArchitectureProjectStructure from "./projectStructure/architectureProjectStructure";
+import ArchitectureTheming from "./theming/architecureTheming";
 
 export default function ArchitectureScreen() {
   return (
@@ -22,16 +25,19 @@ export default function ArchitectureScreen() {
         },
         {
           titleStrKey: "arch_theming",
-          content: <div className="h-160"></div>,
+          content: <ArchitectureTheming />,
         },
         {
           titleStrKey: "arch_localization",
           content: <ArchitectureLocalization />,
         },
-
         {
           titleStrKey: "arch_pdf",
-          content: <div className="h-160"></div>,
+          content: <ArchitecturePDF />,
+        },
+        {
+          titleStrKey: "arch_code_blocks",
+          content: <ArchitectureCodeBlocks />,
           hideDivider: true,
         },
       ]}

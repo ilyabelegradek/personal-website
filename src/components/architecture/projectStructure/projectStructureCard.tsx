@@ -5,9 +5,9 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import ProjectStructureDescription from "./projectStructureDesciption";
-import SvgIconLocal from "../resume/svgIconLocal";
 import { ICONS } from "@/src/types/types";
+import SvgIconLocal from "../../resume/svgIconLocal";
+import ProjectStructureDescription from "./projectStructureDescription";
 
 export default function ProjectStructureCard() {
   const [selectedFileDescription, setSelectedFileDescription] = useState(

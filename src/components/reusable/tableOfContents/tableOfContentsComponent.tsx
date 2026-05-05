@@ -8,7 +8,7 @@ export default function TableOfContentsComponent(props: {
   const { sections } = props;
 
   return (
-    <div className="flex gap-20">
+    <div className="flex gap-20 overflow-x-hidden">
       <TableOfContents
         allIDs={sections.map((section) => section.titleStrKey)}
       />
